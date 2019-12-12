@@ -95,6 +95,60 @@
              <xsl:when test="contains($keywordPass,'State Legislative Districts - Upper')">
                  <xsl:element name="FC_Title">Feature Catalog for the Current State Legislative District (SLD) Upper Chamber State-based</xsl:element>
               </xsl:when>
+             <xsl:when test="contains($keywordPass,'Congressional Districts')">
+                 <xsl:element name="FC_Title">Feature Catalog for the 116th Congressional District National</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Alaska Native Regional Corporations')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Current Alaska Native Regional Corporation (ANRC) State-based</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Census Designated Places')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Current Place State-based</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Incorporated Places')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Current Place State-based</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Consolidated Cities')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Current Consolidated City State-based</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Subbarrios')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Current Subbarrio (Subminor Civil Division)</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'County Subdivisions')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Current County Subdivision State-based</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Estates')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Current Estate State-based Shapefile (U.S. Virgin Islands only)</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Elementary School Districts')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Current Elementary School Districts State-based</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Secondary School Districts')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Current Secondary School Districts Shapefile State-based</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Unified School Districts')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Current Unified School Districts Shapefile State-based</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'2010 Census Blocks')">
+                 <xsl:element name="FC_Title">Feature Catalog for the 2010 Census Block State-based</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Census Block Groups')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Current Block Group State-based</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Census Tracts')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Current Census Tract State-based</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Tribal Block Groups')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Current Tribal Block Group National </xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Tribal Census Tracts')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Current Tribal Census Tract National </xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'ZIP Code Tabulation Areas')">
+                 <xsl:element name="FC_Title">Feature Catalog for the 2010 Census 5-Digit ZIP Code Tabulation Area (ZCTA5) National</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Public Use Microdata Areas')">
+                 <xsl:element name="FC_Title">Feature Catalog for the 2010 Census Public Use Microdata Area (PUMA) State-based</xsl:element>
+             </xsl:when>
              <xsl:otherwise>
                  <xsl:variable name="FCTitle" select="concat('Feature Catalog for the 2019 ', $keywordPass )"/>
                  <xsl:element name="FC_Title"><xsl:value-of select="$FCTitle"></xsl:value-of></xsl:element>
@@ -148,6 +202,61 @@
             <xsl:when test="contains($keywordPass,'State Legislative Districts - Upper')">
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/sldu/tl_2019_sldu.ea.iso.xml</xsl:element>
             </xsl:when>
+            <xsl:when test="contains($keywordPass,'Congressional Districts')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/cd116/tl_2019_cd116.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Alaska Native Regional Corporations')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/anrc/tl_2019_anrc.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Census Designated Places')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/place/tl_2019_place.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Incorporated Places')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/place/tl_2019_place.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Consolidated Cities')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/concity/tl_2019_concity.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Subbarrios')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/subbarrio/tl_2019_subbarrio.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'County Subdivisions')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/cousub/tl_2019_cousub.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Estates')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/estate/tl_2019_estate.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Elementary School Districts')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/elsd/tl_2019_elsd.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Secondary School Districts')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/scsd/tl_2019_scsd.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Unified School Districts')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/unsd/tl_2019_unsd.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'2010 Census Blocks')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/tabblock10/tl_2019_tabblock10.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Census Block Groups')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/bg/tl_2019_bg.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Census Tracts')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/tract/tl_2019_tract.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Tribal Block Groups')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/tbg/tl_2019_tbg.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Tribal Census Tracts')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/ttract/tl_2019_ttract.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'ZIP Code Tabulation Areas')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/zcta510/tl_2019_zcta510.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Public Use Microdata Areas')">
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/puma10/tl_2019_puma10.ea.iso.xml</xsl:element>
+            </xsl:when>
+           
             <xsl:otherwise>
                  <xsl:element name="FC_Online_Linkage"><xsl:value-of select="$TigerURL"/></xsl:element>
             </xsl:otherwise>

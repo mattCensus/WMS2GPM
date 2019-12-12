@@ -13,6 +13,7 @@
     xmlns:grp="http://www.altova.com/Mapforce/grouping"
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
     exclude-result-prefixes="fn grp vmf xs xsi xsl xd" xmlns="http://www.isotc211.org/2005/gmi">
+    <xsl:import href="../WMS2GPM/WMS2GPMTitle.xsl"/>
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p><xd:b>Created on:</xd:b> Apr 5, 2019</xd:p>
@@ -26,7 +27,8 @@
             <xsl:element name="Citation">
                 <xsl:element name="Originator">U.S. Department of Commerce, U.S. Census Bureau, Geography Division</xsl:element>
                 <xsl:element name="Publication_Date"/>
-                <xsl:element name="Title"><xsl:value-of select="/default:WMS_Capabilities/default:Service/default:Title"/></xsl:element>
+               <!--  <xsl:element name="Title"><xsl:value-of select="/default:WMS_Capabilities/default:Service/default:Title"/></xsl:element> -->
+                <xsl:call-template name="WMSTitle"/>
                 <xsl:element name="Geospatial_Data_Presentation_Form">Web Mapping Service</xsl:element>
             </xsl:element>
             <xsl:element name="Description">
