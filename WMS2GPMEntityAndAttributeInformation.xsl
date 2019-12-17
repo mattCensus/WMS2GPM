@@ -12,8 +12,8 @@
     xmlns:fn="http://www.w3.org/2005/xpath-functions"
     xmlns:grp="http://www.altova.com/Mapforce/grouping"
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
-    exclude-result-prefixes="fn grp vmf xs xsi xsl xd" xmlns="http://www.isotc211.org/2005/gmi">
-    
+    exclude-result-prefixes="fn grp vmf xs xsi xsl xd">
+   
     <!--  <Feature_Catalogue_Description>
         <FC_Title>Feature Catalog for the 2016 All Roads County-based Shapefile</FC_Title>
         <Included_With_Dataset>No</Included_With_Dataset>
@@ -161,99 +161,131 @@
         <xsl:variable name="TigerURL">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</xsl:variable>
         <xsl:choose>
             <xsl:when test="contains($keywordPass,'Counties')">
+                <xsl:element name="Feature_Types">county</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/county/tl_2019_county.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'States')">
+                <xsl:element name="Feature_Types">States</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/state/tl_2019_state.ea.iso.xml</xsl:element>
             </xsl:when>   
             <xsl:when test="contains($keywordPass,'Micropolitan Statistical Areas')">
+                <xsl:element name="Feature_Types">Micropolitan Statistical Areas</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/cbsa/tl_2019_cbsa.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Metropolitan Statistical Areas')">
+                <xsl:element name="Feature_Types">Metropolitan Statistical Areas</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/cbsa/tl_2019_cbsa.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Metropolitan Divisions')">
+                <xsl:element name="Feature_Types">Metropolitan Divisions</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/metdiv/tl_2019_metdiv.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Combined Statistical Areas')">
+                <xsl:element name="Feature_Types">Combined Statistical Areas</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/csa/tl_2019_csa.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Micropolitan New England City and Town Areas')">
+                <xsl:element name="Feature_Types">Micropolitan New England City and Town Areas</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/necta/tl_2019_necta.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Metropolitan New England City and Town Areas')">
+                <xsl:element name="Feature_Types">Metropolitan New England City and Town Areas</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/necta/tl_2019_necta.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'New England City and Town Area Divisions')">
+                <xsl:element name="Feature_Types">New England City and Town Area Divisions</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/nectadiv/tl_2019_nectadiv.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Combined New England City and Town Areas')">
+                <xsl:element name="Feature_Types">Combined New England City and Town Areas</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/cnecta/tl_2019_cnecta.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Urban Clusters')">
+                <xsl:element name="Feature_Types">Urban Clusters</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/uac10/tl_2019_uac10.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Census Urbanized Areas')">
+                <xsl:element name="Feature_Types">Census Urbanized Areas</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/uac10/tl_2019_uac10.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'State Legislative Districts - Lower')">
+                <xsl:element name="Feature_Types">State Legislative Districts</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/sldl/tl_2019_sldl.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'State Legislative Districts - Upper')">
+                <xsl:element name="Feature_Types">State Legislative Districts</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/sldu/tl_2019_sldu.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Congressional Districts')">
+                <xsl:element name="Feature_Types">Congressional Districts</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/cd116/tl_2019_cd116.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Alaska Native Regional Corporations')">
+                <xsl:element name="Feature_Types">Alaska Native Regional Corporations</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/anrc/tl_2019_anrc.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Census Designated Places')">
+                <xsl:element name="Feature_Types">Census Designated Places</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/place/tl_2019_place.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Incorporated Places')">
+                <xsl:element name="Feature_Types">Incorporated Place</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/place/tl_2019_place.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Consolidated Cities')">
+                <xsl:element name="Feature_Types">Consolidated Cities</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/concity/tl_2019_concity.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Subbarrios')">
+                <xsl:element name="Feature_Types">Subbarrios</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/subbarrio/tl_2019_subbarrio.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'County Subdivisions')">
+                <xsl:element name="Feature_Types">County Subdivisions</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/cousub/tl_2019_cousub.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Estates')">
+                <xsl:element name="Feature_Types">Estates</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/estate/tl_2019_estate.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Elementary School Districts')">
+                <xsl:element name="Feature_Types">School Districts</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/elsd/tl_2019_elsd.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Secondary School Districts')">
+                <xsl:element name="Feature_Types">School Districts</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/scsd/tl_2019_scsd.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Unified School Districts')">
+                <xsl:element name="Feature_Types">School Districts</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/unsd/tl_2019_unsd.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'2010 Census Blocks')">
+                <xsl:element name="Feature_Types">Census Blocks</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/tabblock10/tl_2019_tabblock10.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Census Block Groups')">
+                <xsl:element name="Feature_Types">Block Groups</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/bg/tl_2019_bg.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Census Tracts')">
+                <xsl:element name="Feature_Types">Census Tracts</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/tract/tl_2019_tract.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Tribal Block Groups')">
+                <xsl:element name="Feature_Types">Tribal Block Groups</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/tbg/tl_2019_tbg.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Tribal Census Tracts')">
+                <xsl:element name="Feature_Types">Tribal Census Tracts</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/ttract/tl_2019_ttract.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'ZIP Code Tabulation Areas')">
+                <xsl:element name="Feature_Types">ZIP Code Tabulation Areas</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/zcta510/tl_2019_zcta510.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Public Use Microdata Areas')">
+                <xsl:element name="Feature_Types">Public Use Microdata Areas</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/puma10/tl_2019_puma10.ea.iso.xml</xsl:element>
             </xsl:when>
            

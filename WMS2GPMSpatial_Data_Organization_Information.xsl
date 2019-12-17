@@ -12,7 +12,7 @@
     xmlns:fn="http://www.w3.org/2005/xpath-functions"
     xmlns:grp="http://www.altova.com/Mapforce/grouping"
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
-    exclude-result-prefixes="fn grp vmf xs xsi xsl xd" xmlns="http://www.isotc211.org/2005/gmi">
+    exclude-result-prefixes="fn grp vmf xs xsi xsl xd">
     
     
     <xsl:template name="Spatial_Data_Organization_Information">

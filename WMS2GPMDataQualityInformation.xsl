@@ -12,7 +12,7 @@
         xmlns:fn="http://www.w3.org/2005/xpath-functions"
         xmlns:grp="http://www.altova.com/Mapforce/grouping"
         xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
-        exclude-result-prefixes="fn grp vmf xs xsi xsl xd" xmlns="http://www.isotc211.org/2005/gmi">
+        exclude-result-prefixes="fn grp vmf xs xsi xsl xd">
         <xd:doc scope="stylesheet">
             <xd:desc>
                 <xd:p><xd:b>Created on:</xd:b> December 9, 2019</xd:p>
@@ -151,10 +151,16 @@
                             <xsl:element name="Beginning_Date">201806</xsl:element>
                             <xsl:element name="Ending_Date">201905</xsl:element>
                         </xsl:element>
-                        <xsl:element name="Currentness_Reference">publication dat</xsl:element>
+                        <xsl:element name="Currentness_Reference">publication date</xsl:element>
                     </xsl:element>
                     <xsl:element name="Source_Citation_Abbreviation">MAF/TIGER</xsl:element>
                     <xsl:element name="Source_Contribution">All line segments</xsl:element>
+                </xsl:element>
+                
+                <xsl:element name="Process_Step">
+                    <xsl:element name="Process_Description">TIGERWeb files are extracted from the Census MAF/TIGER database twice a year.                  then distributed among the shapefiles each containing attributes for line, polygon, or landmark geographic data.
+                    </xsl:element>
+                    <xsl:element name="Process_Date">2019</xsl:element>
                 </xsl:element>
                 
             </xsl:element>

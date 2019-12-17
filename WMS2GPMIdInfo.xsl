@@ -12,7 +12,7 @@
     xmlns:fn="http://www.w3.org/2005/xpath-functions"
     xmlns:grp="http://www.altova.com/Mapforce/grouping"
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
-    exclude-result-prefixes="fn grp vmf xs xsi xsl xd" xmlns="http://www.isotc211.org/2005/gmi">
+    exclude-result-prefixes="fn grp vmf xs xsi xsl xd">
     <xsl:import href="../WMS2GPM/WMS2GPMTitle.xsl"/>
     <xd:doc scope="stylesheet">
         <xd:desc>
@@ -26,10 +26,10 @@
         <xsl:element name="Identification_Information">
             <xsl:element name="Citation">
                 <xsl:element name="Originator">U.S. Department of Commerce, U.S. Census Bureau, Geography Division</xsl:element>
-                <xsl:element name="Publication_Date"/>
-               <!--  <xsl:element name="Title"><xsl:value-of select="/default:WMS_Capabilities/default:Service/default:Title"/></xsl:element> -->
+              <!--   <xsl:element name="Publication_Date"/>
+                <xsl:element name="Title"><xsl:value-of select="/default:WMS_Capabilities/default:Service/default:Title"/></xsl:element> -->
                 <xsl:call-template name="WMSTitle"/>
-                <xsl:element name="Geospatial_Data_Presentation_Form">Web Mapping Service</xsl:element>
+               
             </xsl:element>
             <xsl:element name="Description">
                 <xsl:element name="Abstract">
@@ -58,33 +58,76 @@
                 <xsl:element name="Maintenance_and_Update_Frequency">Annually</xsl:element>
             </xsl:element>
             <xsl:element name="Spatial_Domain">
+                <xsl:variable name="EBC" select="/default:WMS_Capabilities/default:Capability[1]/default:Layer[1]/default:EX_GeographicBoundingBox[1]/default:eastBoundLongitude[1]"/>
+                <xsl:variable name="FinalEBC" select="substring($EBC,0,9)"></xsl:variable>
                 <xsl:element name="Bounding_Coordinates">
                     <xsl:element name="West_Bounding_Coordinate"><xsl:value-of select="/default:WMS_Capabilities/default:Capability[1]/default:Layer[1]/default:EX_GeographicBoundingBox[1]/default:westBoundLongitude[1]"/></xsl:element>
-                    <xsl:element name="East_Bounding_Coordinate"><xsl:value-of select="/default:WMS_Capabilities/default:Capability[1]/default:Layer[1]/default:EX_GeographicBoundingBox[1]/default:eastBoundLongitude[1]"></xsl:value-of></xsl:element>
-                    <xsl:element name="North_Bounding_Coordinate"><xsl:value-of select="/default:WMS_Capabilities/default:Capability[1]/default:Layer[1]/default:EX_GeographicBoundingBox[1]/default:northBoundLatitude[1]"></xsl:value-of></xsl:element>
-                    <xsl:element name="South_Bounding_Coordinate"><xsl:value-of select="/default:WMS_Capabilities/default:Capability[1]/default:Layer[1]/default:EX_GeographicBoundingBox[1]/default:southBoundLatitude[1]"></xsl:value-of></xsl:element>
+                    <xsl:element name="East_Bounding_Coordinate"><xsl:value-of select="$FinalEBC"></xsl:value-of></xsl:element>
+                    <xsl:element name="North_Bounding_Coordinate"><xsl:value-of select="/default:WMS_Capabilities/default:Capability[1]/default:Layer[1]/default:EX_GeographicBoundingBox[1]/default:northBoundLatitude[1]"/></xsl:element>
+                    <xsl:element name="South_Bounding_Coordinate"><xsl:value-of select="/default:WMS_Capabilities/default:Capability[1]/default:Layer[1]/default:EX_GeographicBoundingBox[1]/default:southBoundLatitude[1]"/></xsl:element>
                 </xsl:element>
             </xsl:element>
             <xsl:element name="Keywords">
                 <!-- <xsl:element name="Title"><xsl:value-of select="/default:WMS_Capabilities/default:Service/default:Title"/></xsl:element> -->
-                <xsl:for-each select="/WMS_Capabilities/Service[1]">
-                    <xsl:element name="Title"><xsl:value-of select="./default:Title"/></xsl:element>
-                    <xsl:element name="width"><xsl:value-of select="./MaxWidth[1]"/></xsl:element>
-                </xsl:for-each>
+               
                 
                 
                 
                 <xsl:element name="Theme">
-                    <xsl:element name="Theme_Keyword_Thesaurus">None</xsl:element>   
-                    <xsl:comment>The Keywords Template</xsl:comment>
-                    <xsl:for-each select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer">
-                        <xsl:variable name="keyword" select="./default:Name"/>
-                         <!--  <xsl:comment>keyword:<xsl:value-of select="$keyword"/></xsl:comment>-->
-                        <xsl:if test="not(contains($keyword,'Labels'))">
-                            <xsl:element name="Theme_Keyword"><xsl:value-of select="$keyword"/></xsl:element>
-                        </xsl:if>
-                    </xsl:for-each>
-                </xsl:element>
+                    <xsl:element name="Theme_Keyword_Thesaurus">None</xsl:element>  
+                    <!--  <xsl:comment>keyword:<xsl:value-of select="$keyword"/></xsl:comment>-->
+                    <!--                   /default:WMS_Capabilities/default:Capability/default:Layer/default:Layer[1]/default:Layer[2]/default:Name[1] -->
+                    <xsl:variable name="layerOneLength" select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer"/>
+                  
+                    <xsl:choose>
+                        <xsl:when test="/default:WMS_Capabilities/default:Capability[1]/default:Layer[1]/default:Layer[1]/default:Layer[1]">
+                           <xsl:comment>first for physical</xsl:comment>
+                            <xsl:for-each select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer/default:Layer">
+                                <xsl:variable name="keyword" select="./default:Name"/>
+                                <xsl:if test="not(contains($keyword,'Labels'))">
+                                    <xsl:element name="Theme_Keyword"><xsl:value-of select="$keyword"/></xsl:element>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </xsl:when>
+                        <xsl:when test="string-length($layerOneLength)&gt;1">
+                            <xsl:comment>greater than one</xsl:comment>
+                            <xsl:for-each select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer">
+                                <xsl:variable name="keyword" select="./default:Name"/>
+                                <xsl:if test="not(contains($keyword,'Labels'))">
+                                    <xsl:element name="Theme_Keyword"><xsl:value-of select="$keyword"/></xsl:element>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:for-each select=" /default:WMS_Capabilities/default:Capability/default:Layer/default:Layer[1]/default:Layer[2]">
+                                <xsl:variable name="keyword" select="./default:Name"/>
+                                <xsl:if test="not(contains($keyword,'Labels'))">
+                                    <xsl:element name="Theme_Keyword"><xsl:value-of select="$keyword"/></xsl:element>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    
+                    
+                   <!-- <xsl:choose>
+                        <xsl:when test="string-length($layerOneLength)&gt;5">
+                            <xsl:for-each select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer">
+                                <xsl:variable name="keyword" select="./default:Name"/>
+                                <xsl:if test="not(contains($keyword,'Labels'))">
+                                    <xsl:element name="Theme_Keyword"><xsl:value-of select="$keyword"/></xsl:element>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:for-each select=" /default:WMS_Capabilities/default:Capability/default:Layer/default:Layer[1]/default:Layer[2]">
+                                <xsl:variable name="keyword" select="./default:Name"/>
+                                <xsl:if test="not(contains($keyword,'Labels'))">
+                                    <xsl:element name="Theme_Keyword"><xsl:value-of select="$keyword"/></xsl:element>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </xsl:otherwise>
+                    </xsl:choose> -->
+                </xsl:element> 
                 
                 <xsl:element name="Place">
                     <xsl:element name="Place_Keyword_Thesaurus">National Standard Codes (ANSI INCITS 38-2009), Federal Information Processing Series (FIPS) – States/State Equivalents</xsl:element>
@@ -147,7 +190,7 @@
                     <xsl:element name="Place_Keyword">United States</xsl:element>
                     <xsl:element name="Place_Keyword">United States of America</xsl:element>
                 </xsl:element>
-                
+            </xsl:element>
                 <xsl:element name="Constraints">
                     <xsl:element name="Access_Constraints">unrestricted</xsl:element>
                     <xsl:element name="Use_Constraints">trademark</xsl:element>
@@ -165,7 +208,7 @@
                 </xsl:element>
                         
                 
-            </xsl:element>
+            
         </xsl:element>
         
     </xsl:template>
