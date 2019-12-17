@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<GPM xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" profile="wms">
+   <FGDC_Required>
+      <ISO_Theme>
+         <ISO_Keyword_Thesaurus>ISO 19115 Topic Categories</ISO_Keyword_Thesaurus>
+         <ISO_Keyword>boundaries</ISO_Keyword>
+      </ISO_Theme>
+   </FGDC_Required>
+   <Identification_Information>
+      <Citation>
+         <Originator>U.S. Department of Commerce, U.S. Census Bureau, Geography Division</Originator>
+         <Publication_Date>2019</Publication_Date>
+         <Title> Census Current (2019) WMS </Title>
+         <Geospatial_Data_Presentation_Form>Web Mapping Service</Geospatial_Data_Presentation_Form>
+         <Online_Linkage> http://www.esri.com/wms https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2019/MapServer/WmsServer?version=1.3.0%26service=WMS%26request=GetSchemaExtension</Online_Linkage>
+      </Citation>
+      <Description>
+         <Abstract>
+                    TIGERweb files are designed for Viewing TIGER\Line spatial data online or streaming
+                    to your mapping application.The TIGER/Line shapefiles and related database files (.dbf) are an extract of
+                    selected geographic and cartographic information from the U.S. Census Bureau's
+                    Master Address File / Topologically Integrated Geographic Encoding and Referencing
+                    (MAF/TIGER) Database (MTDB).
+                    
+                    PUT SOME MORE INFO HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                </Abstract>
+         <Purpose>
+                    To provide a simple HTTP interface for requesting geo-registered map images
+                    from our geospatial database. The response to the request is one or more
+                    geo-registered map images that can be displayed in a browser or WMS client
+                    application. By gaining access to our data through our WMS, users can produce maps
+                    containing TIGERweb layers combined with layers from other servers. 
+                </Purpose>
+      </Description>
+      <Time_Period_of_Content>
+         <Calendar_Date>20190101</Calendar_Date>
+         <Currentness_Reference>ground condition</Currentness_Reference>
+      </Time_Period_of_Content>
+      <Status>
+         <Progress>Completed</Progress>
+         <Maintenance_and_Update_Frequency>Annually</Maintenance_and_Update_Frequency>
+      </Status>
+      <Spatial_Domain>
+         <Bounding_Coordinates>
+            <West_Bounding_Coordinate>-179.999996</West_Bounding_Coordinate>
+            <East_Bounding_Coordinate>179.9999</East_Bounding_Coordinate>
+            <North_Bounding_Coordinate>89.000000</North_Bounding_Coordinate>
+            <South_Bounding_Coordinate>-67.337844</South_Bounding_Coordinate>
+         </Bounding_Coordinates>
+      </Spatial_Domain>
+      <Keywords>
+         <Theme>
+            <Theme_Keyword_Thesaurus>None</Theme_Keyword_Thesaurus><!--greater than one-->
+            <Theme_Keyword>Counties</Theme_Keyword>
+            <Theme_Keyword>States</Theme_Keyword>
+            <Theme_Keyword>Micropolitan Statistical Areas</Theme_Keyword>
+            <Theme_Keyword>Metropolitan Statistical Areas</Theme_Keyword>
+            <Theme_Keyword>Metropolitan Divisions</Theme_Keyword>
+            <Theme_Keyword>Combined Statistical Areas</Theme_Keyword>
+            <Theme_Keyword>Micropolitan New England City and Town Areas</Theme_Keyword>
+            <Theme_Keyword>Metropolitan New England City and Town Areas</Theme_Keyword>
+            <Theme_Keyword>New England City and Town Area Divisions</Theme_Keyword>
+            <Theme_Keyword>Combined New England City and Town Areas</Theme_Keyword>
+            <Theme_Keyword>2010 Census Urban Clusters</Theme_Keyword>
+            <Theme_Keyword>2010 Census Urbanized Areas</Theme_Keyword>
+            <Theme_Keyword>Census Regions</Theme_Keyword>
+            <Theme_Keyword>Census Divisions</Theme_Keyword>
+            <Theme_Keyword>2019 State Legislative Districts - Lower</Theme_Keyword>
+            <Theme_Keyword>2019 State Legislative Districts - Upper</Theme_Keyword>
+            <Theme_Keyword>116th Congressional Districts</Theme_Keyword>
+            <Theme_Keyword>American Indian Joint-Use Areas</Theme_Keyword>
+            <Theme_Keyword>Tribal Designated Statistical Areas</Theme_Keyword>
+            <Theme_Keyword>State Designated Tribal Statistical Areas</Theme_Keyword>
+            <Theme_Keyword>Oklahoma Tribal Statistical Areas</Theme_Keyword>
+            <Theme_Keyword>Alaska Native Village Statistical Areas</Theme_Keyword>
+            <Theme_Keyword>Hawaiian Home Lands</Theme_Keyword>
+            <Theme_Keyword>State American Indian Reservations</Theme_Keyword>
+            <Theme_Keyword>Off-Reservation Trust Lands</Theme_Keyword>
+            <Theme_Keyword>Federal American Indian Reservations</Theme_Keyword>
+            <Theme_Keyword>Tribal Subdivisions</Theme_Keyword>
+            <Theme_Keyword>Alaska Native Regional Corporations</Theme_Keyword>
+            <Theme_Keyword>Census Designated Places</Theme_Keyword>
+            <Theme_Keyword>Incorporated Places</Theme_Keyword>
+            <Theme_Keyword>Consolidated Cities</Theme_Keyword>
+            <Theme_Keyword>Subbarrios</Theme_Keyword>
+            <Theme_Keyword>County Subdivisions</Theme_Keyword>
+            <Theme_Keyword>Estates</Theme_Keyword>
+            <Theme_Keyword>Elementary School Districts</Theme_Keyword>
+            <Theme_Keyword>Secondary School Districts</Theme_Keyword>
+            <Theme_Keyword>Unified School Districts</Theme_Keyword>
+            <Theme_Keyword>2010 Census Blocks</Theme_Keyword>
+            <Theme_Keyword>Census Block Groups</Theme_Keyword>
+            <Theme_Keyword>Census Tracts</Theme_Keyword>
+            <Theme_Keyword>Tribal Block Groups</Theme_Keyword>
+            <Theme_Keyword>Tribal Census Tracts</Theme_Keyword>
+            <Theme_Keyword>2010 Census ZIP Code Tabulation Areas</Theme_Keyword>
+            <Theme_Keyword>2010 Census Public Use Microdata Areas</Theme_Keyword>
+         </Theme>
+         <Place>
+            <Place_Keyword_Thesaurus>National Standard Codes (ANSI INCITS 38-2009), Federal Information Processing Series (FIPS) &#8211; States/State Equivalents</Place_Keyword_Thesaurus>
+            <Place_Keyword>Alabama</Place_Keyword>
+            <Place_Keyword>Alaska</Place_Keyword>
+            <Place_Keyword>Arizona</Place_Keyword>
+            <Place_Keyword>Arkansas</Place_Keyword>
+            <Place_Keyword>California</Place_Keyword>
+            <Place_Keyword>Colorado</Place_Keyword>
+            <Place_Keyword>Connecticut</Place_Keyword>
+            <Place_Keyword>Delaware</Place_Keyword>
+            <Place_Keyword>District of Columbia</Place_Keyword>
+            <Place_Keyword>Florida</Place_Keyword>
+            <Place_Keyword>Georgia</Place_Keyword>
+            <Place_Keyword>Hawaii</Place_Keyword>
+            <Place_Keyword>Idaho</Place_Keyword>
+            <Place_Keyword>Illinois</Place_Keyword>
+            <Place_Keyword>Indiana</Place_Keyword>
+            <Place_Keyword>Iowa</Place_Keyword>
+            <Place_Keyword>Kansas</Place_Keyword>
+            <Place_Keyword>Kentucky</Place_Keyword>
+            <Place_Keyword>Louisiana</Place_Keyword>
+            <Place_Keyword>Maine</Place_Keyword>
+            <Place_Keyword>Maryland</Place_Keyword>
+            <Place_Keyword>Massachusetts</Place_Keyword>
+            <Place_Keyword>Michigan</Place_Keyword>
+            <Place_Keyword>Minnesota</Place_Keyword>
+            <Place_Keyword>Mississippi</Place_Keyword>
+            <Place_Keyword>Missouri</Place_Keyword>
+            <Place_Keyword>Montana</Place_Keyword>
+            <Place_Keyword>Nebraska</Place_Keyword>
+            <Place_Keyword>Nevada</Place_Keyword>
+            <Place_Keyword>New Hampshire</Place_Keyword>
+            <Place_Keyword>New Jersey</Place_Keyword>
+            <Place_Keyword>New Mexico</Place_Keyword>
+            <Place_Keyword>New York</Place_Keyword>
+            <Place_Keyword>North Carolina</Place_Keyword>
+            <Place_Keyword>North Dakota</Place_Keyword>
+            <Place_Keyword>Ohio</Place_Keyword>
+            <Place_Keyword>Oklahoma</Place_Keyword>
+            <Place_Keyword>Oregon</Place_Keyword>
+            <Place_Keyword>Pennsylvania</Place_Keyword>
+            <Place_Keyword>Rhode Island</Place_Keyword>
+            <Place_Keyword>South Carolina</Place_Keyword>
+            <Place_Keyword>South Dakota</Place_Keyword>
+            <Place_Keyword>Tennessee</Place_Keyword>
+            <Place_Keyword>Texas</Place_Keyword>
+            <Place_Keyword>Utah</Place_Keyword>
+            <Place_Keyword>Vermont</Place_Keyword>
+            <Place_Keyword>Virginia</Place_Keyword>
+            <Place_Keyword>Washington</Place_Keyword>
+            <Place_Keyword>West Virginia</Place_Keyword>
+            <Place_Keyword>Wisconsin</Place_Keyword>
+            <Place_Keyword>Wyoming</Place_Keyword>
+         </Place>
+         <Place>
+            <Place_Keyword_Thesaurus>ISO 3166: Codes for the representation of names of countries and their subdivisions </Place_Keyword_Thesaurus>
+            <Place_Keyword>U.S</Place_Keyword>
+            <Place_Keyword>United States</Place_Keyword>
+            <Place_Keyword>United States of America</Place_Keyword>
+         </Place>
+      </Keywords>
+      <Constraints>
+         <Access_Constraints>unrestricted</Access_Constraints>
+         <Use_Constraints>trademark</Use_Constraints>
+         <Use_Constraints>otherRestrictions</Use_Constraints>
+         <Other_Constraints>Use Constraints: These products are free to use in a product or
+                        publication, however acknowledgement must be given to the U.S. Census Bureau as the source. WMS
+                        boundary files should not be used for geographic analysis including area or perimeter calculation.
+                        Files should not be used for geocoding addresses. Files should not be used for determining precise
+                        geographic area relationships.</Other_Constraints>
+      </Constraints>
+      <Point_of_Contact>
+         <Contact_Organization>U.S. Department of Commerce, U.S. Census Bureau, Geography Division</Contact_Organization>
+         <Contact_Electronic_Mail_Address>geo.geography@census.gov</Contact_Electronic_Mail_Address>
+      </Point_of_Contact>
+   </Identification_Information>
+   <Data_Quality_Information>
+      <Atribute_Accuracy_Report>
+         <Test_Report>
+            <Measure>TIGER/Line Shapefile Quantitative Attribute Accuracy Test</Measure>
+            <Evaluation>Manual and automatic examination of the Non_Quantitative attribute information</Evaluation>
+            <Result>This information is not fully accurate</Result>
+         </Test_Report>
+      </Atribute_Accuracy_Report>
+      <Non_Quantitative_Attribute_Accuracy_Report>
+         <Test_Report>
+            <Measure>National Standard Codes, Federal Information Processing (FIPS) and the
+                            Geographic Names Information System (GNIS) TIGER/Line Shapefile Test</Measure>
+            <Evaluation>Tested against National Standard Codes, Federal Information Processing
+                            (FIPS) and the Geographic Names Information System (GNIS)</Evaluation>
+            <Result>100% accurate for the codes and base names.</Result>
+         </Test_Report>
+      </Non_Quantitative_Attribute_Accuracy_Report>
+      <Logical_Consistency_Report>
+         <Test_Report>
+            <Measure> The Census Bureau performed automated tests to ensure logical consistency
+                            and limits of shapefiles.</Measure>
+            <Evaluation>Node/geometry and topology relationships are collected or generated to
+                            satisfy topological edit requirements. These requirements include: (1) Complete
+                            chains must begin and end at nodes. (2) Complete chains must connect to each
+                            other at nodes. (3) Complete chains do not extend through nodes. (4) Left and
+                            right polygons are defined for each complete chain element and are consistent
+                            throughout the extract process. (5) The chains representing the limits of the
+                            files are free of gaps.</Evaluation>
+            <Result>There may be some inconsistencies in feature names along features. An
+                            anomaly exists with the sporadic occurrence of road segments comprising a
+                            complete chain with different MAF/TIGER Feature Census Class Code (MTFCC) values
+                            assigned. This problem could affect applications that use the MTFCC values for
+                            network analysis, routing, or for assigning symbology to a feature when creating
+                            a map.</Result>
+         </Test_Report>
+      </Logical_Consistency_Report>
+      <Completeness_Report>
+         <Test_Report>
+            <Measure>Data completeness of the TIGER/Line Shapefiles</Measure>
+            <Result>Data completeness of the TIGER/Line Shapefiles reflects the contents of the
+                            Census MAF/TIGER database at the time the TIGER/Line Shapefiles were
+                            created.</Result>
+         </Test_Report>
+      </Completeness_Report>
+      <Horizontal_Positional_Accuracy_Report>
+         <Test_Report>
+            <Measure>The Census Bureau uses root mean square error (RMSE) as stated in the
+                            FGDC-STD-007. 3-1998, Geospatial Positioning Accuracy Standards, Part 3:
+                            National Standard for Spatial Data Accuracy.</Measure>
+            <Evaluation>The Census Bureau uses Global Positioning System (GPS) coordinates at
+                            road centerline intersections to evaluate the horizontal spatial accuracy of
+                            source files that may be used to realign road features in the MAF/TIGER database
+                            and test the horizontal spatial accuracy of the road features in the TIGER/Line
+                            Shapefiles. The test compares a survey-grade GPS coordinate to its associated
+                            road centerline intersection in the TIGER/Line Shapefiles. The test is based on
+                            an independent collection of GPS coordinates for a random sample of road
+                            intersections from a centerline file that meet certain criteria. The points are
+                            referred to as the sample points and are gathered through a private contractor
+                            working for the Census Bureau. Since the collection method uses survey-quality
+                            GPS-based field techniques, the resulting control points are considered 'ground
+                            truth' against which the TIGER road centerline intersection coordinates are
+                            compared. The distances between the coordinates are calculated and the Census
+                            Bureau determines the Circular Error 95% (CE95). That is, the accuracy of the
+                            file in meters with 95% confidence. The CE95 can be calculated from the mean and
+                            standard deviation by using the formula: mean of differences plus (2.65 times
+                            the standard deviation). CE95 results reported for each file tested are
+                            determined using a spreadsheet with embedded statistical formula. The use and
+                            applicability of the spreadsheet and its embedded formula have been verified by
+                            Census Bureau statisticians. The basis of the calculation is the use of the root
+                            mean square error (RMSE). This is the method as stated in the U.S. Government's
+                            Federal Geographic Data Committee Standard FGDC-STD-007.3-1998, Geospatial
+                            Positioning Accuracy Standards. Part 3: National Standard for Spatial Data
+                            Accuracy. The results of using this measure of accuracy are in compliance with
+                            Federal Spatial Data requirements. In terms of the Census Bureau application,
+                            the dataset coordinate values are those taken from the centerline file and the
+                            coordinate values from an independent source of higher accuracy are those
+                            acquired through the Census Bureau's contractor. Please note that the horizontal
+                            spatial accuracy, where reported, refers only to the realigned road features
+                            identified as matched to the positionally accurate source file with that
+                            accuracy. It is not the spatial accuracy of the TIGER/Line Shapefile as a
+                            whole.</Evaluation>
+            <Result>6.5 meters for 5406</Result>
+         </Test_Report>
+      </Horizontal_Positional_Accuracy_Report>
+      <Source_Information>
+         <Citation>
+            <Originator>U.S. Department of Commerce, U.S. Census Bureau, Geography Division</Originator>
+            <Publication_Date>201905</Publication_Date>
+            <Title>Census MAF/TIGER database</Title>
+         </Citation>
+         <Type_of_Source_Media>online</Type_of_Source_Media>
+         <Time_Period_of_Content>
+            <Range_Of_Dates>
+               <Beginning_Date>201806</Beginning_Date>
+               <Ending_Date>201905</Ending_Date>
+            </Range_Of_Dates>
+            <Currentness_Reference>publication date</Currentness_Reference>
+         </Time_Period_of_Content>
+         <Source_Citation_Abbreviation>MAF/TIGER</Source_Citation_Abbreviation>
+         <Source_Contribution>All line segments</Source_Contribution>
+      </Source_Information>
+      <Process_Step>
+         <Process_Description>TIGERWeb files are extracted from the Census MAF/TIGER database twice a year.                  then distributed among the shapefiles each containing attributes for line, polygon, or landmark geographic data.
+                    </Process_Description>
+         <Process_Date>2019</Process_Date>
+      </Process_Step>
+   </Data_Quality_Information>
+   <Spatial_Data_Organization_Information>
+      <Indirect_Spatial_Reference>Federal Information Processing Series (FIPS), Geographic Names
+            Information System (GNIS), and feature names.</Indirect_Spatial_Reference>
+      <Direct_Spatial_Reference_Method>Vector</Direct_Spatial_Reference_Method>
+      <Topology_Level>topology1D</Topology_Level>
+   </Spatial_Data_Organization_Information>
+   <Spatial_Reference_Information>
+      <Map_Projection>
+         <Map_Projection_Name>WGS 84 longitude-latitude</Map_Projection_Name>
+         <EPSG_Reference>
+            <EPSG_Code>OGC:CRS:</EPSG_Code>
+            <EPSG_Code_Space>http://www.opengis.net/def/crs/OGC/1.3/CRS84</EPSG_Code_Space>
+            <EPSG_Version>1.3</EPSG_Version>
+         </EPSG_Reference>
+      </Map_Projection>
+      <Map_Projection>
+         <Map_Projection_Name>Web Mercator</Map_Projection_Name>
+         <EPSG_Reference>
+            <EPSG_Code>EPSG:3857</EPSG_Code>
+            <EPSG_Code_Space>http://www.epsg-registry.org/export.htm?gml=urn:ogc:def:crs:EPSG:3857</EPSG_Code_Space>
+            <EPSG_Version>9.3, 2018-04-20</EPSG_Version>
+         </EPSG_Reference>
+      </Map_Projection>
+      <Map_Projection>
+         <Map_Projection_Name>WGS 84</Map_Projection_Name>
+         <EPSG_Reference>
+            <EPSG_Code>EPSG:4326</EPSG_Code>
+            <EPSG_Code_Space>http://www.epsg-registry.org/export.htm?gml=urn:ogc:def:crs:EPSG::4326</EPSG_Code_Space>
+            <EPSG_Version>9.3, 2018-04-20</EPSG_Version>
+         </EPSG_Reference>
+      </Map_Projection>
+      <Map_Projection>
+         <Map_Projection_Name>ESRI Web Mercator definition</Map_Projection_Name>
+         <EPSG_Reference>
+            <EPSG_Code>ESRI:102100</EPSG_Code>
+            <EPSG_Code_Space>https://spatialreference.org/ref/sr-org/6928/</EPSG_Code_Space>
+            <EPSG_Version>Unknown</EPSG_Version>
+         </EPSG_Reference>
+      </Map_Projection>
+   </Spatial_Reference_Information>
+   <Entity_and_Attribute_Information>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current County and Equivalent National Shapefile</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>county</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/county/tl_2019_county.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current State and Equivalent National</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>States</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/state/tl_2019_state.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Metropolitan Statistical Area/Micropolitan Statistical Area (CBSA) National</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Micropolitan Statistical Areas</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/cbsa/tl_2019_cbsa.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Metropolitan Statistical Area/Micropolitan Statistical Area (CBSA) National</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Metropolitan Statistical Areas</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/cbsa/tl_2019_cbsa.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Metropolitan Division National</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Metropolitan Divisions</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/metdiv/tl_2019_metdiv.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Combined Statistical Area (CSA) National </FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Combined Statistical Areas</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/csa/tl_2019_csa.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current New England City and Town Area (NECTA) National</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Micropolitan New England City and Town Areas</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/necta/tl_2019_necta.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current New England City and Town Area (NECTA) National</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Metropolitan New England City and Town Areas</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/necta/tl_2019_necta.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current NECTA Division National </FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>New England City and Town Area Divisions</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/nectadiv/tl_2019_nectadiv.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Combined New England City and Town Area (CNECTA) National</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Combined New England City and Town Areas</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/cnecta/tl_2019_cnecta.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2010 Census Urban Area National</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Urban Clusters</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/uac10/tl_2019_uac10.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2010 Census Urban Area National</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Census Urbanized Areas</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/uac10/tl_2019_uac10.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2019 Census Regions</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Census Regions</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2019 Census Divisions</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Census Divisions</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current State Legislative District (SLD) Lower Chamber State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>State Legislative Districts</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/sldl/tl_2019_sldl.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current State Legislative District (SLD) Upper Chamber State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>State Legislative Districts</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/sldu/tl_2019_sldu.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 116th Congressional District National</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Congressional Districts</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/cd116/tl_2019_cd116.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2019 American Indian Joint-Use Areas</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>American Indian Joint-Use Areas</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2019 Tribal Designated Statistical Areas</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Tribal Designated Statistical Areas</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2019 State Designated Tribal Statistical Areas</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>State Designated Tribal Statistical Areas</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2019 Oklahoma Tribal Statistical Areas</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Oklahoma Tribal Statistical Areas</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2019 Alaska Native Village Statistical Areas</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Alaska Native Village Statistical Areas</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2019 Hawaiian Home Lands</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Hawaiian Home Lands</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2019 State American Indian Reservations</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>State American Indian Reservations</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2019 Off-Reservation Trust Lands</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Off-Reservation Trust Lands</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2019 Federal American Indian Reservations</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Federal American Indian Reservations</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2019 Tribal Subdivisions</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Tribal Subdivisions</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Alaska Native Regional Corporation (ANRC) State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Alaska Native Regional Corporations</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/anrc/tl_2019_anrc.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Place State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Census Designated Places</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/place/tl_2019_place.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Place State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Incorporated Place</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/place/tl_2019_place.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Consolidated City State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Consolidated Cities</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/concity/tl_2019_concity.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Subbarrio (Subminor Civil Division)</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Subbarrios</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/subbarrio/tl_2019_subbarrio.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current County Subdivision State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>County Subdivisions</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/cousub/tl_2019_cousub.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Estate State-based Shapefile (U.S. Virgin Islands only)</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Estates</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/estate/tl_2019_estate.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Elementary School Districts State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>School Districts</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/elsd/tl_2019_elsd.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Secondary School Districts Shapefile State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>School Districts</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/scsd/tl_2019_scsd.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Unified School Districts Shapefile State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>School Districts</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/unsd/tl_2019_unsd.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2010 Census Block State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Census Blocks</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/tabblock10/tl_2019_tabblock10.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Block Group State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Block Groups</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/bg/tl_2019_bg.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Census Tract State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Census Tracts</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/tract/tl_2019_tract.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Tribal Block Group National </FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Tribal Block Groups</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/tbg/tl_2019_tbg.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the Current Census Tract State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Census Tracts</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/tract/tl_2019_tract.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2010 Census 5-Digit ZIP Code Tabulation Area (ZCTA5) National</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>ZIP Code Tabulation Areas</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/zcta510/tl_2019_zcta510.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+      <Feature_Catalogue_Description>
+         <FC_Title>Feature Catalog for the 2010 Census Public Use Microdata Area (PUMA) State-based</FC_Title>
+         <Included_With_Dataset>No</Included_With_Dataset>
+         <Feature_Types>Public Use Microdata Areas</Feature_Types>
+         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/puma10/tl_2019_puma10.ea.iso.xml</FC_Online_Linkage>
+      </Feature_Catalogue_Description>
+   </Entity_and_Attribute_Information>
+   <Distribution_Information>
+      <Point_of_Contact>
+         <Contact_Organization>Geography Division, Spatial Products Software Branch</Contact_Organization>
+         <Contact_Electronic_Mail_Address>geo.tigerweb@census.gov</Contact_Electronic_Mail_Address>
+      </Point_of_Contact>
+      <Distribution_Liability>This WMS contains geographic data only and do not
+                include display mapping software or statistical data. For information on how to use the
+                TIGER/Line shapefile data with specific software package users shall contact the company
+                that produced the software. To use this WMS in a web browser, reference the OGC specification.</Distribution_Liability>
+      <Standard_Order_Process>
+         <Digital_Form>
+            <Format_Name>WMS</Format_Name>
+            <Format_Version_Number>1.3.0</Format_Version_Number>
+            <Network_Resource_Name>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2019/MapServer/WmsServer?request=GetCapabilities&amp;service=WMS</Network_Resource_Name>
+            <mimeType>text/html</mimeType>
+         </Digital_Form>
+         <Digital_Form>
+            <Format_Name>https</Format_Name>
+            <Format_Version_Number>3.0</Format_Version_Number>
+            <Network_Resource_Name>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2019/MapServer/WmsServer?</Network_Resource_Name>
+            <mimeType>text/html</mimeType>
+         </Digital_Form>
+         <Fees>Census Web Mapping Services may be accessed without charge.</Fees>
+      </Standard_Order_Process>
+   </Distribution_Information>
+   <Computer_Service_Information>
+      <Service_Type>urn:ogc:serviceType:WebMapService</Service_Type>
+      <Service_Type_Version>1.3.0</Service_Type_Version>
+      <Coupling_Type>mixed</Coupling_Type>
+      <Contains_Operations>
+         <Operation_Name>GetCapabilities</Operation_Name>
+         <DCP>WebServices</DCP>
+         <Operation_Description>The Open Geospatial Consortium, Inc.  Off Site (OGC) Web Map Service interface standard (WMS) provides a simple HTTP interface for
+            requesting geo-registered map images from our geospatial database.  The response to the request is one or more geo-registered map
+            images that can be displayed in a browser or WMS client application.  By gaining access to our data through our WMS, users can
+            produce maps containing TIGERweb layers combined with layers from other servers.  
+            
+            The GetCapabilities operation returns parameters about the WMS.  It returns results in the following formats:
+             application/vnd.ogc.wms_xml
+				text/xml
+</Operation_Description>
+         <Operation_Parameters>
+            <Parameter_Name>VERSION</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Request version</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>SERVICE</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Service type</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>request</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>request name</Parameter_Description>
+         </Operation_Parameters>
+         <Connect_Point>
+            <CP_Link>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2019/MapServer/WmsServer?service=wms&amp;1.3.0&amp;request=GetCapabilities</CP_Link>
+            <Protocol>HTTP/1.1</Protocol><!--In the Resource Description Template-->
+            <Resource_Name> Census Current (2019) WMS GetCapabilities</Resource_Name><!--GetCapabilities--><!--Exiting the Resource Description Template A-->
+            <Resource_Description>This is the GetCapabilities URL.</Resource_Description>
+         </Connect_Point>
+      </Contains_Operations>
+      <Contains_Operations>
+         <Operation_Name>GetMap</Operation_Name>
+         <DCP>WebServices</DCP>
+         <Operation_Description>
+            The Open Geospatial Consortium, Inc. Off Site (OGC) Web Map Service interface standard (WMS) provides a simple HTTP interface for
+            requesting geo-registered map images from our geospatial database. The response to the request is one or more geo-registered map images that can be displayed in
+            a browser or WMS client application. By gaining access to our data through our WMS, users can produce maps containing TIGERweb layers combined with layers from
+            other servers. 
+            
+            The GetMap operation returns a map image. It returns results in the following formats:
+            image/bmp
+				image/jpeg
+				image/tiff
+				image/png
+				image/png8
+				image/png24
+				image/png32
+				image/gif
+				image/svg+xml
+</Operation_Description>
+         <Operation_Parameters>
+            <Parameter_Name>version</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>request version.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>request</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>request name</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>LAYERS</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Comma-separated list of one or more map layers.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>STYLES</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Comma-separated list of one rendering style per requested layer.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>CRS</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Coordinate reference system.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>BBOX</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Bounding box corners (lower left, upper right) in CRS units.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>WIDTH</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Width in pixels of map picture.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>HEIGHT</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Height in pixels of map picture.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>FORMAT</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Output format of map.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>TRANSPARENT</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Background transparency of map (default=FALSE).</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>BGCOLOR</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Hexadecimal red-green-blue color value for the background color (default=0xFFFFFF)</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>EXCEPTIONS</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>The format in which exceptions are to be reported by the WMS (default=XML).</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>TIME</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Time value of layer desired.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>ELEVATION</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Elevation of layer desired.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>Other sample dimension</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Value of other dimensions as appropriate.</Parameter_Description>
+         </Operation_Parameters>
+         <Connect_Point>
+            <CP_Link>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2019/MapServer/WmsServer?service=wms&amp;1.3.0&amp;request=GetMap</CP_Link>
+            <Protocol>HTTP/1.1</Protocol><!--In the Resource Description Template-->
+            <Resource_Name> Census Current (2019) WMS GetMap</Resource_Name><!--GetMap--><!--Exiting the Resource Description Template A-->
+            <Resource_Description>This is the GetMap URL.</Resource_Description>
+         </Connect_Point>
+      </Contains_Operations>
+      <Contains_Operations>
+         <Operation_Name>GetFeatureInfo</Operation_Name>
+         <DCP>WebServices</DCP>
+         <Operation_Description>
+            The Open Geospatial Consortium, Inc. Off Site (OGC) Web Map Service interface standard (WMS) provides a simple HTTP interface for
+            requesting geo-registered map images from our geospatial database. The response to the request is one or more geo-registered map images that can be displayed in
+            a browser or WMS client application. By gaining access to our data through our WMS, users can produce maps containing TIGERweb layers combined with layers from
+            other servers.
+            
+            The GetFeatureInfo operation provides clients of a WMS with more information about features in the pictures of maps that were returned by previous
+            Map requests. It is only supported for those Layers for which the attribute queryable="1" (true) has been defined or inherited. It is availiable in the
+            following formats:
+            application/vnd.esri.wms_raw_xml
+				application/vnd.esri.wms_featureinfo_xml
+				application/vnd.ogc.wms_xml
+				application/geojson
+				text/xml
+				text/html
+				text/plain
+</Operation_Description>
+         <Operation_Parameters>
+            <Parameter_Name>version</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>request version.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>request</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>request name</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>map request part</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Partial copy of the Map request parameters that generated the map for which information is desired.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>QUERY_LAYERS</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Comma-separated list of one or more layers to be queried.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>INFO_FORMAT</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Return format of feature information (MIME type).</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>FEATURE_COUNT</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Number of features about which to return information (default=1).</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>I</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>i coordinate in pixels of feature in Map CS.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>J</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>j coordinate in pixels of feature in Map CS.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>EXCEPTIONS</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>The format in which exceptions are to be reported by the WMS (default= XML).</Parameter_Description>
+         </Operation_Parameters>
+         <Connect_Point>
+            <CP_Link>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2019/MapServer/WmsServer?service=wms&amp;1.3.0&amp;request=GetFeatureInfo</CP_Link>
+            <Protocol>HTTP/1.1</Protocol><!--In the Resource Description Template-->
+            <Resource_Name> Census Current (2019) WMS GetFeatureInfo</Resource_Name><!--GetFeatureInfo--><!--Exiting the Resource Description Template A-->
+            <Resource_Description>This is the GetFeatureInfo URL.</Resource_Description>
+         </Connect_Point>
+      </Contains_Operations>
+      <Contains_Operations>
+         <Operation_Name>esri_wms:GetStyles</Operation_Name>
+         <DCP>WebServices</DCP>
+         <Operation_Description>
+            The Open Geospatial Consortium, Inc. Off Site (OGC) Web Map Service interface standard (WMS) provides a simple HTTP interface for
+            requesting geo-registered map images from our geospatial database. The response to the request is one or more geo-registered map images that can be displayed in
+            a browser or WMS client application. By gaining access to our data through our WMS, users can produce maps containing TIGERweb layers combined with layers from
+            other servers. The esri_wms:GetStyles operation returns user-defined styles from the WMS.It supports the following formats: 
+        application/vnd.ogc.sld+xml
+</Operation_Description>
+         <Operation_Parameters>
+            <Parameter_Name>VERSION</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Version as required by OGC interfaces.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>REQUEST</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Request name. It must be set to GetStyles.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>LAYERS</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>Comma-separated list of named layers for which to retrieve style descriptions.</Parameter_Description>
+         </Operation_Parameters>
+         <Operation_Parameters>
+            <Parameter_Name>SLDVER</Parameter_Name>
+            <Parameter_Direction>out</Parameter_Direction>
+            <Parameter_Description>The SLD version requested for the Styled Layer Descriptor (SLD) document. Only version 1.0.0 is supported.</Parameter_Description>
+         </Operation_Parameters>
+         <Connect_Point>
+            <CP_Link>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2019/MapServer/WmsServer?</CP_Link>
+            <Protocol>HTTP/1.1</Protocol><!--In the Resource Description Template-->
+            <Resource_Name> Census Current (2019) WMS esri_wms:GetStyles</Resource_Name><!--esri_wms:GetStyles--><!--Exiting the Resource Description Template A-->
+            <Resource_Description>This is the esri_wms:GetStyles URL.</Resource_Description>
+         </Connect_Point>
+      </Contains_Operations>
+   </Computer_Service_Information>
+   <Metadata_Reference_Information>
+      <Metadata_Date>2019</Metadata_Date>
+      <Metadata_Parent_Identifier>TIGERweb, 2019 Series Information for the TIGERWeb files</Metadata_Parent_Identifier>
+      <Metadata_Hierarchy_Level>service</Metadata_Hierarchy_Level>
+      <Metadata_Hierarchy_Level_Name>
+         <Metadata_Hierarchy_Level_Name>This is the TIGERWeb for all the Census Current (2019) WMS </Metadata_Hierarchy_Level_Name>
+      </Metadata_Hierarchy_Level_Name>
+      <Point_of_Contact>
+         <Contact_Organization>U.S. Department of Commerce, U.S. Census Bureau, Geography Division</Contact_Organization>
+         <Contact_Electronic_Mail_Address>geo.geography@census.gov</Contact_Electronic_Mail_Address>
+      </Point_of_Contact>
+      <Metadata_Standard_Name>GeoPlatform Profile of ISO 19115-1</Metadata_Standard_Name>
+      <Metadata_Standard_Version>DRAFT Revision 1</Metadata_Standard_Version>
+      <Metadata_Character_Set>UTF-8</Metadata_Character_Set>
+      <Metadata_File_Identifier>tigerWMS_ACS2019.gpm.xml</Metadata_File_Identifier>
+      <Metadata_Language>eng</Metadata_Language>
+   </Metadata_Reference_Information>
+</GPM>
