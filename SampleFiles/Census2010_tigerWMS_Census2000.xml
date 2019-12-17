@@ -1,0 +1,1945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WMS_Capabilities version="1.3.0" xmlns="http://www.opengis.net/wms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:esri_wms="http://www.esri.com/wms" xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.esri.com/wms https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?version=1.3.0%26service=WMS%26request=GetSchemaExtension">
+  <Service>
+    <Name><![CDATA[WMS]]></Name>
+    <Title>WMS</Title>
+    <Abstract>WMS</Abstract>
+    <KeywordList><Keyword><![CDATA[]]></Keyword></KeywordList>
+    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson><![CDATA[]]></ContactPerson>
+        <ContactOrganization><![CDATA[]]></ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition><![CDATA[]]></ContactPosition>
+      <ContactAddress>
+        <AddressType><![CDATA[]]></AddressType>
+        <Address><![CDATA[]]></Address>
+        <City><![CDATA[]]></City>
+        <StateOrProvince><![CDATA[]]></StateOrProvince>
+        <PostCode><![CDATA[]]></PostCode>
+        <Country><![CDATA[]]></Country>
+      </ContactAddress>
+      <ContactVoiceTelephone><![CDATA[]]></ContactVoiceTelephone>
+      <ContactFacsimileTelephone><![CDATA[]]></ContactFacsimileTelephone>
+      <ContactElectronicMailAddress><![CDATA[]]></ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees><![CDATA[]]></Fees>
+    <AccessConstraints><![CDATA[]]></AccessConstraints>
+    <MaxWidth>4096</MaxWidth>
+    <MaxHeight>4096</MaxHeight>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?"/></Get></HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/bmp</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/png</Format>
+        <Format>image/png8</Format>
+        <Format>image/png24</Format>
+        <Format>image/png32</Format>
+        <Format>image/gif</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?"/></Get></HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>application/vnd.esri.wms_raw_xml</Format>
+        <Format>application/vnd.esri.wms_featureinfo_xml</Format>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>application/geojson</Format>
+        <Format>text/xml</Format>
+        <Format>text/html</Format>
+        <Format>text/plain</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?"/></Get></HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <esri_wms:GetStyles>
+        <Format>application/vnd.ogc.sld+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?"/></Get></HTTP>
+        </DCPType>
+      </esri_wms:GetStyles>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+      <Format>application/vnd.ogc.se_blank</Format>
+      <Format>text/xml</Format>
+      <Format>XML</Format>
+    </Exception>
+    <Layer>
+      <Title><![CDATA[Census 2000 WMS]]></Title>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+      <Layer queryable="1">
+        <Name>Counties Labels</Name>
+        <Title><![CDATA[Counties Labels]]></Title>
+        <Abstract><![CDATA[Counties (or statistically equivalent entities); Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Counties Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Counties Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>2362351.190476</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Counties</Name>
+        <Title><![CDATA[Counties]]></Title>
+        <Abstract><![CDATA[Counties (or statistically equivalent entities); Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Counties</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Counties" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>11339285.714286</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>States Labels</Name>
+        <Title><![CDATA[States Labels]]></Title>
+        <Abstract><![CDATA[States (or statistically equivalent entities); Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>States Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=States Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>20788690.476190</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>States</Name>
+        <Title><![CDATA[States]]></Title>
+        <Abstract><![CDATA[States (or statistically equivalent entities); Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>States</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=States" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>559081145.864044</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Primary Metropolitan Statistical Areas Labels</Name>
+        <Title><![CDATA[Primary Metropolitan Statistical Areas Labels]]></Title>
+        <Abstract><![CDATA[Primary Metropolitan Statistical Areas labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-123.784819</westBoundLongitude><eastBoundLongitude>-65.469132</eastBoundLongitude><southBoundLatitude>17.965504</southBoundLatitude><northBoundLatitude>48.417855</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-123.784819" miny="17.965504" maxx="-65.469132" maxy="48.417855"/>
+<BoundingBox CRS="EPSG:4326" minx="17.965504" miny="-123.784819" maxx="48.417855" maxy="-65.469132"/>
+<BoundingBox CRS="EPSG:3857" minx="-13779663.019000" miny="2033511.243300" maxx="-7287990.436900" maxy="6176654.698000"/>
+<BoundingBox CRS="EPSG:102100" minx="-13779663.019000" miny="2033511.243300" maxx="-7287990.436900" maxy="6176654.698000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Primary Metropolitan Statistical Areas Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Primary Metropolitan Statistical Areas Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>146466.718750</MinScaleDenominator>
+        <MaxScaleDenominator>2362351.190476</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Primary Metropolitan Statistical Areas</Name>
+        <Title><![CDATA[Primary Metropolitan Statistical Areas]]></Title>
+        <Abstract><![CDATA[Primary Metropolitan Statistical Areas; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-123.784819</westBoundLongitude><eastBoundLongitude>-65.469132</eastBoundLongitude><southBoundLatitude>17.965504</southBoundLatitude><northBoundLatitude>48.417855</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-123.784819" miny="17.965504" maxx="-65.469132" maxy="48.417855"/>
+<BoundingBox CRS="EPSG:4326" minx="17.965504" miny="-123.784819" maxx="48.417855" maxy="-65.469132"/>
+<BoundingBox CRS="EPSG:3857" minx="-13779663.019000" miny="2033511.243300" maxx="-7287990.436900" maxy="6176654.698000"/>
+<BoundingBox CRS="EPSG:102100" minx="-13779663.019000" miny="2033511.243300" maxx="-7287990.436900" maxy="6176654.698000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Primary Metropolitan Statistical Areas</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Primary Metropolitan Statistical Areas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>146466.718750</MinScaleDenominator>
+        <MaxScaleDenominator>5669642.857143</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Metropolitan Statistical Areas/Consolidated Metropolitan Statistical Areas Labels</Name>
+        <Title><![CDATA[Metropolitan Statistical Areas/Consolidated Metropolitan Statistical Areas Labels]]></Title>
+        <Abstract><![CDATA[Metropolitan Statistical Areas/Consolidated Metropolitan Statistical Areas labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-178.443593</westBoundLongitude><eastBoundLongitude>-65.469132</eastBoundLongitude><southBoundLatitude>17.874565</southBoundLatitude><northBoundLatitude>61.483938</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-178.443593" miny="17.874565" maxx="-65.469132" maxy="61.483938"/>
+<BoundingBox CRS="EPSG:4326" minx="17.874565" miny="-178.443593" maxx="61.483938" maxy="-65.469132"/>
+<BoundingBox CRS="EPSG:3857" minx="-19864249.908100" miny="2022871.806500" maxx="-7287990.436900" maxy="8737799.193700"/>
+<BoundingBox CRS="EPSG:102100" minx="-19864249.908100" miny="2022871.806500" maxx="-7287990.436900" maxy="8737799.193700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Metropolitan Statistical Areas/Consolidated Metropolitan Statistical Areas Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Metropolitan Statistical Areas/Consolidated Metropolitan Statistical Areas Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>146466.718750</MinScaleDenominator>
+        <MaxScaleDenominator>2362351.190476</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Metropolitan Statistical Areas/Consolidated Metropolitan Statistical Areas</Name>
+        <Title><![CDATA[Metropolitan Statistical Areas/Consolidated Metropolitan Statistical Areas]]></Title>
+        <Abstract><![CDATA[Metropolitan Statistical Areas/Consolidated Metropolitan Statistical Areas; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-178.443593</westBoundLongitude><eastBoundLongitude>-65.469132</eastBoundLongitude><southBoundLatitude>17.874565</southBoundLatitude><northBoundLatitude>61.483938</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-178.443593" miny="17.874565" maxx="-65.469132" maxy="61.483938"/>
+<BoundingBox CRS="EPSG:4326" minx="17.874565" miny="-178.443593" maxx="61.483938" maxy="-65.469132"/>
+<BoundingBox CRS="EPSG:3857" minx="-19864249.908100" miny="2022871.806500" maxx="-7287990.436900" maxy="8737799.193700"/>
+<BoundingBox CRS="EPSG:102100" minx="-19864249.908100" miny="2022871.806500" maxx="-7287990.436900" maxy="8737799.193700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Metropolitan Statistical Areas/Consolidated Metropolitan Statistical Areas</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Metropolitan Statistical Areas/Consolidated Metropolitan Statistical Areas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>146466.718750</MinScaleDenominator>
+        <MaxScaleDenominator>20788690.476190</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Urban Clusters Labels</Name>
+        <Title><![CDATA[Urban Clusters Labels]]></Title>
+        <Abstract><![CDATA[Urban Clusters labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-170.814981</westBoundLongitude><eastBoundLongitude>145.797638</eastBoundLongitude><southBoundLatitude>-14.373765</southBoundLatitude><northBoundLatitude>71.307227</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-170.814981" miny="-14.373765" maxx="145.797638" maxy="71.307227"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.373765" miny="-170.814981" maxx="71.307227" maxy="145.797638"/>
+<BoundingBox CRS="EPSG:3857" minx="-19015036.704800" miny="-1617132.844100" maxx="16230118.821000" maxy="11508147.423000"/>
+<BoundingBox CRS="EPSG:102100" minx="-19015036.704800" miny="-1617132.844100" maxx="16230118.821000" maxy="11508147.423000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Urban Clusters Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Urban Clusters Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>614211.309524</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Urban Clusters</Name>
+        <Title><![CDATA[Urban Clusters]]></Title>
+        <Abstract><![CDATA[Urban Clusters; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-170.814981</westBoundLongitude><eastBoundLongitude>145.797638</eastBoundLongitude><southBoundLatitude>-14.373765</southBoundLatitude><northBoundLatitude>71.307227</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-170.814981" miny="-14.373765" maxx="145.797638" maxy="71.307227"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.373765" miny="-170.814981" maxx="71.307227" maxy="145.797638"/>
+<BoundingBox CRS="EPSG:3857" minx="-19015036.704800" miny="-1617132.844100" maxx="16230118.821000" maxy="11508147.423000"/>
+<BoundingBox CRS="EPSG:102100" minx="-19015036.704800" miny="-1617132.844100" maxx="16230118.821000" maxy="11508147.423000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Urban Clusters</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Urban Clusters" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>5669642.857143</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Urbanized Areas Labels</Name>
+        <Title><![CDATA[Urbanized Areas Labels]]></Title>
+        <Abstract><![CDATA[Urbanized Areas labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-170.814981</westBoundLongitude><eastBoundLongitude>145.797638</eastBoundLongitude><southBoundLatitude>-14.373765</southBoundLatitude><northBoundLatitude>71.307227</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-170.814981" miny="-14.373765" maxx="145.797638" maxy="71.307227"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.373765" miny="-170.814981" maxx="71.307227" maxy="145.797638"/>
+<BoundingBox CRS="EPSG:3857" minx="-19015036.704800" miny="-1617132.844100" maxx="16230118.821000" maxy="11508147.423000"/>
+<BoundingBox CRS="EPSG:102100" minx="-19015036.704800" miny="-1617132.844100" maxx="16230118.821000" maxy="11508147.423000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Urbanized Areas Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Urbanized Areas Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>614211.309524</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Urbanized Areas</Name>
+        <Title><![CDATA[Urbanized Areas]]></Title>
+        <Abstract><![CDATA[Urbanized Areas; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-170.814981</westBoundLongitude><eastBoundLongitude>145.797638</eastBoundLongitude><southBoundLatitude>-14.373765</southBoundLatitude><northBoundLatitude>71.307227</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-170.814981" miny="-14.373765" maxx="145.797638" maxy="71.307227"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.373765" miny="-170.814981" maxx="71.307227" maxy="145.797638"/>
+<BoundingBox CRS="EPSG:3857" minx="-19015036.704800" miny="-1617132.844100" maxx="16230118.821000" maxy="11508147.423000"/>
+<BoundingBox CRS="EPSG:102100" minx="-19015036.704800" miny="-1617132.844100" maxx="16230118.821000" maxy="11508147.423000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Urbanized Areas</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Urbanized Areas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>5669642.857143</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Census Regions Labels</Name>
+        <Title><![CDATA[Census Regions Labels]]></Title>
+        <Abstract><![CDATA[Census Regions labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>17.831509</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="17.831509" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="17.831509" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="2017836.357400" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="2017836.357400" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Census Regions Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Census Regions Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>11339286.659226</MinScaleDenominator>
+        <MaxScaleDenominator>75595238.095238</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Census Regions</Name>
+        <Title><![CDATA[Census Regions]]></Title>
+        <Abstract><![CDATA[Census Regions; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>17.831509</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="17.831509" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="17.831509" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="2017836.357400" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="2017836.357400" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Census Regions</Title>
+          <LegendURL width="70" height="80">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Census Regions" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>11339286.659226</MinScaleDenominator>
+        <MaxScaleDenominator>75595238.095238</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Census Divisions Labels</Name>
+        <Title><![CDATA[Census Divisions Labels]]></Title>
+        <Abstract><![CDATA[Census Divisions labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>17.831509</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="17.831509" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="17.831509" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="2017836.357400" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="2017836.357400" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Census Divisions Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Census Divisions Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>5669643.802083</MinScaleDenominator>
+        <MaxScaleDenominator>37797619.047619</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Census Divisions</Name>
+        <Title><![CDATA[Census Divisions]]></Title>
+        <Abstract><![CDATA[Census Divisions; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>17.831509</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="17.831509" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="17.831509" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="2017836.357400" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="2017836.357400" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Census Divisions</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Census Divisions" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>5669643.802083</MinScaleDenominator>
+        <MaxScaleDenominator>37797619.047619</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Voting Districts Labels</Name>
+        <Title><![CDATA[Voting Districts Labels]]></Title>
+        <Abstract><![CDATA[Voting Districts labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>17.831509</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="17.831509" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="17.831509" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="2017836.357400" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="2017836.357400" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Voting Districts Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Voting Districts Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>85044.642857</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Voting Districts</Name>
+        <Title><![CDATA[Voting Districts]]></Title>
+        <Abstract><![CDATA[Voting Districts; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>17.831509</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="17.831509" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="17.831509" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="2017836.357400" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="2017836.357400" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Voting Districts</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Voting Districts" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>307105.654762</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>State Legislative Districts - Lower Labels</Name>
+        <Title><![CDATA[State Legislative Districts - Lower Labels]]></Title>
+        <Abstract><![CDATA[State Legislative Districts - Lower labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>28.855127</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="28.855127" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="28.855127" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="3357219.838500" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="3357219.838500" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>State Legislative Districts - Lower Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=State Legislative Districts - Lower Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>307105.654762</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>State Legislative Districts - Lower</Name>
+        <Title><![CDATA[State Legislative Districts - Lower]]></Title>
+        <Abstract><![CDATA[State Legislative Districts - Lower; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>28.855127</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="28.855127" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="28.855127" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="3357219.838500" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="3357219.838500" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>State Legislative Districts - Lower</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=State Legislative Districts - Lower" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>2362351.190476</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>State Legislative Districts - Upper Labels</Name>
+        <Title><![CDATA[State Legislative Districts - Upper Labels]]></Title>
+        <Abstract><![CDATA[State Legislative Districts - Upper labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>28.855127</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="28.855127" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="28.855127" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="3357219.838500" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="3357219.838500" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>State Legislative Districts - Upper Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=State Legislative Districts - Upper Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>307105.654762</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>State Legislative Districts - Upper</Name>
+        <Title><![CDATA[State Legislative Districts - Upper]]></Title>
+        <Abstract><![CDATA[State Legislative Districts - Upper; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>28.855127</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="28.855127" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="28.855127" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="3357219.838500" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="3357219.838500" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>State Legislative Districts - Upper</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=State Legislative Districts - Upper" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>2362351.190476</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>108th Congressional Districts Labels</Name>
+        <Title><![CDATA[108th Congressional Districts Labels]]></Title>
+        <Abstract><![CDATA[108th Congressional Districts labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>108th Congressional Districts Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=108th Congressional Districts Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>2362351.190476</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>108th Congressional Districts</Name>
+        <Title><![CDATA[108th Congressional Districts]]></Title>
+        <Abstract><![CDATA[108th Congressional Districts; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>108th Congressional Districts</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=108th Congressional Districts" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>11339285.714286</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>American Indian Joint-Use Areas Labels</Name>
+        <Title><![CDATA[American Indian Joint-Use Areas Labels]]></Title>
+        <Abstract><![CDATA[American Indian Joint-Use Areas (AIJUA) labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="18.911283" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>American Indian Joint-Use Areas Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=American Indian Joint-Use Areas Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>614211.309524</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>American Indian Joint-Use Areas</Name>
+        <Title><![CDATA[American Indian Joint-Use Areas]]></Title>
+        <Abstract><![CDATA[American Indian Joint-Use Areas (AIJUA); Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="18.911283" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>American Indian Joint-Use Areas</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=American Indian Joint-Use Areas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>5669642.857143</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tribal Designated Statistical Areas Labels</Name>
+        <Title><![CDATA[Tribal Designated Statistical Areas Labels]]></Title>
+        <Abstract><![CDATA[Tribal Designated Statistical Areas (TDSA) labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="18.911283" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tribal Designated Statistical Areas Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tribal Designated Statistical Areas Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>614211.309524</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tribal Designated Statistical Areas</Name>
+        <Title><![CDATA[Tribal Designated Statistical Areas]]></Title>
+        <Abstract><![CDATA[Tribal Designated Statistical Areas (TDSA); Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="18.911283" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tribal Designated Statistical Areas</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tribal Designated Statistical Areas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>5669642.857143</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>State Designated Tribal Statistical Areas Labels</Name>
+        <Title><![CDATA[State Designated Tribal Statistical Areas Labels]]></Title>
+        <Abstract><![CDATA[State Designated Tribal Statistical Areas (SDTSA) labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="18.911283" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>State Designated Tribal Statistical Areas Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=State Designated Tribal Statistical Areas Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>1322916.666667</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>State Designated Tribal Statistical Areas</Name>
+        <Title><![CDATA[State Designated Tribal Statistical Areas]]></Title>
+        <Abstract><![CDATA[State Designated Tribal Statistical Areas (SDTSA); Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="18.911283" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>State Designated Tribal Statistical Areas</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=State Designated Tribal Statistical Areas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>11339285.714286</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Oklahoma Tribal Statistical Areas Labels</Name>
+        <Title><![CDATA[Oklahoma Tribal Statistical Areas Labels]]></Title>
+        <Abstract><![CDATA[Oklahoma Tribal Statistical Areas (OTSA) labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="18.911283" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Oklahoma Tribal Statistical Areas Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Oklahoma Tribal Statistical Areas Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>2362351.190476</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Oklahoma Tribal Statistical Areas</Name>
+        <Title><![CDATA[Oklahoma Tribal Statistical Areas]]></Title>
+        <Abstract><![CDATA[Oklahoma Tribal Statistical Areas (OTSA); Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="18.911283" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Oklahoma Tribal Statistical Areas</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Oklahoma Tribal Statistical Areas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>20788690.476190</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Alaska Native Village Statistical Areas Labels</Name>
+        <Title><![CDATA[Alaska Native Village Statistical Areas Labels]]></Title>
+        <Abstract><![CDATA[Alaska Native Village Statistical Areas (ANVSA) labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="18.911283" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Alaska Native Village Statistical Areas Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Alaska Native Village Statistical Areas Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>2362351.190476</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Alaska Native Village Statistical Areas</Name>
+        <Title><![CDATA[Alaska Native Village Statistical Areas]]></Title>
+        <Abstract><![CDATA[Alaska Native Village Statistical Areas (ANVSA); Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="18.911283" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Alaska Native Village Statistical Areas</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Alaska Native Village Statistical Areas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>20788690.476190</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Hawaiian Home Lands Labels</Name>
+        <Title><![CDATA[Hawaiian Home Lands Labels]]></Title>
+        <Abstract><![CDATA[Hawaiian Home Lands (HHL) labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="18.911283" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Hawaiian Home Lands Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Hawaiian Home Lands Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>307105.654762</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Hawaiian Home Lands</Name>
+        <Title><![CDATA[Hawaiian Home Lands]]></Title>
+        <Abstract><![CDATA[Hawaiian Home Lands (HHL); Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="18.911283" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Hawaiian Home Lands</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Hawaiian Home Lands" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>2362351.190476</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>State American Indian Reservations Labels</Name>
+        <Title><![CDATA[State American Indian Reservations Labels]]></Title>
+        <Abstract><![CDATA[State American Indian Reservations labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="18.911283" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>State American Indian Reservations Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=State American Indian Reservations Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>1322916.666667</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>State American Indian Reservations</Name>
+        <Title><![CDATA[State American Indian Reservations]]></Title>
+        <Abstract><![CDATA[State American Indian Reservations; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="18.911283" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2144493.705200" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>State American Indian Reservations</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=State American Indian Reservations" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>2362351.190476</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Off-Reservation Trust Lands Labels</Name>
+        <Title><![CDATA[Off-Reservation Trust Lands Labels]]></Title>
+        <Abstract><![CDATA[Off-Reservation Trust Lands (ORTL) labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-159.754288</westBoundLongitude><eastBoundLongitude>-67.705837</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>49.002249</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-159.754288" miny="18.911283" maxx="-67.705837" maxy="49.002249"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-159.754288" maxx="49.002249" maxy="-67.705837"/>
+<BoundingBox CRS="EPSG:3857" minx="-17783765.992200" miny="2144493.705200" maxx="-7536979.298600" maxy="6275243.010900"/>
+<BoundingBox CRS="EPSG:102100" minx="-17783765.992200" miny="2144493.705200" maxx="-7536979.298600" maxy="6275243.010900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Off-Reservation Trust Lands Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Off-Reservation Trust Lands Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>2362351.190476</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Off-Reservation Trust Lands</Name>
+        <Title><![CDATA[Off-Reservation Trust Lands]]></Title>
+        <Abstract><![CDATA[Off-Reservation Trust Lands (ORTL); Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-159.754288</westBoundLongitude><eastBoundLongitude>-67.705837</eastBoundLongitude><southBoundLatitude>18.911283</southBoundLatitude><northBoundLatitude>49.002249</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-159.754288" miny="18.911283" maxx="-67.705837" maxy="49.002249"/>
+<BoundingBox CRS="EPSG:4326" minx="18.911283" miny="-159.754288" maxx="49.002249" maxy="-67.705837"/>
+<BoundingBox CRS="EPSG:3857" minx="-17783765.992200" miny="2144493.705200" maxx="-7536979.298600" maxy="6275243.010900"/>
+<BoundingBox CRS="EPSG:102100" minx="-17783765.992200" miny="2144493.705200" maxx="-7536979.298600" maxy="6275243.010900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Off-Reservation Trust Lands</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Off-Reservation Trust Lands" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>20788690.476190</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Federal American Indian Reservations Labels</Name>
+        <Title><![CDATA[Federal American Indian Reservations Labels]]></Title>
+        <Abstract><![CDATA[Federal American Indian Reservations labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>25.757448</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="25.757448" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="25.757448" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2969070.721100" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2969070.721100" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Federal American Indian Reservations Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Federal American Indian Reservations Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>2362351.190476</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Federal American Indian Reservations</Name>
+        <Title><![CDATA[Federal American Indian Reservations]]></Title>
+        <Abstract><![CDATA[Federal American Indian Reservations; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-174.324274</westBoundLongitude><eastBoundLongitude>-67.038092</eastBoundLongitude><southBoundLatitude>25.757448</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-174.324274" miny="25.757448" maxx="-67.038092" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="25.757448" miny="-174.324274" maxx="71.340257" maxy="-67.038092"/>
+<BoundingBox CRS="EPSG:3857" minx="-19405689.414600" miny="2969070.721100" maxx="-7462646.265200" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19405689.414600" miny="2969070.721100" maxx="-7462646.265200" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Federal American Indian Reservations</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Federal American Indian Reservations" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>20788690.476190</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tribal Subdivisions Labels</Name>
+        <Title><![CDATA[Tribal Subdivisions Labels]]></Title>
+        <Abstract><![CDATA[Tribal Subdivisions labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-114.853660</westBoundLongitude><eastBoundLongitude>-83.157841</eastBoundLongitude><southBoundLatitude>31.507912</southBoundLatitude><northBoundLatitude>48.635910</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-114.853660" miny="31.507912" maxx="-83.157841" maxy="48.635910"/>
+<BoundingBox CRS="EPSG:4326" minx="31.507912" miny="-114.853660" maxx="48.635910" maxy="-83.157841"/>
+<BoundingBox CRS="EPSG:3857" minx="-12785450.946900" miny="3698888.353600" maxx="-9257088.515600" maxy="6213307.235500"/>
+<BoundingBox CRS="EPSG:102100" minx="-12785450.946900" miny="3698888.353600" maxx="-9257088.515600" maxy="6213307.235500"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tribal Subdivisions Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tribal Subdivisions Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>307105.654762</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tribal Subdivisions</Name>
+        <Title><![CDATA[Tribal Subdivisions]]></Title>
+        <Abstract><![CDATA[Tribal Subdivisions; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-114.853660</westBoundLongitude><eastBoundLongitude>-83.157841</eastBoundLongitude><southBoundLatitude>31.507912</southBoundLatitude><northBoundLatitude>48.635910</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-114.853660" miny="31.507912" maxx="-83.157841" maxy="48.635910"/>
+<BoundingBox CRS="EPSG:4326" minx="31.507912" miny="-114.853660" maxx="48.635910" maxy="-83.157841"/>
+<BoundingBox CRS="EPSG:3857" minx="-12785450.946900" miny="3698888.353600" maxx="-9257088.515600" maxy="6213307.235500"/>
+<BoundingBox CRS="EPSG:102100" minx="-12785450.946900" miny="3698888.353600" maxx="-9257088.515600" maxy="6213307.235500"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tribal Subdivisions</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tribal Subdivisions" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>2362351.190476</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Alaska Native Regional Corporations Labels</Name>
+        <Title><![CDATA[Alaska Native Regional Corporations Labels]]></Title>
+        <Abstract><![CDATA[Alaska Native Regional Corporations (ANRC) labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>51.175092</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="51.175092" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="51.175092" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="6652324.106200" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="6652324.106200" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Alaska Native Regional Corporations Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Alaska Native Regional Corporations Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>11339285.714286</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Alaska Native Regional Corporations</Name>
+        <Title><![CDATA[Alaska Native Regional Corporations]]></Title>
+        <Abstract><![CDATA[Alaska Native Regional Corporations (ANRC); Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>51.175092</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="51.175092" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="51.175092" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="6652324.106200" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="6652324.106200" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Alaska Native Regional Corporations</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Alaska Native Regional Corporations" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>20788690.476190</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Census Designated Places Labels</Name>
+        <Title><![CDATA[Census Designated Places Labels]]></Title>
+        <Abstract><![CDATA[Census Designated Places labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-176.810433</westBoundLongitude><eastBoundLongitude>173.429921</eastBoundLongitude><southBoundLatitude>-14.419950</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-176.810433" miny="-14.419950" maxx="173.429921" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.419950" miny="-176.810433" maxx="71.340257" maxy="173.429921"/>
+<BoundingBox CRS="EPSG:3857" minx="-19682447.368500" miny="-1622440.822400" maxx="19306130.494000" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19682447.368500" miny="-1622440.822400" maxx="19306130.494000" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Census Designated Places Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Census Designated Places Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>307105.654762</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Census Designated Places</Name>
+        <Title><![CDATA[Census Designated Places]]></Title>
+        <Abstract><![CDATA[Census Designated Places; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-176.810433</westBoundLongitude><eastBoundLongitude>173.429921</eastBoundLongitude><southBoundLatitude>-14.419950</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-176.810433" miny="-14.419950" maxx="173.429921" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.419950" miny="-176.810433" maxx="71.340257" maxy="173.429921"/>
+<BoundingBox CRS="EPSG:3857" minx="-19682447.368500" miny="-1622440.822400" maxx="19306130.494000" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19682447.368500" miny="-1622440.822400" maxx="19306130.494000" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Census Designated Places</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Census Designated Places" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>1322916.666667</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Incorporated Places Labels</Name>
+        <Title><![CDATA[Incorporated Places Labels]]></Title>
+        <Abstract><![CDATA[Incorporated Places labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-176.810433</westBoundLongitude><eastBoundLongitude>173.429921</eastBoundLongitude><southBoundLatitude>-14.419950</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-176.810433" miny="-14.419950" maxx="173.429921" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.419950" miny="-176.810433" maxx="71.340257" maxy="173.429921"/>
+<BoundingBox CRS="EPSG:3857" minx="-19682447.368500" miny="-1622440.822400" maxx="19306130.494000" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19682447.368500" miny="-1622440.822400" maxx="19306130.494000" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Incorporated Places Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Incorporated Places Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>307105.654762</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Incorporated Places</Name>
+        <Title><![CDATA[Incorporated Places]]></Title>
+        <Abstract><![CDATA[Incorporated Places; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-176.810433</westBoundLongitude><eastBoundLongitude>173.429921</eastBoundLongitude><southBoundLatitude>-14.419950</southBoundLatitude><northBoundLatitude>71.340257</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-176.810433" miny="-14.419950" maxx="173.429921" maxy="71.340257"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.419950" miny="-176.810433" maxx="71.340257" maxy="173.429921"/>
+<BoundingBox CRS="EPSG:3857" minx="-19682447.368500" miny="-1622440.822400" maxx="19306130.494000" maxy="11519629.773900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19682447.368500" miny="-1622440.822400" maxx="19306130.494000" maxy="11519629.773900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Incorporated Places</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Incorporated Places" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>1322916.666667</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Consolidated Cities Labels</Name>
+        <Title><![CDATA[Consolidated Cities Labels]]></Title>
+        <Abstract><![CDATA[Consolidated Cities labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-113.085474</westBoundLongitude><eastBoundLongitude>-72.979047</eastBoundLongitude><southBoundLatitude>32.373874</southBoundLatitude><northBoundLatitude>46.185468</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-113.085474" miny="32.373874" maxx="-72.979047" maxy="46.185468"/>
+<BoundingBox CRS="EPSG:4326" minx="32.373874" miny="-113.085474" maxx="46.185468" maxy="-72.979047"/>
+<BoundingBox CRS="EPSG:3857" minx="-12588617.381800" miny="3812488.077100" maxx="-8123990.350600" maxy="5810120.574600"/>
+<BoundingBox CRS="EPSG:102100" minx="-12588617.381800" miny="3812488.077100" maxx="-8123990.350600" maxy="5810120.574600"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Consolidated Cities Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Consolidated Cities Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>614211.309524</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Consolidated Cities</Name>
+        <Title><![CDATA[Consolidated Cities]]></Title>
+        <Abstract><![CDATA[Consolidated Cities; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-113.085474</westBoundLongitude><eastBoundLongitude>-72.979047</eastBoundLongitude><southBoundLatitude>32.373874</southBoundLatitude><northBoundLatitude>46.185468</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-113.085474" miny="32.373874" maxx="-72.979047" maxy="46.185468"/>
+<BoundingBox CRS="EPSG:4326" minx="32.373874" miny="-113.085474" maxx="46.185468" maxy="-72.979047"/>
+<BoundingBox CRS="EPSG:3857" minx="-12588617.381800" miny="3812488.077100" maxx="-8123990.350600" maxy="5810120.574600"/>
+<BoundingBox CRS="EPSG:102100" minx="-12588617.381800" miny="3812488.077100" maxx="-8123990.350600" maxy="5810120.574600"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Consolidated Cities</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Consolidated Cities" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>1322916.666667</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Subbarrios Labels</Name>
+        <Title><![CDATA[Subbarrios Labels]]></Title>
+        <Abstract><![CDATA[Subbarrios labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.192456</westBoundLongitude><eastBoundLongitude>-65.624604</eastBoundLongitude><southBoundLatitude>17.910811</southBoundLatitude><northBoundLatitude>18.487596</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.192456" miny="17.910811" maxx="-65.624604" maxy="18.487596"/>
+<BoundingBox CRS="EPSG:4326" minx="17.910811" miny="-67.192456" maxx="18.487596" maxy="-65.624604"/>
+<BoundingBox CRS="EPSG:3857" minx="-7479829.987100" miny="2027111.764300" maxx="-7305297.500800" maxy="2094700.540900"/>
+<BoundingBox CRS="EPSG:102100" minx="-7479829.987100" miny="2027111.764300" maxx="-7305297.500800" maxy="2094700.540900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Subbarrios Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Subbarrios Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>307105.654762</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Subbarrios</Name>
+        <Title><![CDATA[Subbarrios]]></Title>
+        <Abstract><![CDATA[Subbarrios; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.192456</westBoundLongitude><eastBoundLongitude>-65.624604</eastBoundLongitude><southBoundLatitude>17.910811</southBoundLatitude><northBoundLatitude>18.487596</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.192456" miny="17.910811" maxx="-65.624604" maxy="18.487596"/>
+<BoundingBox CRS="EPSG:4326" minx="17.910811" miny="-67.192456" maxx="18.487596" maxy="-65.624604"/>
+<BoundingBox CRS="EPSG:3857" minx="-7479829.987100" miny="2027111.764300" maxx="-7305297.500800" maxy="2094700.540900"/>
+<BoundingBox CRS="EPSG:102100" minx="-7479829.987100" miny="2027111.764300" maxx="-7305297.500800" maxy="2094700.540900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Subbarrios</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Subbarrios" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>307105.654762</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>County Subdivisions Labels</Name>
+        <Title><![CDATA[County Subdivisions Labels]]></Title>
+        <Abstract><![CDATA[County Subdivisions labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>County Subdivisions Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=County Subdivisions Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>307105.654762</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>County Subdivisions</Name>
+        <Title><![CDATA[County Subdivisions]]></Title>
+        <Abstract><![CDATA[County Subdivisions; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>County Subdivisions</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=County Subdivisions" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>1322916.666667</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Elementary School Districts Labels</Name>
+        <Title><![CDATA[Elementary School Districts Labels]]></Title>
+        <Abstract><![CDATA[Elementary School Districts labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-160.305007</westBoundLongitude><eastBoundLongitude>-67.388789</eastBoundLongitude><southBoundLatitude>18.865460</southBoundLatitude><northBoundLatitude>49.001390</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-160.305007" miny="18.865460" maxx="-67.388789" maxy="49.001390"/>
+<BoundingBox CRS="EPSG:4326" minx="18.865460" miny="-160.305007" maxx="49.001390" maxy="-67.388789"/>
+<BoundingBox CRS="EPSG:3857" minx="-17845071.750900" miny="2139102.395800" maxx="-7501685.676700" maxy="6275097.251200"/>
+<BoundingBox CRS="EPSG:102100" minx="-17845071.750900" miny="2139102.395800" maxx="-7501685.676700" maxy="6275097.251200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Elementary School Districts Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Elementary School Districts Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>307105.654762</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Elementary School Districts</Name>
+        <Title><![CDATA[Elementary School Districts]]></Title>
+        <Abstract><![CDATA[Elementary School Districts; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-160.305007</westBoundLongitude><eastBoundLongitude>-67.388789</eastBoundLongitude><southBoundLatitude>18.865460</southBoundLatitude><northBoundLatitude>49.001390</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-160.305007" miny="18.865460" maxx="-67.388789" maxy="49.001390"/>
+<BoundingBox CRS="EPSG:4326" minx="18.865460" miny="-160.305007" maxx="49.001390" maxy="-67.388789"/>
+<BoundingBox CRS="EPSG:3857" minx="-17845071.750900" miny="2139102.395800" maxx="-7501685.676700" maxy="6275097.251200"/>
+<BoundingBox CRS="EPSG:102100" minx="-17845071.750900" miny="2139102.395800" maxx="-7501685.676700" maxy="6275097.251200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Elementary School Districts</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Elementary School Districts" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>5669642.857143</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Secondary School Districts Labels</Name>
+        <Title><![CDATA[Secondary School Districts Labels]]></Title>
+        <Abstract><![CDATA[Secondary School Districts labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-160.305007</westBoundLongitude><eastBoundLongitude>-67.388789</eastBoundLongitude><southBoundLatitude>18.865460</southBoundLatitude><northBoundLatitude>49.001390</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-160.305007" miny="18.865460" maxx="-67.388789" maxy="49.001390"/>
+<BoundingBox CRS="EPSG:4326" minx="18.865460" miny="-160.305007" maxx="49.001390" maxy="-67.388789"/>
+<BoundingBox CRS="EPSG:3857" minx="-17845071.750900" miny="2139102.395800" maxx="-7501685.676700" maxy="6275097.251200"/>
+<BoundingBox CRS="EPSG:102100" minx="-17845071.750900" miny="2139102.395800" maxx="-7501685.676700" maxy="6275097.251200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Secondary School Districts Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Secondary School Districts Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>307105.654762</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Secondary School Districts</Name>
+        <Title><![CDATA[Secondary School Districts]]></Title>
+        <Abstract><![CDATA[Secondary School Districts; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-160.305007</westBoundLongitude><eastBoundLongitude>-67.388789</eastBoundLongitude><southBoundLatitude>18.865460</southBoundLatitude><northBoundLatitude>49.001390</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-160.305007" miny="18.865460" maxx="-67.388789" maxy="49.001390"/>
+<BoundingBox CRS="EPSG:4326" minx="18.865460" miny="-160.305007" maxx="49.001390" maxy="-67.388789"/>
+<BoundingBox CRS="EPSG:3857" minx="-17845071.750900" miny="2139102.395800" maxx="-7501685.676700" maxy="6275097.251200"/>
+<BoundingBox CRS="EPSG:102100" minx="-17845071.750900" miny="2139102.395800" maxx="-7501685.676700" maxy="6275097.251200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Secondary School Districts</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Secondary School Districts" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>5669642.857143</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Unified School Districts Labels</Name>
+        <Title><![CDATA[Unified School Districts Labels]]></Title>
+        <Abstract><![CDATA[Unified School Districts labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Unified School Districts Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Unified School Districts Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>307105.654762</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Unified School Districts</Name>
+        <Title><![CDATA[Unified School Districts]]></Title>
+        <Abstract><![CDATA[Unified School Districts; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Unified School Districts</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Unified School Districts" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>5669642.857143</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Census Blocks Labels</Name>
+        <Title><![CDATA[Census Blocks Labels]]></Title>
+        <Abstract><![CDATA[Census Blocks labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Census Blocks Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Census Blocks Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>39687.500000</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Census Blocks</Name>
+        <Title><![CDATA[Census Blocks]]></Title>
+        <Abstract><![CDATA[Census Blocks; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Census Blocks</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Census Blocks" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>39687.500000</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Census Block Groups Labels</Name>
+        <Title><![CDATA[Census Block Groups Labels]]></Title>
+        <Abstract><![CDATA[Block Groups labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Census Block Groups Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Census Block Groups Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>85044.642857</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Census Block Groups</Name>
+        <Title><![CDATA[Census Block Groups]]></Title>
+        <Abstract><![CDATA[Block Groups; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Census Block Groups</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Census Block Groups" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>146465.773810</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Census Tracts Labels</Name>
+        <Title><![CDATA[Census Tracts Labels]]></Title>
+        <Abstract><![CDATA[Census Tracts labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Census Tracts Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Census Tracts Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>307105.654762</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Census Tracts</Name>
+        <Title><![CDATA[Census Tracts]]></Title>
+        <Abstract><![CDATA[Census Tracts; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>-14.601813</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="-14.601813" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="-14.601813" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="-1643352.819900" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Census Tracts</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Census Tracts" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>1322916.666667</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Zip Code Tabulation Areas Labels</Name>
+        <Title><![CDATA[Zip Code Tabulation Areas Labels]]></Title>
+        <Abstract><![CDATA[ZIP Code Tabulation Areas (ZCTAs) labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.147236</westBoundLongitude><eastBoundLongitude>179.778470</eastBoundLongitude><southBoundLatitude>17.881229</southBoundLatitude><northBoundLatitude>71.390380</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.147236" miny="17.881229" maxx="179.778470" maxy="71.390380"/>
+<BoundingBox CRS="EPSG:4326" minx="17.881229" miny="-179.147236" maxx="71.390380" maxy="179.778470"/>
+<BoundingBox CRS="EPSG:3857" minx="-19942579.088500" miny="2023651.278000" maxx="20012847.736000" maxy="11537091.729900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19942579.088500" miny="2023651.278000" maxx="20012847.736000" maxy="11537091.729900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Zip Code Tabulation Areas Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Zip Code Tabulation Areas Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>2183910.726032</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Zip Code Tabulation Areas</Name>
+        <Title><![CDATA[Zip Code Tabulation Areas]]></Title>
+        <Abstract><![CDATA[ZIP Code Tabulation Areas (ZCTAs); Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.147236</westBoundLongitude><eastBoundLongitude>179.778470</eastBoundLongitude><southBoundLatitude>17.881229</southBoundLatitude><northBoundLatitude>71.390380</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.147236" miny="17.881229" maxx="179.778470" maxy="71.390380"/>
+<BoundingBox CRS="EPSG:4326" minx="17.881229" miny="-179.147236" maxx="71.390380" maxy="179.778470"/>
+<BoundingBox CRS="EPSG:3857" minx="-19942579.088500" miny="2023651.278000" maxx="20012847.736000" maxy="11537091.729900"/>
+<BoundingBox CRS="EPSG:102100" minx="-19942579.088500" miny="2023651.278000" maxx="20012847.736000" maxy="11537091.729900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Zip Code Tabulation Areas</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Zip Code Tabulation Areas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>94.494048</MinScaleDenominator>
+        <MaxScaleDenominator>2183910.726032</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Urban Growth Areas Labels</Name>
+        <Title><![CDATA[Urban Growth Areas Labels]]></Title>
+        <Abstract><![CDATA[Urban Growth Areas labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-124.520539</westBoundLongitude><eastBoundLongitude>-116.935343</eastBoundLongitude><southBoundLatitude>42.005602</southBoundLatitude><northBoundLatitude>46.216341</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-124.520539" miny="42.005602" maxx="-116.935343" maxy="46.216341"/>
+<BoundingBox CRS="EPSG:4326" minx="42.005602" miny="-124.520539" maxx="46.216341" maxy="-116.935343"/>
+<BoundingBox CRS="EPSG:3857" minx="-13861562.994800" miny="5161818.633400" maxx="-13017182.838500" maxy="5815086.055000"/>
+<BoundingBox CRS="EPSG:102100" minx="-13861562.994800" miny="5161818.633400" maxx="-13017182.838500" maxy="5815086.055000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Urban Growth Areas Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Urban Growth Areas Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>1322916.666667</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Urban Growth Areas</Name>
+        <Title><![CDATA[Urban Growth Areas]]></Title>
+        <Abstract><![CDATA[Urban Growth Areas; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-124.520539</westBoundLongitude><eastBoundLongitude>-116.935343</eastBoundLongitude><southBoundLatitude>42.005602</southBoundLatitude><northBoundLatitude>46.216341</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-124.520539" miny="42.005602" maxx="-116.935343" maxy="46.216341"/>
+<BoundingBox CRS="EPSG:4326" minx="42.005602" miny="-124.520539" maxx="46.216341" maxy="-116.935343"/>
+<BoundingBox CRS="EPSG:3857" minx="-13861562.994800" miny="5161818.633400" maxx="-13017182.838500" maxy="5815086.055000"/>
+<BoundingBox CRS="EPSG:102100" minx="-13861562.994800" miny="5161818.633400" maxx="-13017182.838500" maxy="5815086.055000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Urban Growth Areas</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Urban Growth Areas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>1322916.666667</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Public Use Microdata Areas Labels</Name>
+        <Title><![CDATA[Public Use Microdata Areas Labels]]></Title>
+        <Abstract><![CDATA[Public Use Microdata Areas labels; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>13.182335</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="13.182335" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="13.182335" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="1480571.308600" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="1480571.308600" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Public Use Microdata Areas Labels</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Public Use Microdata Areas Labels" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>2362351.190476</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Public Use Microdata Areas</Name>
+        <Title><![CDATA[Public Use Microdata Areas]]></Title>
+        <Abstract><![CDATA[Public Use Microdata Areas; Census 2000 - January 1, 2000 vintage]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:3857</CRS>
+ <!-- alias 3857 -->
+<CRS>EPSG:102100</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-179.231086</westBoundLongitude><eastBoundLongitude>179.859681</eastBoundLongitude><southBoundLatitude>13.182335</southBoundLatitude><northBoundLatitude>71.441059</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-179.231086" miny="13.182335" maxx="179.859681" maxy="71.441059"/>
+<BoundingBox CRS="EPSG:4326" minx="13.182335" miny="-179.231086" maxx="71.441059" maxy="179.859681"/>
+<BoundingBox CRS="EPSG:3857" minx="-19951913.227800" miny="1480571.308600" maxx="20021888.103200" maxy="11554793.571200"/>
+<BoundingBox CRS="EPSG:102100" minx="-19951913.227800" miny="1480571.308600" maxx="20021888.103200" maxy="11554793.571200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Public Use Microdata Areas</Title>
+          <LegendURL width="16" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://tigerweb.geo.census.gov/arcgis/services/Census2010/tigerWMS_Census2000/MapServer/WmsServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Public Use Microdata Areas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>945.885417</MinScaleDenominator>
+        <MaxScaleDenominator>11339285.714286</MaxScaleDenominator>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>
