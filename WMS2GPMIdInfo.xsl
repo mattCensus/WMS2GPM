@@ -77,7 +77,7 @@
                     <xsl:element name="Theme_Keyword_Thesaurus">None</xsl:element>  
                     <!--  <xsl:comment>keyword:<xsl:value-of select="$keyword"/></xsl:comment>-->
                     <!--                   /default:WMS_Capabilities/default:Capability/default:Layer/default:Layer[1]/default:Layer[2]/default:Name[1] -->
-                    <xsl:variable name="layerOneLength" select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer"/>
+                    <xsl:variable name="layerOneLength" select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer[1]"/>
                   
                     <xsl:choose>
                         <xsl:when test="/default:WMS_Capabilities/default:Capability[1]/default:Layer[1]/default:Layer[1]/default:Layer[1]">
@@ -89,7 +89,7 @@
                                 </xsl:if>
                             </xsl:for-each>
                         </xsl:when>
-                        <xsl:when test="string-length($layerOneLength)&gt;1">
+                           <xsl:when test="string-length($layerOneLength)&gt;1">
                             <xsl:comment>greater than one</xsl:comment>
                             <xsl:for-each select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer">
                                 <xsl:variable name="keyword" select="./default:Name"/>
@@ -97,9 +97,9 @@
                                     <xsl:element name="Theme_Keyword"><xsl:value-of select="$keyword"/></xsl:element>
                                 </xsl:if>
                             </xsl:for-each>
-                        </xsl:when>
+                        </xsl:when> 
                         <xsl:otherwise>
-                            <xsl:for-each select=" /default:WMS_Capabilities/default:Capability/default:Layer/default:Layer[1]/default:Layer[2]">
+                            <xsl:for-each select=" /default:WMS_Capabilities/default:Capability/default:Layer/default:Layer/default:Layer">
                                 <xsl:variable name="keyword" select="./default:Name"/>
                                 <xsl:if test="not(contains($keyword,'Labels'))">
                                     <xsl:element name="Theme_Keyword"><xsl:value-of select="$keyword"/></xsl:element>

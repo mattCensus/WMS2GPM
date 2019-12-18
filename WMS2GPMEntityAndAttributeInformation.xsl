@@ -23,7 +23,31 @@
     
     <xsl:template name="EntityAttributeInformation">
         <xsl:element name="Entity_and_Attribute_Information">
-            <xsl:for-each select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer">
+            <xsl:choose>
+                <xsl:when test="/default:WMS_Capabilities/default:Capability[1]/default:Layer[1]/default:Layer[1]/default:Layer[1]">
+                    <xsl:comment>first for physical</xsl:comment>
+                    <xsl:for-each select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer/default:Layer">
+                        <xsl:variable name="keyword" select="./default:Name"/>
+                        <xsl:if test="not(contains($keyword,'Labels'))">
+                            
+                            <xsl:element name="Feature_Catalogue_Description">
+                                
+                                <xsl:call-template name="knownTitles">
+                                    <xsl:with-param name="keywordPass" select="$keyword"/>
+                                </xsl:call-template>
+                                
+                                <xsl:element name="Included_With_Dataset">No</xsl:element>
+                                <!-- <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</xsl:element>
+                        --> 
+                                <xsl:call-template name="knownURLS">
+                                    <xsl:with-param name="keywordPass" select="$keyword"/>
+                                </xsl:call-template>
+                            </xsl:element>
+                        </xsl:if>
+                    </xsl:for-each>
+                </xsl:when>
+                <xsl:when test="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer">
+                    <xsl:for-each select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer">
                 <xsl:variable name="keyword" select="./default:Name"/>
                 <!--  <xsl:comment>keyword:<xsl:value-of select="$keyword"/></xsl:comment>-->
                 <xsl:if test="not(contains($keyword,'Labels'))">
@@ -42,6 +66,9 @@
                     </xsl:element>
                 </xsl:if>
             </xsl:for-each>
+                </xsl:when>
+            </xsl:choose>
+            
             
             
         </xsl:element>
@@ -149,6 +176,39 @@
              <xsl:when test="contains($keywordPass,'Public Use Microdata Areas')">
                  <xsl:element name="FC_Title">Feature Catalog for the 2010 Census Public Use Microdata Area (PUMA) State-based</xsl:element>
              </xsl:when>
+             <xsl:when test="contains($keywordPass,'Military Installations')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Military Installation National Shapefile</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Colleges and Universities')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Area Landmark State-based Shapefile</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Correctional Facilities')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Area Landmark State-based Shapefile</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'National Park Service Areas')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Area Landmark State-based Shapefile</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Glaciers')">
+                 <xsl:element name="FC_Title">Feature Catalog for the 2019 Area Hydrography County-based Shapefile</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Areal Hydrography')">
+                 <xsl:element name="FC_Title">Feature Catalog for the 2019 Area Hydrography County-based Shapefile</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Linear Hydrography')">
+                 <xsl:element name="FC_Title">Feature Catalog for the 2019 Linear Hydrography County-based Shapefile</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Railroads')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Rails National Shapefile</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Local Roads')">
+                 <xsl:element name="FC_Title">Feature Catalog for the 2019 All Roads County-based Shapefile</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Secondary Roads')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Primary and Secondary Roads State-based Shapefile</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Primary Roads')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Primary and Secondary Roads State-based Shapefile</xsl:element>
+             </xsl:when>
              <xsl:otherwise>
                  <xsl:variable name="FCTitle" select="concat('Feature Catalog for the 2019 ', $keywordPass )"/>
                  <xsl:element name="FC_Title"><xsl:value-of select="$FCTitle"></xsl:value-of></xsl:element>
@@ -159,6 +219,7 @@
     <xsl:template name="knownURLS">
         <xsl:param name="keywordPass"/>
         <xsl:variable name="TigerURL">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</xsl:variable>
+        <xsl:comment>keyword:<xsl:value-of select="$keywordPass"/></xsl:comment>
         <xsl:choose>
             <xsl:when test="contains($keywordPass,'Counties')">
                 <xsl:element name="Feature_Types">county</xsl:element>
@@ -288,7 +349,50 @@
                 <xsl:element name="Feature_Types">Public Use Microdata Areas</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/puma10/tl_2019_puma10.ea.iso.xml</xsl:element>
             </xsl:when>
-           
+            <xsl:when test="contains($keywordPass,'Military Installations')">
+                <xsl:element name="Feature_Types">Military Installations</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/necta/tl_2019_necta.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Colleges and Universities')">
+                <xsl:element name="Feature_Types">Colleges and Universities</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/arealm/tl_2019_arealm.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Correctional Facilities')">
+                <xsl:element name="Feature_Types">Correctional Facilities</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/arealm/tl_2019_arealm.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'National Park Service Areas')">
+                <xsl:element name="Feature_Types">National Park Service Areas</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/arealm/tl_2019_arealm.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Glaciers')">
+                <xsl:element name="Feature_Types">Glaciers</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/areawater/tl_2019_areawater.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Areal Hydrography')">
+                <xsl:element name="Feature_Types">Areal Hydrography</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/areawater/tl_2019_areawater.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Linear Hydrography')">
+                <xsl:element name="Feature_Types">Linear Hydrography</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/linearwater/tl_2019_linearwater.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Railroads')">
+                <xsl:element name="Feature_Types">Railroads</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/rails/tl_2019_rails.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Local Roads')">
+                <xsl:element name="Feature_Types">roads</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/roads/tl_2019_roads.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Secondary Roads')">
+                <xsl:element name="Feature_Types">roads</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/prisecroads/tl_2019_prisecroads.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Primary Roads')">
+                <xsl:element name="Feature_Types">roads</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/prisecroads/tl_2019_prisecroads.ea.iso.xml</xsl:element>
+            </xsl:when>
             <xsl:otherwise>
                  <xsl:element name="FC_Online_Linkage"><xsl:value-of select="$TigerURL"/></xsl:element>
             </xsl:otherwise>
