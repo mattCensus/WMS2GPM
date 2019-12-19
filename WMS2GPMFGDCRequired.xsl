@@ -17,34 +17,55 @@
     <xsl:template name="FGDCRequired">
         <xsl:variable name="path" select="/default:WMS_Capabilities/@*[namespace-uri()='http://www.w3.org/2001/XMLSchema-instance' and local-name()='schemaLocation']"/>
         <xsl:variable name="pathB" select="substring($path,87)"/>
-        <xsl:variable name="postTiger" select="substring-after($pathB,'TIGERweb')"/>
-        <xsl:variable name="finalWMS" select="substring-before($postTiger,'MapServer')"></xsl:variable>
-        <xsl:element name="FGDC_Required">
-            <xsl:element name="ISO_Theme">
-                <xsl:element name="ISO_Keyword_Thesaurus">ISO 19115 Topic Categories</xsl:element>
-               <!--  <xsl:element name="ISO_Keyword"><xsl:value-of select="$finalWMS"/></xsl:element> -->
-                <xsl:choose>
-                    <xsl:when test="contains($finalWMS,'ACS')">
-                        <xsl:element name="ISO_Keyword">boundaries</xsl:element>
-                    </xsl:when>
-                    <xsl:when test="contains($finalWMS,'ECON')">
-                        <xsl:element name="ISO_Keyword">economy</xsl:element>
-                    </xsl:when>
-                    <xsl:when test="contains($finalWMS,'Census')">
-                        <xsl:element name="ISO_Keyword">boundaries</xsl:element>
-                        <xsl:element name="ISO_Keyword">transportation</xsl:element>
-                    </xsl:when>
-                    <xsl:when test="contains($finalWMS,'PhysicalFeatures')">
-                        <xsl:element name="ISO_Keyword">boundaries</xsl:element>
-                        <xsl:element name="ISO_Keyword">transportation</xsl:element>
-                        <xsl:element name="ISO_Keyword">inlandWaters</xsl:element>
-                        <xsl:element name="ISO_Keyword">structure</xsl:element>
-                        <xsl:element name="ISO_Keyword">society</xsl:element>
-                        <xsl:element name="ISO_Keyword">intelligenceMilitary</xsl:element>
-                    </xsl:when>
-                </xsl:choose>
-            </xsl:element>
-        </xsl:element>
+        <xsl:choose>
+            <xsl:when test="contains($pathB,'TIGERweb')">
+                <xsl:variable name="postTiger" select="substring-after($pathB,'TIGERweb')"/>
+                <xsl:variable name="finalWMS" select="substring-before($postTiger,'MapServer')"/>
+                <xsl:comment><xsl:value-of select="$finalWMS"/></xsl:comment>
+                <xsl:element name="FGDC_Required">
+                    <xsl:element name="ISO_Theme">
+                        <xsl:element name="ISO_Keyword_Thesaurus">ISO 19115 Topic Categories</xsl:element>
+                        <xsl:choose>
+                            <xsl:when test="contains($finalWMS,'ACS')">
+                                <xsl:element name="ISO_Keyword">boundaries</xsl:element>
+                            </xsl:when>
+                            <xsl:when test="contains($finalWMS,'ECON')">
+                                <xsl:element name="ISO_Keyword">economy</xsl:element>
+                            </xsl:when>
+                            <xsl:when test="contains($finalWMS,'Census')">
+                                <xsl:element name="ISO_Keyword">boundaries</xsl:element>
+                                <xsl:element name="ISO_Keyword">transportation</xsl:element>
+                            </xsl:when>
+                            <xsl:when test="contains($finalWMS,'PhysicalFeatures')">
+                                <xsl:element name="ISO_Keyword">boundaries</xsl:element>
+                                <xsl:element name="ISO_Keyword">transportation</xsl:element>
+                                <xsl:element name="ISO_Keyword">inlandWaters</xsl:element>
+                                <xsl:element name="ISO_Keyword">structure</xsl:element>
+                                <xsl:element name="ISO_Keyword">society</xsl:element>
+                                <xsl:element name="ISO_Keyword">intelligenceMilitary</xsl:element>
+                            </xsl:when>
+                        </xsl:choose>
+                    </xsl:element>
+                </xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($pathB,'Census2010')">
+                <xsl:variable name="postTiger" select="substring-after($pathB,'Census')"/>
+                <xsl:variable name="finalWMS" select="substring-before($postTiger,'MapServer')"/>
+                <xsl:comment><xsl:value-of select="$finalWMS"/></xsl:comment>
+                <xsl:element name="FGDC_Required">
+                    <xsl:element name="ISO_Theme">
+                        <xsl:element name="ISO_Keyword_Thesaurus">ISO 19115 Topic Categories</xsl:element>
+                        <xsl:choose>
+                            <xsl:when test="contains($finalWMS,'Census')">
+                                <xsl:element name="ISO_Keyword">boundaries</xsl:element>
+                            </xsl:when>
+                        </xsl:choose>
+                        
+                        </xsl:element>
+                    </xsl:element>
+            </xsl:when>
+        </xsl:choose>
+        
     </xsl:template>
     
 </xsl:stylesheet>

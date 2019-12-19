@@ -14,6 +14,7 @@
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
     exclude-result-prefixes="fn grp vmf xs xsi xsl xd">
     <xsl:import href="../WMS2GPM/WMS2GPMTitle.xsl"/>
+    <xsl:import href="../WMS2GPM/AbstractKeywords.xsl"/>
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p><xd:b>Created on:</xd:b> Apr 5, 2019</xd:p>
@@ -28,7 +29,7 @@
                 <xsl:element name="Originator">U.S. Department of Commerce, U.S. Census Bureau, Geography Division</xsl:element>
               <!--   <xsl:element name="Publication_Date"/>
                 <xsl:element name="Title"><xsl:value-of select="/default:WMS_Capabilities/default:Service/default:Title"/></xsl:element> -->
-                <xsl:call-template name="WMSTitle"/>
+               <xsl:call-template name="WMSTitle"/> 
                
             </xsl:element>
             <xsl:element name="Description">
@@ -39,7 +40,7 @@
                     Master Address File / Topologically Integrated Geographic Encoding and Referencing
                     (MAF/TIGER) Database (MTDB).
                     
-                    PUT SOME MORE INFO HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    The <xsl:call-template name="WMSAbstractTitle"/> contians the following layers: <xsl:call-template name="AbstractKeywords"/>
                 </xsl:element>
                 <xsl:element name="Purpose">
                     To provide a simple HTTP interface for requesting geo-registered map images
@@ -81,7 +82,7 @@
                   
                     <xsl:choose>
                         <xsl:when test="/default:WMS_Capabilities/default:Capability[1]/default:Layer[1]/default:Layer[1]/default:Layer[1]">
-                           <xsl:comment>first for physical</xsl:comment>
+                          <!--  <xsl:comment>first for physical</xsl:comment> -->
                             <xsl:for-each select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer/default:Layer">
                                 <xsl:variable name="keyword" select="./default:Name"/>
                                 <xsl:if test="not(contains($keyword,'Labels'))">
@@ -90,7 +91,7 @@
                             </xsl:for-each>
                         </xsl:when>
                            <xsl:when test="string-length($layerOneLength)&gt;1">
-                            <xsl:comment>greater than one</xsl:comment>
+                           <!--  <xsl:comment>greater than one</xsl:comment>--> 
                             <xsl:for-each select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer">
                                 <xsl:variable name="keyword" select="./default:Name"/>
                                 <xsl:if test="not(contains($keyword,'Labels'))">

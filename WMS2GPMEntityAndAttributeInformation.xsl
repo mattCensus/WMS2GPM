@@ -114,6 +114,7 @@
                  <xsl:element name="FC_Title">Feature Catalog for the 2010 Census Urban Area National</xsl:element>
              </xsl:when>
              <xsl:when test="contains($keywordPass,'Census Urbanized Areas')">
+                 <xsl:comment>UA!!!!!!!!!!!!!!!</xsl:comment>
                  <xsl:element name="FC_Title">Feature Catalog for the 2010 Census Urban Area National</xsl:element>
              </xsl:when>
              <xsl:when test="contains($keywordPass,'State Legislative Districts - Lower')">
@@ -209,6 +210,12 @@
              <xsl:when test="contains($keywordPass,'Primary Roads')">
                  <xsl:element name="FC_Title">Feature Catalog for the Primary and Secondary Roads State-based Shapefile</xsl:element>
              </xsl:when>
+             <xsl:when test="contains($keywordPass,'Economic Places')">
+                 <xsl:element name="FC_Title">Feature Catalog for the 2012 Economic Census Place State-based Shapefile</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Voting Districts')">
+                 <xsl:element name="FC_Title">Feature Catalog for the 2012 2010 Census Voting District State-based (VTD) Shapefile</xsl:element>
+             </xsl:when>
              <xsl:otherwise>
                  <xsl:variable name="FCTitle" select="concat('Feature Catalog for the 2019 ', $keywordPass )"/>
                  <xsl:element name="FC_Title"><xsl:value-of select="$FCTitle"></xsl:value-of></xsl:element>
@@ -266,6 +273,12 @@
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/uac10/tl_2019_uac10.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Census Urbanized Areas')">
+                <xsl:comment>UA!!!!!!!!!!!!!!!</xsl:comment>
+                <xsl:element name="Feature_Types">Census Urbanized Areas</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/uac10/tl_2019_uac10.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Urbanized Areas')">
+                <xsl:comment>UA!!!!!!!!!!!!!!!</xsl:comment>
                 <xsl:element name="Feature_Types">Census Urbanized Areas</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/uac10/tl_2019_uac10.ea.iso.xml</xsl:element>
             </xsl:when>
@@ -325,6 +338,10 @@
                 <xsl:element name="Feature_Types">Census Blocks</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/tabblock10/tl_2019_tabblock10.ea.iso.xml</xsl:element>
             </xsl:when>
+            <xsl:when test="contains($keywordPass,'Census Blocks')">
+                <xsl:element name="Feature_Types">Census Blocks</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/tabblock10/tl_2019_tabblock10.ea.iso.xml</xsl:element>
+            </xsl:when>
             <xsl:when test="contains($keywordPass,'Census Block Groups')">
                 <xsl:element name="Feature_Types">Block Groups</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/bg/tl_2019_bg.ea.iso.xml</xsl:element>
@@ -342,6 +359,10 @@
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/ttract/tl_2019_ttract.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'ZIP Code Tabulation Areas')">
+                <xsl:element name="Feature_Types">ZIP Code Tabulation Areas</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/zcta510/tl_2019_zcta510.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Zip Code Tabulation Areas')">
                 <xsl:element name="Feature_Types">ZIP Code Tabulation Areas</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/zcta510/tl_2019_zcta510.ea.iso.xml</xsl:element>
             </xsl:when>
@@ -392,6 +413,14 @@
             <xsl:when test="contains($keywordPass,'Primary Roads')">
                 <xsl:element name="Feature_Types">roads</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/prisecroads/tl_2019_prisecroads.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Economic Places')">
+                <xsl:element name="Feature_Types">Economic Census Place</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/placeec/tl_2012_placeec.shp.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Voting Districts')">
+                <xsl:element name="Feature_Types">Voting Districts</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/ISO/vtd10/2012_vtd10.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:otherwise>
                  <xsl:element name="FC_Online_Linkage"><xsl:value-of select="$TigerURL"/></xsl:element>
