@@ -18,8 +18,8 @@
         <xsl:param name="OperPass"/>
         <xsl:variable name="path" select="/default:WMS_Capabilities/@*[namespace-uri()='http://www.w3.org/2001/XMLSchema-instance' and local-name()='schemaLocation']"/>
         <xsl:variable name="pathB" select="substring($path,85)"></xsl:variable>
-        <!--  <xsl:element name="Title"><xsl:value-of select="$pathB"/></xsl:element>
-        <xsl:comment>In the Resource Description Template</xsl:comment>-->
+        <!--  <xsl:element name="Title"><xsl:value-of select="$pathB"/></xsl:element>-->
+       <!--  <xsl:comment>In the Resource Description Template</xsl:comment>--> 
         <xsl:choose>
           
             <xsl:when test="contains($pathB,'TIGERweb')">
@@ -30,23 +30,23 @@
                         <xsl:variable name="YearFinal" select="substring-after($YearB,'ACS')"/>
                         <xsl:variable name="FinalTitle" select="concat(' Census Current (',$YearFinal,') WMS ', $OperPass)"/>
                         <xsl:element name="Resource_Name"><xsl:value-of select="$FinalTitle"/></xsl:element>
-                       <!--  <xsl:comment><xsl:value-of select="$OperPass"/></xsl:comment>
-                        <xsl:comment>Exiting the Resource Description Template A</xsl:comment> -->
+                        <xsl:comment><xsl:value-of select="$OperPass"/></xsl:comment>
+                        <!--  <xsl:comment>Exiting the Resource Description Template A</xsl:comment>-->
                     </xsl:when>
                     <xsl:when test="contains($pathB,'ECON')">
                         <xsl:variable name="YearA" select="substring-after($pathB,'TIGERweb/')"/>
                         <xsl:variable name="YearB" select="substring-before($YearA,'/MapServer')"/>
                          <xsl:variable name="FinalTitle" select="concat('Economic Places ',$OperPass)"></xsl:variable>  
                         <xsl:element name="Resource_Name"><xsl:value-of select="$FinalTitle"/></xsl:element>
-                       <!--  <xsl:comment>Exiting the Resource Description Template B</xsl:comment>-->
+                        <!--  <xsl:comment>Exiting the Resource Description Template B</xsl:comment>-->
                     </xsl:when>
                     <xsl:when test="contains($pathB,'Census2010')">
                         <xsl:variable name="YearA" select="substring-after($pathB,'TIGERweb/')"/>
-                      <!--  <xsl:comment>YearA: <xsl:value-of select="$YearA"/></xsl:comment> --> 
+                      <!--    <xsl:comment>YearA: <xsl:value-of select="$YearA"/></xsl:comment>-->
                         <xsl:variable name="YearB" select="substring-before($YearA,'/MapServer')"/>
-                        <!--  <xsl:comment>YearB: <xsl:value-of select="$YearB"/></xsl:comment>-->
+                       <!--  <xsl:comment>YearB: <xsl:value-of select="$YearB"/></xsl:comment>--> 
                         <xsl:variable name="YearFinal" select="substring-after($YearB,'WMS_Census')"/>
-                       <!--   <xsl:comment> YearFinal <xsl:value-of select="$YearFinal"/></xsl:comment>-->
+                      <!--   <xsl:comment> YearFinal <xsl:value-of select="$YearFinal"/></xsl:comment> -->
                         <xsl:variable name="FinalTitle" select="concat('Census ',$YearFinal,' WMS ', $OperPass)"/>
                         <xsl:element name="Resource_Name"><xsl:value-of select="$FinalTitle"/></xsl:element>
                         <!--  <xsl:comment>Exiting the Resource Description Template C</xsl:comment>-->
@@ -58,15 +58,15 @@
                         <!--  <xsl:comment>YearB: <xsl:value-of select="$YearB"/></xsl:comment>-->
                         <xsl:variable name="FinalTitle" select="concat('Census Physical Features WMS ', $OperPass)"/>
                         <xsl:element name="Resource_Name"></xsl:element>
-                       <!--  <xsl:comment>Exiting the Resource Description Template D</xsl:comment>-->
+                        <!--  <xsl:comment>Exiting the Resource Description Template D</xsl:comment>-->
                     </xsl:when>
                 </xsl:choose>
             </xsl:when> 
             <xsl:when test="contains($pathB,'Census2010')">
-                <xsl:comment>In Census2010!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</xsl:comment>
+                <!--  <xsl:comment>In Census2010!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</xsl:comment>-->
                 <xsl:choose>
-                    <xsl:when test="contains($pathB,'Census2000')">
-                        <!--   <xsl:comment>in Census 2000</xsl:comment>--> 
+                      <xsl:when test="contains($pathB,'Census2010')">
+                       <!--  <xsl:comment>in Census 2000</xsl:comment>  -->
                         <xsl:variable name="YearA" select="substring-after($pathB,'tigerWMS')"/>
                         <!--  <xsl:comment>pathB <xsl:value-of select="$pathB"></xsl:value-of></xsl:comment>
                             <xsl:comment>YearA: <xsl:value-of select="$YearA"/></xsl:comment>-->
@@ -74,11 +74,28 @@
                         <!--  <xsl:comment>YearB: <xsl:value-of select="$YearB"/></xsl:comment> -->
                         <xsl:variable name="FinalYear" select="substring-after($YearB,'_Census')"/>
                         <!--  <xsl:comment>Final Year<xsl:value-of select="$FinalYear"/></xsl:comment>-->
-                        <xsl:element name="Publication_Date"><xsl:value-of select="$FinalYear"/></xsl:element>
+                      
+                        <xsl:variable name="FinalTitle" select="concat('Census ',$FinalYear,' WMS ', $OperPass)"/>
+                        <xsl:element name="Resource_Name"><xsl:value-of select="$FinalTitle"/></xsl:element>
+                        
+                       <!--   <xsl:comment>Exiting the Resource Description Template E</xsl:comment>-->
+                    </xsl:when>
+                    <xsl:when test="contains($pathB,'Census2000')">
+                        <!--  <xsl:comment>in Census 2000</xsl:comment>-->
+                        <xsl:variable name="YearA" select="substring-after($pathB,'tigerWMS')"/>
+                        <!--  <xsl:comment>pathB <xsl:value-of select="$pathB"></xsl:value-of></xsl:comment>
+                            <xsl:comment>YearA: <xsl:value-of select="$YearA"/></xsl:comment>-->
+                        <xsl:variable name="YearB" select="substring-before($YearA,'/MapServer')"/>
+                        <!--  <xsl:comment>YearB: <xsl:value-of select="$YearB"/></xsl:comment> -->
+                        <xsl:variable name="FinalYear" select="substring-after($YearB,'_Census')"/>
+                        <!--  <xsl:comment>Final Year<xsl:value-of select="$FinalYear"/></xsl:comment>-->
+                       
                         <xsl:variable name="FinalTitle" select="concat('Census ',$FinalYear,' WMS', $OperPass)"/>
                         <xsl:element name="Resource_Name"><xsl:value-of select="$FinalTitle"/></xsl:element>
-                        <xsl:comment>Exiting the Resource Description Template E</xsl:comment>
+                        
+                        <!--  <xsl:comment>Exiting the Resource Description Template F</xsl:comment>-->
                     </xsl:when>
+                  
                 </xsl:choose>
             </xsl:when>
         </xsl:choose>
