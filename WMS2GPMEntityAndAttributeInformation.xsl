@@ -216,6 +216,39 @@
              <xsl:when test="contains($keywordPass,'Voting Districts')">
                  <xsl:element name="FC_Title">Feature Catalog for the 2012 2010 Census Voting District State-based (VTD) Shapefile</xsl:element>
              </xsl:when>
+             <xsl:when test="contains($keywordPass,'Joint-Use Areas')">
+                 <xsl:element name="FC_Title">Feature Catolog for the 2019 American Indian Joint-Use Areas</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Alaska Native Village Statistical Areas')">
+                 <xsl:element name="FC_Title">Feature Catolog for the 2019 Alaska Native Village Statistical Areas</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Federal American Indian Reservations')">
+                 <xsl:element name="FC_Title">Feature Catalog for the Federal American Indian Reservations</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Hawaiian Home Lands')">
+                 <xsl:element name="FC_Title">Feature Attributes for the 2019 Hawaiian Home Lands</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'MAF/TIGER Feature Class Codes')">
+                 <xsl:element name="FC_Title">Feature Catolog for the 2019 MAF/TIGER Feature Class Codes</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Off-Reservation Trust Lands')">
+                 <xsl:element name="FC_Title">Feature Catolog for the 2019 Off-Reservation Trust Lands</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Oklahoma Tribal Statistical Areas')">
+                 <xsl:element name="FC_Title">Feature Catolog for the 2019 Oklahoma Tribal Statistical Areas</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'SDTSA')">
+                 <xsl:element name="FC_Title">Feature Catolog for the 2019 State Designated Tribal Statistical Areas (SDTSA) </xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'State American Indian Reservations')">
+                 <xsl:element name="FC_Title">Feature Catolog for the 2019 State American Indian Reservations</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Tribal Designated Statistical Areas')">
+                 <xsl:element name="FC_Title">Feature Catolog for the Tribal Designated Statistical Areas</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Census Regions')">
+                 <xsl:element name="FC_Title">Feature Attributes for the 2019 Census Regions</xsl:element>
+             </xsl:when>
              <xsl:otherwise>
                  <xsl:variable name="FCTitle" select="concat('Feature Catalog for the 2019 ', $keywordPass )"/>
                  <xsl:element name="FC_Title"><xsl:value-of select="$FCTitle"></xsl:value-of></xsl:element>
@@ -421,6 +454,50 @@
             <xsl:when test="contains($keywordPass,'Voting Districts')">
                 <xsl:element name="Feature_Types">Voting Districts</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/ISO/vtd10/2012_vtd10.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Joint-Use Areas')">
+                <xsl:element name="Feature_Types">American Indian Joint-Use Areas</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_AIJUA.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Alaska Native Village Statistical Areas')">
+                <xsl:element name="Feature_Types">Alaska Native Village Statistical Areas</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_EATribalSubdivisions.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Federal American Indian Reservations')">
+                <xsl:element name="Feature_Types">Federal American Indian Reservations</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_FAIR.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Hawaiian Home Lands')">
+                <xsl:element name="Feature_Types">Hawaiian Home Lands</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_HawaiianHomeLands.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'MAF/TIGER Feature Class Codes')">
+                <xsl:element name="Feature_Types">MAF/TIGER Feature Class Codes</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_MAFTIGERFeatureClassCodes.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Off-Reservation Trust Lands')">
+                <xsl:element name="Feature_Types">Off-Reservation Trust Lands</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_Off-ReservationTrustLands.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Oklahoma Tribal Statistical Areas')">
+                <xsl:element name="Feature_Types">Oklahoma Tribal Statistical Areas</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_OklahomaTribalStatisticalAreas.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'SDTSA')">
+                <xsl:element name="Feature_Types">State Designated Tribal Statistical Areas</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_SDTSA.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'State American Indian Reservations')">
+                <xsl:element name="Feature_Types">State American Indian Reservations</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_StateAmericanIndianReservations.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Tribal Designated Statistical Areas')">
+                <xsl:element name="Feature_Types">Tribal Designated Statistical Areas</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_TDSA.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Census Regions')">
+                <xsl:element name="Feature_Types">Census Regions</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_CensusRegions.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:otherwise>
                  <xsl:element name="FC_Online_Linkage"><xsl:value-of select="$TigerURL"/></xsl:element>
