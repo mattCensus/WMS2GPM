@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<GPM xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" profile="wms"><!--/tigerWMS_ACS2019/-->
+<GPM xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" profile="wms">
    <FGDC_Required>
       <ISO_Theme>
          <ISO_Keyword_Thesaurus>ISO 19115 Topic Categories</ISO_Keyword_Thesaurus>
@@ -10,10 +10,10 @@
    <Identification_Information>
       <Citation>
          <Originator>U.S. Department of Commerce, U.S. Census Bureau, Geography Division</Originator>
-         <Publication_Date>2019</Publication_Date>
-         <Title> Census Current (2019) WMS </Title>
+         <Publication_Date>2014</Publication_Date>
+         <Title> Census Current (2014) WMS </Title>
          <Geospatial_Data_Presentation_Form>Web Mapping Service</Geospatial_Data_Presentation_Form>
-         <Online_Linkage> http://www.esri.com/wms https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2019/MapServer/WmsServer?version=1.3.0%26service=WMS%26request=GetSchemaExtension</Online_Linkage>
+         <Online_Linkage> http://www.esri.com/wms https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2014/MapServer/WmsServer?version=1.3.0%26service=WMS%26request=GetSchemaExtension</Online_Linkage>
       </Citation>
       <Description>
          <Abstract>
@@ -23,7 +23,7 @@
                     Master Address File / Topologically Integrated Geographic Encoding and Referencing
                     (MAF/TIGER) Database (MTDB).
                     
-                    The  Census Current (2019) WMS  contians the following layers: Counties , States , Micropolitan Statistical Areas , Metropolitan Statistical Areas , Metropolitan Divisions , Combined Statistical Areas , Micropolitan New England City and Town Areas , Metropolitan New England City and Town Areas , New England City and Town Area Divisions , Combined New England City and Town Areas , 2010 Census Urban Clusters , 2010 Census Urbanized Areas , Census Regions , Census Divisions , 2019 State Legislative Districts - Lower , 2019 State Legislative Districts - Upper , 116th Congressional Districts , American Indian Joint-Use Areas , Tribal Designated Statistical Areas , State Designated Tribal Statistical Areas , Oklahoma Tribal Statistical Areas , Alaska Native Village Statistical Areas , Hawaiian Home Lands , State American Indian Reservations , Off-Reservation Trust Lands , Federal American Indian Reservations , Tribal Subdivisions , Alaska Native Regional Corporations , Census Designated Places , Incorporated Places , Consolidated Cities , Subbarrios , County Subdivisions , Estates , Elementary School Districts , Secondary School Districts , Unified School Districts , 2010 Census Blocks , Census Block Groups , Census Tracts , Tribal Block Groups , Tribal Census Tracts , 2010 Census ZIP Code Tabulation Areas , 
+                    The  Census Current (2014) WMS  contians the following layers: Counties , States , Micropolitan Statistical Areas , Metropolitan Statistical Areas , Metropolitan Divisions , Combined Statistical Areas , Micropolitan New England City and Town Areas , Metropolitan New England City and Town Areas , New England City and Town Area Divisions , Combined New England City and Town Areas , 2010 Census Urban Clusters , 2010 Census Urbanized Areas , Census Regions , Census Divisions , 2014 State Legislative Districts - Lower , 2014 State Legislative Districts - Upper , 114th Congressional Districts , American Indian Joint-Use Areas , Tribal Designated Statistical Areas , State Designated Tribal Statistical Areas , Oklahoma Tribal Statistical Areas , Alaska Native Village Statistical Areas , Hawaiian Home Lands , State American Indian Reservations , Off-Reservation Trust Lands , Federal American Indian Reservations , Tribal Subdivisions , Alaska Native Regional Corporations , Census Designated Places , Incorporated Places , Consolidated Cities , Subbarrios , County Subdivisions , Estates , Elementary School Districts , Secondary School Districts , Unified School Districts , Census Block Groups , Census Tracts , Tribal Block Groups , Tribal Census Tracts , 2010 Census ZIP Code Tabulation Areas , 
                                          and 2010 Census Public Use Microdata Areas .</Abstract>
          <Purpose>
                     To provide a simple HTTP interface for requesting geo-registered map images
@@ -46,7 +46,7 @@
             <West_Bounding_Coordinate>-179.999996</West_Bounding_Coordinate>
             <East_Bounding_Coordinate>179.9999</East_Bounding_Coordinate>
             <North_Bounding_Coordinate>89.000000</North_Bounding_Coordinate>
-            <South_Bounding_Coordinate>-67.337844</South_Bounding_Coordinate>
+            <South_Bounding_Coordinate>-67.336152</South_Bounding_Coordinate>
          </Bounding_Coordinates>
       </Spatial_Domain>
       <Keywords>
@@ -66,9 +66,9 @@
             <Theme_Keyword>2010 Census Urbanized Areas</Theme_Keyword>
             <Theme_Keyword>Census Regions</Theme_Keyword>
             <Theme_Keyword>Census Divisions</Theme_Keyword>
-            <Theme_Keyword>2019 State Legislative Districts - Lower</Theme_Keyword>
-            <Theme_Keyword>2019 State Legislative Districts - Upper</Theme_Keyword>
-            <Theme_Keyword>116th Congressional Districts</Theme_Keyword>
+            <Theme_Keyword>2014 State Legislative Districts - Lower</Theme_Keyword>
+            <Theme_Keyword>2014 State Legislative Districts - Upper</Theme_Keyword>
+            <Theme_Keyword>114th Congressional Districts</Theme_Keyword>
             <Theme_Keyword>American Indian Joint-Use Areas</Theme_Keyword>
             <Theme_Keyword>Tribal Designated Statistical Areas</Theme_Keyword>
             <Theme_Keyword>State Designated Tribal Statistical Areas</Theme_Keyword>
@@ -89,7 +89,6 @@
             <Theme_Keyword>Elementary School Districts</Theme_Keyword>
             <Theme_Keyword>Secondary School Districts</Theme_Keyword>
             <Theme_Keyword>Unified School Districts</Theme_Keyword>
-            <Theme_Keyword>2010 Census Blocks</Theme_Keyword>
             <Theme_Keyword>Census Block Groups</Theme_Keyword>
             <Theme_Keyword>Census Tracts</Theme_Keyword>
             <Theme_Keyword>Tribal Block Groups</Theme_Keyword>
@@ -406,19 +405,19 @@
       </Feature_Catalogue_Description>
       <Feature_Catalogue_Description>
          <FC_Title>Feature Catalog for the Current State Legislative District (SLD) Lower Chamber State-based</FC_Title>
-         <Included_With_Dataset>No</Included_With_Dataset><!--keyword:2019 State Legislative Districts - Lower-->
+         <Included_With_Dataset>No</Included_With_Dataset><!--keyword:2014 State Legislative Districts - Lower-->
          <Feature_Types>State Legislative Districts</Feature_Types>
          <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/sldl/tl_2019_sldl.ea.iso.xml</FC_Online_Linkage>
       </Feature_Catalogue_Description>
       <Feature_Catalogue_Description>
          <FC_Title>Feature Catalog for the Current State Legislative District (SLD) Upper Chamber State-based</FC_Title>
-         <Included_With_Dataset>No</Included_With_Dataset><!--keyword:2019 State Legislative Districts - Upper-->
+         <Included_With_Dataset>No</Included_With_Dataset><!--keyword:2014 State Legislative Districts - Upper-->
          <Feature_Types>State Legislative Districts</Feature_Types>
          <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/sldu/tl_2019_sldu.ea.iso.xml</FC_Online_Linkage>
       </Feature_Catalogue_Description>
       <Feature_Catalogue_Description>
          <FC_Title>Feature Catalog for the 116th Congressional District National</FC_Title>
-         <Included_With_Dataset>No</Included_With_Dataset><!--keyword:116th Congressional Districts-->
+         <Included_With_Dataset>No</Included_With_Dataset><!--keyword:114th Congressional Districts-->
          <Feature_Types>Congressional Districts</Feature_Types>
          <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/cd116/tl_2019_cd116.ea.iso.xml</FC_Online_Linkage>
       </Feature_Catalogue_Description>
@@ -543,12 +542,6 @@
          <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/unsd/tl_2019_unsd.ea.iso.xml</FC_Online_Linkage>
       </Feature_Catalogue_Description>
       <Feature_Catalogue_Description>
-         <FC_Title>Feature Catalog for the 2010 Census Block State-based</FC_Title>
-         <Included_With_Dataset>No</Included_With_Dataset><!--keyword:2010 Census Blocks-->
-         <Feature_Types>Census Blocks</Feature_Types>
-         <FC_Online_Linkage>https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/tabblock10/tl_2019_tabblock10.ea.iso.xml</FC_Online_Linkage>
-      </Feature_Catalogue_Description>
-      <Feature_Catalogue_Description>
          <FC_Title>Feature Catalog for the Current Block Group State-based</FC_Title>
          <Included_With_Dataset>No</Included_With_Dataset><!--keyword:Census Block Groups-->
          <Feature_Types>Block Groups</Feature_Types>
@@ -598,13 +591,13 @@
          <Digital_Form>
             <Format_Name>WMS</Format_Name>
             <Format_Version_Number>1.3.0</Format_Version_Number>
-            <Network_Resource_Name>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2019/MapServer/WmsServer?request=GetCapabilities&amp;service=WMS</Network_Resource_Name>
+            <Network_Resource_Name>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2014/MapServer/WmsServer?request=GetCapabilities&amp;service=WMS</Network_Resource_Name>
             <mimeType>text/html</mimeType>
          </Digital_Form>
          <Digital_Form>
             <Format_Name>https</Format_Name>
             <Format_Version_Number>3.0</Format_Version_Number>
-            <Network_Resource_Name>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2019/MapServer/WmsServer?</Network_Resource_Name>
+            <Network_Resource_Name>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2014/MapServer/WmsServer?</Network_Resource_Name>
             <mimeType>text/html</mimeType>
          </Digital_Form>
          <Fees>Census Web Mapping Services may be accessed without charge.</Fees>
@@ -642,9 +635,9 @@
             <Parameter_Description>request name</Parameter_Description>
          </Operation_Parameters>
          <Connect_Point>
-            <CP_Link>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2019/MapServer/WmsServer?service=wms&amp;1.3.0&amp;request=GetCapabilities</CP_Link>
+            <CP_Link>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2014/MapServer/WmsServer?service=wms&amp;1.3.0&amp;request=GetCapabilities</CP_Link>
             <Protocol>HTTP/1.1</Protocol>
-            <Resource_Name> Census Current (2019) WMS GetCapabilities</Resource_Name><!--GetCapabilities-->
+            <Resource_Name> Census Current (2014) WMS GetCapabilities</Resource_Name><!--GetCapabilities-->
             <Resource_Description>This is the GetCapabilities URL.</Resource_Description>
          </Connect_Point>
       </Contains_Operations>
@@ -744,9 +737,9 @@
             <Parameter_Description>Value of other dimensions as appropriate.</Parameter_Description>
          </Operation_Parameters>
          <Connect_Point>
-            <CP_Link>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2019/MapServer/WmsServer?service=wms&amp;1.3.0&amp;request=GetMap</CP_Link>
+            <CP_Link>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2014/MapServer/WmsServer?service=wms&amp;1.3.0&amp;request=GetMap</CP_Link>
             <Protocol>HTTP/1.1</Protocol>
-            <Resource_Name> Census Current (2019) WMS GetMap</Resource_Name><!--GetMap-->
+            <Resource_Name> Census Current (2014) WMS GetMap</Resource_Name><!--GetMap-->
             <Resource_Description>This is the GetMap URL.</Resource_Description>
          </Connect_Point>
       </Contains_Operations>
@@ -816,9 +809,9 @@
             <Parameter_Description>The format in which exceptions are to be reported by the WMS (default= XML).</Parameter_Description>
          </Operation_Parameters>
          <Connect_Point>
-            <CP_Link>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2019/MapServer/WmsServer?service=wms&amp;1.3.0&amp;request=GetFeatureInfo</CP_Link>
+            <CP_Link>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2014/MapServer/WmsServer?service=wms&amp;1.3.0&amp;request=GetFeatureInfo</CP_Link>
             <Protocol>HTTP/1.1</Protocol>
-            <Resource_Name> Census Current (2019) WMS GetFeatureInfo</Resource_Name><!--GetFeatureInfo-->
+            <Resource_Name> Census Current (2014) WMS GetFeatureInfo</Resource_Name><!--GetFeatureInfo-->
             <Resource_Description>This is the GetFeatureInfo URL.</Resource_Description>
          </Connect_Point>
       </Contains_Operations>
@@ -853,9 +846,9 @@
             <Parameter_Description>The SLD version requested for the Styled Layer Descriptor (SLD) document. Only version 1.0.0 is supported.</Parameter_Description>
          </Operation_Parameters>
          <Connect_Point>
-            <CP_Link>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2019/MapServer/WmsServer?</CP_Link>
+            <CP_Link>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2014/MapServer/WmsServer?</CP_Link>
             <Protocol>HTTP/1.1</Protocol>
-            <Resource_Name> Census Current (2019) WMS esri_wms:GetStyles</Resource_Name><!--esri_wms:GetStyles-->
+            <Resource_Name> Census Current (2014) WMS esri_wms:GetStyles</Resource_Name><!--esri_wms:GetStyles-->
             <Resource_Description>This is the esri_wms:GetStyles URL.</Resource_Description>
          </Connect_Point>
       </Contains_Operations>
@@ -865,7 +858,7 @@
       <Metadata_Parent_Identifier>TIGERweb, 2019 Series Information for the TIGERWeb files</Metadata_Parent_Identifier>
       <Metadata_Hierarchy_Level>service</Metadata_Hierarchy_Level>
       <Metadata_Hierarchy_Level_Name>
-         <Metadata_Hierarchy_Level_Name>This is the TIGERWeb for all the  Census Current (2019) WMS </Metadata_Hierarchy_Level_Name>
+         <Metadata_Hierarchy_Level_Name>This is the TIGERWeb for all the  Census Current (2014) WMS </Metadata_Hierarchy_Level_Name>
       </Metadata_Hierarchy_Level_Name>
       <Point_of_Contact>
          <Contact_Organization>U.S. Department of Commerce, U.S. Census Bureau, Geography Division</Contact_Organization>
@@ -874,7 +867,7 @@
       <Metadata_Standard_Name>GeoPlatform Profile of ISO 19115-1</Metadata_Standard_Name>
       <Metadata_Standard_Version>DRAFT Revision 1</Metadata_Standard_Version>
       <Metadata_Character_Set>UTF-8</Metadata_Character_Set>
-      <Metadata_File_Identifier>tigerWMS_ACS2019.gpm.xml</Metadata_File_Identifier>
+      <Metadata_File_Identifier>tigerWMS_ACS2014.gpm.xml</Metadata_File_Identifier>
       <Metadata_Language>eng</Metadata_Language>
    </Metadata_Reference_Information>
 </GPM>
