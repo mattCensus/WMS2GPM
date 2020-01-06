@@ -249,6 +249,15 @@
              <xsl:when test="contains($keywordPass,'Census Regions')">
                  <xsl:element name="FC_Title">Feature Attributes for the 2019 Census Regions</xsl:element>
              </xsl:when>
+             <xsl:when test="contains($keywordPass,'Census Divisions')">
+                 <xsl:element name="FC_Title">Feature Attributes for the Census Divisions</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'State Designated Tribal Statistical Areas')">
+                 <xsl:element name="FC_Title">Feature Catolog for the 2019 State Designated Tribal Statistical Areas (SDTSA) </xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Tribal Subdivisions')">
+                 <xsl:element name="FC_Title">Feature Catolog for the 2019 Tribal Subdivisions</xsl:element>
+             </xsl:when>
              <xsl:otherwise>
                  <xsl:variable name="FCTitle" select="concat('Feature Catalog for the 2019 ', $keywordPass )"/>
                  <xsl:element name="FC_Title"><xsl:value-of select="$FCTitle"></xsl:value-of></xsl:element>
@@ -498,6 +507,18 @@
             <xsl:when test="contains($keywordPass,'Census Regions')">
                 <xsl:element name="Feature_Types">Census Regions</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_CensusRegions.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Census Divisions')">
+                <xsl:element name="Feature_Types">Census Divisions</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_CensusDivisions.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'State Designated Tribal Statistical Areas')">
+                <xsl:element name="Feature_Types">State Designated Tribal Statistical Areas</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_SDTSA.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Tribal Subdivisions')">
+                <xsl:element name="Feature_Types">Tribal Subdivisions</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_EATribalSubdivisions.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:otherwise>
                  <xsl:element name="FC_Online_Linkage"><xsl:value-of select="$TigerURL"/></xsl:element>

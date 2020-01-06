@@ -21,7 +21,7 @@
             <xsl:when test="contains($pathB,'TIGERweb')">
                 <xsl:variable name="postTiger" select="substring-after($pathB,'TIGERweb')"/>
                 <xsl:variable name="finalWMS" select="substring-before($postTiger,'MapServer')"/>
-                <xsl:comment><xsl:value-of select="$finalWMS"/></xsl:comment>
+                <!-- <xsl:comment><xsl:value-of select="$finalWMS"/></xsl:comment> -->
                 <xsl:element name="FGDC_Required">
                     <xsl:element name="ISO_Theme">
                         <xsl:element name="ISO_Keyword_Thesaurus">ISO 19115 Topic Categories</xsl:element>
