@@ -15,6 +15,7 @@
     exclude-result-prefixes="fn grp vmf xs xsi xsl xd">
     <xsl:import href="../WMS2GPM/WMS2GPMTitle.xsl"/>
     <xsl:import href="../WMS2GPM/AbstractKeywords.xsl"/>
+    <xsl:import href="../WMS2GPM/WMS2GPMRangeOfDates.xsl"/>
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p><xd:b>Created on:</xd:b> Apr 5, 2019</xd:p>
@@ -51,7 +52,8 @@
                 </xsl:element>
             </xsl:element>
             <xsl:element name="Time_Period_of_Content">
-                <xsl:element name="Calendar_Date">20190101</xsl:element>
+               <!--  <xsl:element name="Calendar_Date">20190101</xsl:element> -->
+                <xsl:call-template name="rangeOfDates"/>
                 <xsl:element name="Currentness_Reference">ground condition</xsl:element>
             </xsl:element>
             <xsl:element name="Status">
