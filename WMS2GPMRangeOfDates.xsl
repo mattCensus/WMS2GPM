@@ -25,10 +25,10 @@
                     <xsl:when test="contains($pathB,'TIGERweb')">
                         <xsl:choose>  
                             <xsl:when test="contains($pathB,'PhysicalFeatures')">
-                                <xsl:element name="Calendar_Date">20190101 </xsl:element>
+                                <xsl:element name="Calendar_Date">20190101</xsl:element>
                             </xsl:when>
                             <xsl:when test="contains($pathB,'ECON')">
-                                <xsl:comment>In ACS</xsl:comment>
+                                <!--  <xsl:comment>In ACS</xsl:comment>-->
                                 <xsl:variable name="YearA" select="substring-after($pathB,'TIGERweb/')"/>
                                 <xsl:variable name="YearB" select="substring-before($YearA,'/MapServer')"/>
                                 <xsl:variable name="yearFinal" select="substring-after($YearB,'ECON')"/>
@@ -43,7 +43,7 @@
                                 <xsl:element name="Calendar_Date"><xsl:value-of select="$yearFinalA"/> </xsl:element>
                             </xsl:when>
                             <xsl:when test="contains($pathB,'ACS')"> 
-                                <xsl:comment>In ACS</xsl:comment>
+                                <!--  <xsl:comment>In ACS</xsl:comment>-->
                                 <xsl:variable name="YearA" select="substring-after($pathB,'TIGERweb/')"/>
                                 <xsl:variable name="YearB" select="substring-before($YearA,'/MapServer')"/>
                                 <xsl:variable name="yearFinal" select="substring-after($YearB,'ACS')"/>
@@ -60,7 +60,7 @@
                              n Census2010!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</xsl:comment>-->
                         <xsl:choose>
                             <xsl:when test="contains($pathB,'PhysicalFeatures')">
-                                <xsl:element name="Calendar_Date">20100101 </xsl:element>
+                                <xsl:element name="Calendar_Date">20100101</xsl:element>
                             </xsl:when>
                             <xsl:when test="contains($pathB,'Census2000')">
                                 <!-- <xsl:comment>In the decennial</xsl:comment> -->

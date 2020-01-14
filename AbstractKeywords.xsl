@@ -14,10 +14,11 @@
     xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
     exclude-result-prefixes="fn grp vmf xs xsi xsl xd">
     <xsl:template name="AbstractKeywords">
+       <!--   <xsl:comment>In the abstract keywords document!!!!!!!!!!</xsl:comment>-->
         <xsl:variable name="layerOneLength" select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer[1]"/>
         <xsl:choose>
             <xsl:when test="/default:WMS_Capabilities/default:Capability[1]/default:Layer[1]/default:Layer[1]/default:Layer[1]">
-                <!--  <xsl:comment>first for physical</xsl:comment> -->
+                  <!--<xsl:comment>first for physical</xsl:comment> -->
                 <xsl:for-each select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer/default:Layer">
                     <xsl:variable name="keyword" select="./default:Name"/>
                     <xsl:if test="not(contains($keyword,'Labels'))">

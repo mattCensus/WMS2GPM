@@ -18,16 +18,14 @@
     
     <xsl:template name="Metadata_Reference_Information">
         <xsl:element name="Metadata_Reference_Information">
-            <xsl:variable name="yearValue">2019</xsl:variable>
+            <xsl:variable name="yearValue">2020</xsl:variable>
             <xsl:element name="Metadata_Date"><xsl:value-of select="$yearValue"/></xsl:element>
             <xsl:element name="Metadata_Parent_Identifier">
                 <xsl:variable name="TigerParentFile" select="concat('TIGERweb, ',$yearValue, ' Series Information for the TIGERWeb files')"/>
                 <xsl:value-of select="$TigerParentFile"/>
             </xsl:element>
             <xsl:element name="Metadata_Hierarchy_Level">service</xsl:element>
-            <xsl:element name="Metadata_Hierarchy_Level_Name">
-                <xsl:call-template name="WMSMetadataHierarchyLevelName"/>
-            </xsl:element>
+            <xsl:call-template name="WMSMetadataHierarchyLevelName"/>
             <xsl:element name="Point_of_Contact">
                 <xsl:element name="Contact_Organization">U.S. Department of Commerce, U.S. Census Bureau, Geography Division</xsl:element>
                 <xsl:element name="Contact_Electronic_Mail_Address">geo.geography@census.gov</xsl:element>

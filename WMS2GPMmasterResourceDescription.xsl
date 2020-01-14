@@ -30,7 +30,7 @@
                         <xsl:variable name="YearFinal" select="substring-after($YearB,'ACS')"/>
                         <xsl:variable name="FinalTitle" select="concat(' Census Current (',$YearFinal,') WMS ', $OperPass)"/>
                         <xsl:element name="Resource_Name"><xsl:value-of select="$FinalTitle"/></xsl:element>
-                        <xsl:comment><xsl:value-of select="$OperPass"/></xsl:comment>
+                        <!-- <xsl:comment><xsl:value-of select="$OperPass"/></xsl:comment> -->
                         <!--  <xsl:comment>Exiting the Resource Description Template A</xsl:comment>-->
                     </xsl:when>
                     <xsl:when test="contains($pathB,'ECON')">

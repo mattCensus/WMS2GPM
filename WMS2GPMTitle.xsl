@@ -17,6 +17,7 @@
     <xsl:template name="WMSTitle">
         <xsl:variable name="path" select="/default:WMS_Capabilities/@*[namespace-uri()='http://www.w3.org/2001/XMLSchema-instance' and local-name()='schemaLocation']"/>
         <xsl:variable name="pathB" select="substring($path,87)"></xsl:variable>
+        <xsl:variable name="getCapPath" select="substring-after($pathB,'.com/wms')"/>
         <!--  <xsl:element name="Title"><xsl:value-of select="$pathB"/></xsl:element>-->
         <xsl:choose>
           
@@ -30,16 +31,17 @@
                         <xsl:element name="Publication_Date"><xsl:value-of select="$YearFinal"/></xsl:element>
                         <xsl:element name="Title"><xsl:value-of select="$FinalTitle"/></xsl:element>
                         <xsl:element name="Geospatial_Data_Presentation_Form">Web Mapping Service</xsl:element>
-                        <xsl:element name="Online_Linkage"><xsl:value-of select="$pathB"/></xsl:element>
+                        <xsl:element name="Online_Linkage"><xsl:value-of select="$getCapPath"/></xsl:element>
                     </xsl:when>
                     <xsl:when test="contains($pathB,'ECON')">
                         <xsl:variable name="YearA" select="substring-after($pathB,'TIGERweb/')"/>
                         <xsl:variable name="YearB" select="substring-before($YearA,'/MapServer')"/>
                         <xsl:variable name="YearFinal" select="substring-after($YearB,'ECON')"/>
+                        <xsl:variable name="FinalTitle" select="concat($YearFinal,' Economic Places WMS')"/>
                         <xsl:element name="Publication_Date"><xsl:value-of select="$YearFinal"/></xsl:element>
-                        <xsl:element name="Title">Economic Places </xsl:element>
+                        <xsl:element name="Title">  <xsl:value-of select="$FinalTitle"/></xsl:element>
                         <xsl:element name="Geospatial_Data_Presentation_Form">Web Mapping Service</xsl:element>
-                        <xsl:element name="Online_Linkage"><xsl:value-of select="$pathB"/></xsl:element>
+                        <xsl:element name="Online_Linkage"><xsl:value-of select="$getCapPath"/></xsl:element>
                     </xsl:when>
                     <xsl:when test="contains($pathB,'Census2010')">
                         <xsl:variable name="YearA" select="substring-after($pathB,'TIGERweb/')"/>
@@ -52,11 +54,12 @@
                         <xsl:element name="Publication_Date"><xsl:value-of select="$YearFinal"/></xsl:element>
                         <xsl:element name="Title"><xsl:value-of select="$FinalTitle"/></xsl:element>
                         <xsl:element name="Geospatial_Data_Presentation_Form">Web Mapping Service</xsl:element>
-                        <xsl:element name="Online_Linkage"><xsl:value-of select="$pathB"/></xsl:element>
+                        <xsl:element name="Online_Linkage"><xsl:value-of select="$getCapPath"/></xsl:element>
                     </xsl:when>    
                     <xsl:when test="contains($pathB,'PhysicalFeatures')">
                         <xsl:variable name="YearA" select="substring-after($pathB,'TIGERweb/')"/>
-                        <!--  <xsl:comment>YearA: <xsl:value-of select="$YearA"/></xsl:comment>-->
+                         <!--<xsl:comment>In the Physical Features when TIGERWEB</xsl:comment>
+                         <xsl:comment>YearA: <xsl:value-of select="$YearA"/></xsl:comment>-->
                         <xsl:variable name="YearB" select="substring-before($YearA,'/MapServer')"/>
                         <!--  <xsl:comment>YearB: <xsl:value-of select="$YearB"/></xsl:comment>-->
                         <xsl:variable name="YearFinal" select="substring-after($YearB,'WMS_Census')"/>
@@ -64,7 +67,7 @@
                         <xsl:element name="Publication_Date">2020</xsl:element>
                         <xsl:element name="Title">Census Physical Features WMS</xsl:element>
                         <xsl:element name="Geospatial_Data_Presentation_Form">Web Mapping Service</xsl:element>
-                        <xsl:element name="Online_Linkage"><xsl:value-of select="$pathB"/></xsl:element>
+                        <xsl:element name="Online_Linkage"><xsl:value-of select="$getCapPath"/></xsl:element>
                     </xsl:when>
                 </xsl:choose>
             </xsl:when> 
@@ -85,7 +88,7 @@
                         <xsl:variable name="FinalTitle" select="concat('Census ',$FinalYear,' WMS')"/>
                         <xsl:element name="Title"><xsl:value-of select="$FinalTitle"/></xsl:element>
                         <xsl:element name="Geospatial_Data_Presentation_Form">Web Mapping Service</xsl:element>
-                        <xsl:element name="Online_Linkage"><xsl:value-of select="$pathB"/></xsl:element>
+                        <xsl:element name="Online_Linkage"><xsl:value-of select="$getCapPath"/></xsl:element>
                     </xsl:when>
                     <xsl:when test="contains($pathB,'PhysicalFeatures')">
                         <xsl:variable name="YearA" select="substring-after($pathB,'TIGERweb/')"/>
@@ -97,7 +100,7 @@
                         <xsl:element name="Publication_Date">2020</xsl:element>
                         <xsl:element name="Title">Census Physical Features WMS</xsl:element>
                         <xsl:element name="Geospatial_Data_Presentation_Form">Web Mapping Service</xsl:element>
-                        <xsl:element name="Online_Linkage"><xsl:value-of select="$pathB"/></xsl:element>
+                        <xsl:element name="Online_Linkage"><xsl:value-of select="$getCapPath"/></xsl:element>
                     </xsl:when>
                     <xsl:when test="contains($pathB,'2010')">
                         <!--  <xsl:comment>in Census 2010B</xsl:comment>-->
@@ -112,7 +115,7 @@
                         <xsl:variable name="FinalTitle" select="concat('Census ',$FinalYear,' WMS')"/>
                         <xsl:element name="Title"><xsl:value-of select="$FinalTitle"/></xsl:element>
                         <xsl:element name="Geospatial_Data_Presentation_Form">Web Mapping Service</xsl:element>
-                        <xsl:element name="Online_Linkage"><xsl:value-of select="$pathB"/></xsl:element>
+                        <xsl:element name="Online_Linkage"><xsl:value-of select="$getCapPath"/></xsl:element>
                     </xsl:when>
                     <xsl:otherwise>
                        <!--   <xsl:comment>In the 2010otherwise!!!!!!!!!!!!!</xsl:comment>-->
@@ -127,7 +130,7 @@
                         <xsl:variable name="FinalTitle" select="concat('Census ',$FinalYear,' WMS')"/>
                         <xsl:element name="Title"><xsl:value-of select="$FinalTitle"/></xsl:element>
                         <xsl:element name="Geospatial_Data_Presentation_Form">Web Mapping Service</xsl:element>
-                        <xsl:element name="Online_Linkage"><xsl:value-of select="$pathB"/></xsl:element>
+                        <xsl:element name="Online_Linkage"><xsl:value-of select="$getCapPath"/></xsl:element>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
@@ -135,7 +138,7 @@
     </xsl:template>
     
     <xsl:template name="WMSMetadataHierarchyLevelName">
-        <xsl:variable name="BegPhrase">This is the TIGERWeb for all the </xsl:variable>
+        <xsl:variable name="BegPhrase">This is metadata for the TIGERWeb service for the </xsl:variable>
         <xsl:variable name="path" select="/default:WMS_Capabilities/@*[namespace-uri()='http://www.w3.org/2001/XMLSchema-instance' and local-name()='schemaLocation']"/>
         <xsl:variable name="pathB" select="substring($path,85)"></xsl:variable>
         <xsl:variable name="postTiger" select="substring-after($pathB,'TIGERweb')"/>
@@ -156,17 +159,17 @@
                         <xsl:variable name="YearA" select="substring-after($pathB,'TIGERweb/')"/>
                         <xsl:variable name="YearB" select="substring-before($YearA,'/MapServer')"/>
                         <xsl:variable name="FinalTitle" select="concat($BegPhrase,'Economic Places')"/>
-                        <xsl:element name="Metadata_Hierarchy_Level_Name"> </xsl:element>
+                        <xsl:element name="Metadata_Hierarchy_Level_Name"><xsl:value-of select="$FinalTitle"/> </xsl:element>
                     </xsl:when>
                     <xsl:when test="contains($pathB,'Census2010')">
                         <xsl:variable name="YearA" select="substring-after($pathB,'TIGERweb/')"/>
-                        <xsl:comment>YearA: <xsl:value-of select="$YearA"/></xsl:comment>
+                        <!--  <xsl:comment>YearA: <xsl:value-of select="$YearA"/></xsl:comment>-->
                         <xsl:variable name="YearB" select="substring-before($YearA,'/MapServer')"/>
-                        <xsl:comment>YearB: <xsl:value-of select="$YearB"/></xsl:comment>
+                        <!-- <xsl:comment>YearB: <xsl:value-of select="$YearB"/></xsl:comment> -->
                         <xsl:variable name="YearFinal" select="substring-after($YearB,'WMS_Census')"/>
-                        <xsl:comment> YearFinal <xsl:value-of select="$YearFinal"/></xsl:comment>
+                       <!--  <xsl:comment> YearFinal <xsl:value-of select="$YearFinal"/></xsl:comment> -->
                         <xsl:variable name="FinalTitle" select="concat($BegPhrase,'Census ',$YearFinal,' WMS ')"/>
-                        <xsl:element name="Publication_Date"><xsl:value-of select="$YearFinal"/></xsl:element>
+                        <!--  <xsl:element name="Publication_Date"><xsl:value-of select="$YearFinal"/></xsl:element>-->
                         <xsl:element name="Metadata_Hierarchy_Level_Name"><xsl:value-of select="$FinalTitle"/></xsl:element>
                     </xsl:when>    
                     <xsl:when test="contains($pathB,'PhysicalFeatures')">
@@ -211,10 +214,25 @@
  <xsl:template name="WMSfileName">
      <xsl:variable name="path" select="/default:WMS_Capabilities/@*[namespace-uri()='http://www.w3.org/2001/XMLSchema-instance' and local-name()='schemaLocation']"/>
      <xsl:variable name="pathB" select="substring($path,85)"></xsl:variable>
-     <xsl:variable name="postTiger" select="substring-after($pathB,'TIGERweb/')"/>
-     <xsl:variable name="finalWMS" select="substring-before($postTiger,'/MapServer')"/>
-     <xsl:variable name="FinalFileName" select="concat($finalWMS,'.gpm.xml')"></xsl:variable>
-     <xsl:element name="Metadata_File_Identifier"><xsl:value-of select="$FinalFileName"/></xsl:element>
+     <!--  <xsl:comment>pathB<xsl:value-of select="$pathB"/></xsl:comment>-->
+     <xsl:choose>
+         <xsl:when test="contains($pathB,'Census2010')">
+             <xsl:variable name="postTiger" select="substring-after($pathB,'Census2010/')"/>
+            <!--   <xsl:comment>postTiger: <xsl:value-of select="$postTiger"/></xsl:comment>-->
+             <xsl:variable name="finalWMS" select="substring-before($postTiger,'/MapServer')"/>
+            <!--   <xsl:comment>finalWMS: <xsl:value-of select="$finalWMS"/></xsl:comment>-->
+             <xsl:variable name="FinalFileName" select="concat('Census2010_',$finalWMS,'.gpm.xml')"></xsl:variable>
+             <xsl:element name="Metadata_File_Identifier"><xsl:value-of select="$FinalFileName"/></xsl:element>
+         </xsl:when>
+         <xsl:when test="contains($pathB,'TIGERweb/')">
+              <xsl:variable name="postTiger" select="substring-after($pathB,'TIGERweb/')"/>
+             <!--  <xsl:comment>postTiger<xsl:value-of select="$postTiger"/></xsl:comment>-->
+             <xsl:variable name="finalWMS" select="substring-before($postTiger,'/MapServer')"/>
+             <!--  <xsl:comment>finalWMS: <xsl:value-of select="$finalWMS"/></xsl:comment>-->
+             <xsl:variable name="FinalFileName" select="concat($finalWMS,'.gpm.xml')"></xsl:variable>
+             <xsl:element name="Metadata_File_Identifier"><xsl:value-of select="$FinalFileName"/></xsl:element>
+         </xsl:when>
+     </xsl:choose>
  </xsl:template>
     
     <xsl:template name="WMSAbstractTitle">
@@ -235,10 +253,12 @@
                        
                     </xsl:when>
                     <xsl:when test="contains($pathB,'ECON')">
+                        <!--  <xsl:comment>In the Econ !!!!!!!!!</xsl:comment>-->
                         <xsl:variable name="YearA" select="substring-after($pathB,'TIGERweb/')"/>
                         <xsl:variable name="YearB" select="substring-before($YearA,'/MapServer')"/>
                         <xsl:variable name="YearFinal" select="substring-after($YearB,'ECON')"/>
-                       Economic Places
+                        <xsl:variable name="FinalTitle" select="concat($YearFinal,' Economic Places WMS')"/>
+                        <xsl:value-of select="$FinalTitle"/>
                     </xsl:when>
                     <xsl:when test="contains($pathB,'Census2010')">
                         <xsl:variable name="YearA" select="substring-after($pathB,'TIGERweb/')"/>
@@ -248,7 +268,7 @@
                         <xsl:variable name="YearFinal" select="substring-after($YearB,'WMS_Census')"/>
                         
                         <xsl:variable name="FinalTitle" select="concat('Census ',$YearFinal,' WMS ')"/>
-                        <xsl:element name="Publication_Date"><xsl:value-of select="$YearFinal"/></xsl:element>
+                       <!--  <xsl:element name="Publication_Date"><xsl:value-of select="$YearFinal"/></xsl:element> -->
                         <xsl:value-of select="$FinalTitle"/>
                        
                     </xsl:when>    

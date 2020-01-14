@@ -25,7 +25,7 @@
         <xsl:element name="Entity_and_Attribute_Information">
             <xsl:choose>
                 <xsl:when test="/default:WMS_Capabilities/default:Capability[1]/default:Layer[1]/default:Layer[1]/default:Layer[1]">
-                    <xsl:comment>first for physical</xsl:comment>
+                    <!--  <xsl:comment>first for physical</xsl:comment>-->
                     <xsl:for-each select="/default:WMS_Capabilities/default:Capability/default:Layer/default:Layer/default:Layer">
                         <xsl:variable name="keyword" select="./default:Name"/>
                         <xsl:if test="not(contains($keyword,'Labels'))">
@@ -114,7 +114,7 @@
                  <xsl:element name="FC_Title">Feature Catalog for the 2010 Census Urban Area National</xsl:element>
              </xsl:when>
              <xsl:when test="contains($keywordPass,'Census Urbanized Areas')">
-                 <xsl:comment>UA!!!!!!!!!!!!!!!</xsl:comment>
+                 <!--  <xsl:comment>UA!!!!!!!!!!!!!!!</xsl:comment>-->
                  <xsl:element name="FC_Title">Feature Catalog for the 2010 Census Urban Area National</xsl:element>
              </xsl:when>
              <xsl:when test="contains($keywordPass,'State Legislative Districts - Lower')">
@@ -258,6 +258,15 @@
              <xsl:when test="contains($keywordPass,'Tribal Subdivisions')">
                  <xsl:element name="FC_Title">Feature Catolog for the 2019 Tribal Subdivisions</xsl:element>
              </xsl:when>
+             <xsl:when test="contains($keywordPass,'Urban Growth Areas')">
+                 <xsl:element name="FC_Title">Feature Catalog for the 2010 Census Urban Growth Area (UGA) State-based Shapefile</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Traffic Analysis Zones')">
+                 <xsl:element name="FC_Title">Feature Catolog for the 2010 Census Traffic Analysis Zone (TAZ) State-based Shapefile</xsl:element>
+             </xsl:when>
+             <xsl:when test="contains($keywordPass,'Traffic Analysis Districts')">
+                 <xsl:element name="FC_Title">Feature Catalog for 2011 2010 Census Traffic Analysis District (TAD) National Shapefile</xsl:element>
+             </xsl:when>
              <xsl:otherwise>
                  <xsl:variable name="FCTitle" select="concat('Feature Catalog for the 2019 ', $keywordPass )"/>
                  <xsl:element name="FC_Title"><xsl:value-of select="$FCTitle"></xsl:value-of></xsl:element>
@@ -268,7 +277,7 @@
     <xsl:template name="knownURLS">
         <xsl:param name="keywordPass"/>
         <xsl:variable name="TigerURL">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/</xsl:variable>
-        <xsl:comment>keyword:<xsl:value-of select="$keywordPass"/></xsl:comment>
+        <!-- <xsl:comment>keyword:<xsl:value-of select="$keywordPass"/></xsl:comment> -->
         <xsl:choose>
             <xsl:when test="contains($keywordPass,'Counties')">
                 <xsl:element name="Feature_Types">county</xsl:element>
@@ -315,12 +324,12 @@
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/uac10/tl_2019_uac10.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Census Urbanized Areas')">
-                <xsl:comment>UA!!!!!!!!!!!!!!!</xsl:comment>
+                <!--  <xsl:comment>UA!!!!!!!!!!!!!!!</xsl:comment>-->
                 <xsl:element name="Feature_Types">Census Urbanized Areas</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/uac10/tl_2019_uac10.ea.iso.xml</xsl:element>
             </xsl:when>
             <xsl:when test="contains($keywordPass,'Urbanized Areas')">
-                <xsl:comment>UA!!!!!!!!!!!!!!!</xsl:comment>
+                <!--  <xsl:comment>UA!!!!!!!!!!!!!!!</xsl:comment>-->
                 <xsl:element name="Feature_Types">Census Urbanized Areas</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/uac10/tl_2019_uac10.ea.iso.xml</xsl:element>
             </xsl:when>
@@ -520,6 +529,18 @@
                 <xsl:element name="Feature_Types">Tribal Subdivisions</xsl:element>
                 <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/Tiger2019/OtherEAs/tl_2019_EATribalSubdivisions.ea.iso.xml</xsl:element>
             </xsl:when>
+            <xsl:when test="contains($keywordPass,'Urban Growth Areas')">
+                <xsl:element name="Feature_Types">Urban Growth Areas</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/ISO/uga10/2012_uga10.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Traffic Analysis Zones')">
+                <xsl:element name="Feature_Types">Traffic Analysis Zones</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2011/taz/2011_taz10.ea.iso.xml</xsl:element>
+            </xsl:when>
+            <xsl:when test="contains($keywordPass,'Traffic Analysis Districts')">
+                <xsl:element name="Feature_Types">Traffic Analysis Districts</xsl:element>
+                <xsl:element name="FC_Online_Linkage">https://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2011/tad/tl_2011_us_tad10.ea.xml</xsl:element>
+             </xsl:when>   
             <xsl:otherwise>
                  <xsl:element name="FC_Online_Linkage"><xsl:value-of select="$TigerURL"/></xsl:element>
             </xsl:otherwise>
