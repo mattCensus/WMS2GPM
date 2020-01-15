@@ -39,7 +39,7 @@
             other servers.
             
             The GetFeatureInfo operation provides clients of a WMS with more information about features in the pictures of maps that were returned by previous
-            Map requests. It is only supported for those Layers for which the attribute queryable="1" (true) has been defined or inherited. It is availiable in the
+            Map requests. It is only supported for those Layers for which the attribute queryable="1" (true) has been defined or inherited. It is available in the
             following formats:
             <xsl:for-each select="/default:WMS_Capabilities/default:Capability[1]/default:Request[1]/default:GetFeatureInfo[1]/default:Format">
                 <xsl:choose>

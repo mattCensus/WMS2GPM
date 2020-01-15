@@ -36,7 +36,7 @@
             The Open Geospatial Consortium, Inc. Off Site (OGC) Web Map Service interface standard (WMS) provides a simple HTTP interface for
             requesting geo-registered map images from our geospatial database. The response to the request is one or more geo-registered map images that can be displayed in
             a browser or WMS client application. By gaining access to our data through our WMS, users can produce maps containing TIGERweb layers combined with layers from
-            other servers. The esri_wms:GetStyles operation returns user-defined styles from the WMS.It supports the following formats: 
+            other servers. The esri_wms:GetStyles operation returns user-defined styles from the WMS. It supports the following formats: 
         <xsl:for-each select="/default:WMS_Capabilities/default:Capability[1]/default:Request[1]/esri_wms:GetStyles[1]/default:Format">
             <xsl:choose>
                 <xsl:when test="position()&lt;2">

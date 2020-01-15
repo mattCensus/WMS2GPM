@@ -32,22 +32,26 @@
                 <xsl:element name="Digital_Form">
                     <xsl:element name="Format_Name">WMS</xsl:element>
                     <xsl:element name="Format_Version_Number"><xsl:value-of select="/default:WMS_Capabilities/@version"/></xsl:element>
-                    <xsl:element name="Network_Resource_Name">
-                        <xsl:variable name="NRN" select="/default:WMS_Capabilities/default:Capability[1]/default:Request[1]/default:GetCapabilities[1]/default:DCPType[1]/default:HTTP[1]/default:Get[1]/default:OnlineResource[1]/@*[namespace-uri()='http://www.w3.org/1999/xlink' and local-name()='href']"/>
-                        <xsl:variable name="GetCap" select="concat($NRN,'request=GetCapabilities&#38;service=WMS')"></xsl:variable>
-                        <xsl:value-of select="$GetCap"/>
-                    </xsl:element>
-                    <xsl:element name="mimeType">text/html</xsl:element>
+                    <xsl:element name="Network_Address">
+                        <xsl:element name="Network_Resource_Name">
+                            <xsl:variable name="NRN" select="/default:WMS_Capabilities/default:Capability[1]/default:Request[1]/default:GetCapabilities[1]/default:DCPType[1]/default:HTTP[1]/default:Get[1]/default:OnlineResource[1]/@*[namespace-uri()='http://www.w3.org/1999/xlink' and local-name()='href']"/>
+                            <xsl:variable name="GetCap" select="concat($NRN,'request=GetCapabilities&#38;service=WMS')"></xsl:variable>
+                            <xsl:value-of select="$GetCap"/>
+                        </xsl:element>
+                        <xsl:element name="Application_Profile">http://opengis.net/spec/wms</xsl:element>
+                        <xsl:element name="mimeType">text/html</xsl:element></xsl:element>
                 </xsl:element>
                 
                 <xsl:element name="Digital_Form">
-                    <xsl:element name="Format_Name">https</xsl:element>
+                    <xsl:element name="Format_Name">HTTPS</xsl:element>
                     <xsl:element name="Format_Version_Number">3.0</xsl:element>
-                    <xsl:element name="Network_Resource_Name">
-                        <xsl:variable name="NRN" select="/default:WMS_Capabilities/default:Capability[1]/default:Request[1]/default:GetCapabilities[1]/default:DCPType[1]/default:HTTP[1]/default:Get[1]/default:OnlineResource[1]/@*[namespace-uri()='http://www.w3.org/1999/xlink' and local-name()='href']"/>
-                         <xsl:value-of select="$NRN"/>
+                    <xsl:element name="Network_Address">
+                        <xsl:element name="Network_Resource_Name">
+                            <xsl:variable name="NRN" select="/default:WMS_Capabilities/default:Capability[1]/default:Request[1]/default:GetCapabilities[1]/default:DCPType[1]/default:HTTP[1]/default:Get[1]/default:OnlineResource[1]/@*[namespace-uri()='http://www.w3.org/1999/xlink' and local-name()='href']"/>
+                            <xsl:value-of select="$NRN"/>
+                        </xsl:element>
+                        <xsl:element name="mimeType">text/html</xsl:element>
                     </xsl:element>
-                    <xsl:element name="mimeType">text/html</xsl:element>
                 </xsl:element>
                 
                 <xsl:element name="Fees">Census Web Mapping Services may be accessed without charge.</xsl:element>

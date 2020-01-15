@@ -36,12 +36,12 @@
             <xsl:element name="Description">
                 <xsl:element name="Abstract">
                     TIGERweb files are designed for Viewing TIGER\Line spatial data online or streaming
-                    to your mapping application.The TIGER/Line shapefiles and related database files (.dbf) are an extract of
+                    to your mapping application. The TIGER/Line shapefiles and related database files (.dbf) are an extract of
                     selected geographic and cartographic information from the U.S. Census Bureau's
                     Master Address File / Topologically Integrated Geographic Encoding and Referencing
                     (MAF/TIGER) Database (MTDB).
                     
-                    The <xsl:call-template name="WMSAbstractTitle"/> contians the following layers: <xsl:call-template name="AbstractKeywords"/>
+                    The <xsl:call-template name="WMSAbstractTitle"/> contains the following layers: <xsl:call-template name="AbstractKeywords"/>
                 </xsl:element>
                 <xsl:element name="Purpose">
                     To provide a simple HTTP interface for requesting geo-registered map images

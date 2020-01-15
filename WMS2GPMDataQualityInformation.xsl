@@ -158,7 +158,7 @@
                 </xsl:element>
                 
                 <xsl:element name="Process_Step">
-                    <xsl:element name="Process_Description">TIGERWeb files are extracted from the Census MAF/TIGER database twice a year.                           </xsl:element>
+                    <xsl:element name="Process_Description">TIGERWeb files are extracted from the Census MAF/TIGER database twice a year.</xsl:element>
                     <xsl:element name="Process_Date">2019</xsl:element>
                 </xsl:element>
                 
