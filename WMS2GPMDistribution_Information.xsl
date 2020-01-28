@@ -38,8 +38,9 @@
                             <xsl:variable name="GetCap" select="concat($NRN,'request=GetCapabilities&#38;service=WMS')"></xsl:variable>
                             <xsl:value-of select="$GetCap"/>
                         </xsl:element>
+                        <xsl:element name="mimeType">text/html</xsl:element>
                         <xsl:element name="Application_Profile">http://opengis.net/spec/wms</xsl:element>
-                        <xsl:element name="mimeType">text/html</xsl:element></xsl:element>
+                    </xsl:element>
                 </xsl:element>
                 
                 <xsl:element name="Digital_Form">
