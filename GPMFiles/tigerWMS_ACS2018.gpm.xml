@@ -13,32 +13,26 @@
          <Publication_Date>2018</Publication_Date>
          <Title> Census Current (2018) WMS </Title>
          <Geospatial_Data_Presentation_Form>Web Mapping Service</Geospatial_Data_Presentation_Form>
-         <Online_Linkage> http://www.esri.com/wms https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2018/MapServer/WmsServer?version=1.3.0%26service=WMS%26request=GetSchemaExtension</Online_Linkage>
+         <Online_Linkage> https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2018/MapServer/WmsServer?version=1.3.0%26service=WMS%26request=GetSchemaExtension</Online_Linkage>
       </Citation>
       <Description>
          <Abstract>
                     TIGERweb files are designed for Viewing TIGER\Line spatial data online or streaming
-                    to your mapping application.The TIGER/Line shapefiles and related database files (.dbf) are an extract of
+                    to your mapping application. The TIGER/Line shapefiles and related database files (.dbf) are an extract of
                     selected geographic and cartographic information from the U.S. Census Bureau's
                     Master Address File / Topologically Integrated Geographic Encoding and Referencing
                     (MAF/TIGER) Database (MTDB).
                     
-                    The  Census Current (2018) WMS  contians the following layers: Counties, States,
-                    Micropolitan Statistical Areas, Metropolitan Statistical Areas, Metropolitan Divisions,
-                    Combined Statistical Areas, Micropolitan New England City and Town Areas,
-                    Metropolitan New England City and Town Areas, New England City and Town Area Divisions,
-                    Combined New England City and Town Areas, 2010 Census Urban Clusters, 2010 Census Urbanized Areas,
-                    Census Regions, Census Divisions, 2018 State Legislative Districts - Lower,
-                    2018 State Legislative Districts - Upper, 116th Congressional Districts,
-                    American Indian Joint-Use Areas, Tribal Designated Statistical Areas,
-                    State Designated Tribal Statistical Areas, Oklahoma Tribal Statistical Areas,
-                    Alaska Native Village Statistical Areas, Hawaiian Home Lands, State American Indian Reservations,
-                    Off-Reservation Trust Lands, Federal American Indian Reservations, Tribal Subdivisions,
-                    Alaska Native Regional Corporations, Census Designated Places, Incorporated Places, Consolidated Cities,
-                    Subbarrios , County Subdivisions, Estates, Elementary School Districts, Secondary School Districts,
-                    Unified School Districts, 2010 Census Blocks, Census Block Groups, Census Tracts, Tribal Block Groups,
-                    Tribal Census Tracts, 2010 Census ZIP Code Tabulation Areas, and 2010 Census Public Use Microdata Areas .
-         </Abstract>
+                    The  Census Current (2018) WMS  contains the following layers: Counties, States, Micropolitan Statistical Areas, Metropolitan Statistical Areas,
+                    Metropolitan Divisions, Combined Statistical Areas, Micropolitan New England City and Town Areas, Metropolitan New England City and Town Areas,
+                    New England City and Town Area Divisions, Combined New England City and Town Areas, 2010 Census Urban Clusters, 2010 Census Urbanized Areas,
+                    Census Regions, Census Divisions, 2018 State Legislative Districts - Lower, 2018 State Legislative Districts - Upper,
+                    116th Congressional Districts, American Indian Joint-Use Areas, Tribal Designated Statistical Areas, State Designated Tribal Statistical Areas,
+                    Oklahoma Tribal Statistical Areas, Alaska Native Village Statistical Areas, Hawaiian Home Lands, State American Indian Reservations,
+                    Off-Reservation Trust Lands, Federal American Indian Reservations, Tribal Subdivisions, Alaska Native Regional Corporations,
+                    Census Designated Places, Incorporated Places, Consolidated Cities, Subbarrios, County Subdivisions, Estates, Elementary School Districts,
+                    Secondary School Districts, Unified School Districts, 2010 Census Blocks, Census Block Groups, Census Tracts, Tribal Block Groups,
+                    Tribal Census Tracts, 2010 Census ZIP Code Tabulation Areas, and 2010 Census Public Use Microdata Areas .</Abstract>
          <Purpose>
                     To provide a simple HTTP interface for requesting geo-registered map images
                     from our geospatial database. The response to the request is one or more
@@ -289,7 +283,7 @@
          <Source_Contribution>All line segments</Source_Contribution>
       </Source_Information>
       <Process_Step>
-         <Process_Description>TIGERWeb files are extracted from the Census MAF/TIGER database twice a year.                           </Process_Description>
+         <Process_Description>TIGERWeb files are extracted from the Census MAF/TIGER database twice a year.</Process_Description>
          <Process_Date>2019</Process_Date>
       </Process_Step>
    </Data_Quality_Information>
@@ -612,14 +606,19 @@
          <Digital_Form>
             <Format_Name>WMS</Format_Name>
             <Format_Version_Number>1.3.0</Format_Version_Number>
-            <Network_Resource_Name>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2018/MapServer/WmsServer?request=GetCapabilities&amp;service=WMS</Network_Resource_Name>
-            <mimeType>text/html</mimeType>
+            <Network_Address>
+               <Network_Resource_Name>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2018/MapServer/WmsServer?request=GetCapabilities&amp;service=WMS</Network_Resource_Name>
+               <mimeType>text/html</mimeType>
+               <Application_Profile>http://opengis.net/spec/wms</Application_Profile>
+            </Network_Address>
          </Digital_Form>
          <Digital_Form>
-            <Format_Name>https</Format_Name>
+            <Format_Name>HTTPS</Format_Name>
             <Format_Version_Number>3.0</Format_Version_Number>
-            <Network_Resource_Name>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2018/MapServer/WmsServer?</Network_Resource_Name>
-            <mimeType>text/html</mimeType>
+            <Network_Address>
+               <Network_Resource_Name>https://tigerweb.geo.census.gov/arcgis/services/TIGERweb/tigerWMS_ACS2018/MapServer/WmsServer?</Network_Resource_Name>
+               <mimeType>text/html</mimeType>
+            </Network_Address>
          </Digital_Form>
          <Fees>Census Web Mapping Services may be accessed without charge.</Fees>
       </Standard_Order_Process>
@@ -774,7 +773,7 @@
             other servers.
             
             The GetFeatureInfo operation provides clients of a WMS with more information about features in the pictures of maps that were returned by previous
-            Map requests. It is only supported for those Layers for which the attribute queryable="1" (true) has been defined or inherited. It is availiable in the
+            Map requests. It is only supported for those Layers for which the attribute queryable="1" (true) has been defined or inherited. It is available in the
             following formats:
             application/vnd.esri.wms_raw_xml
 				application/vnd.esri.wms_featureinfo_xml
@@ -843,7 +842,7 @@
             The Open Geospatial Consortium, Inc. Off Site (OGC) Web Map Service interface standard (WMS) provides a simple HTTP interface for
             requesting geo-registered map images from our geospatial database. The response to the request is one or more geo-registered map images that can be displayed in
             a browser or WMS client application. By gaining access to our data through our WMS, users can produce maps containing TIGERweb layers combined with layers from
-            other servers. The esri_wms:GetStyles operation returns user-defined styles from the WMS.It supports the following formats: 
+            other servers. The esri_wms:GetStyles operation returns user-defined styles from the WMS. It supports the following formats: 
         application/vnd.ogc.sld+xml
 </Operation_Description>
          <Operation_Parameters>
