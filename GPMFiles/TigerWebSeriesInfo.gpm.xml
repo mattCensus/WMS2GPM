@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GPM xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="../../../../MetadataSchemas/SchemaAndXslts/newGPMStd/SeriesGPM.xsd"
+ profile="series">
+    
+ <FGDC_Required>
+     <ISO_Theme>
+         <ISO_Keyword_Thesaurus>ISO 19115 Topic Categories</ISO_Keyword_Thesaurus>
+         <ISO_Keyword>boundaries</ISO_Keyword>
+         <ISO_Keyword>transportation</ISO_Keyword>
+         <ISO_Keyword>inlandWaters</ISO_Keyword>
+         <ISO_Keyword>structure</ISO_Keyword>
+         <ISO_Keyword>society</ISO_Keyword>
+         <ISO_Keyword>intelligenceMilitary</ISO_Keyword>
+     </ISO_Theme>
+ </FGDC_Required>
+    <Identification_Information>
+        <Citation>
+            <Originator>U.S. Department of Commerce, U.S. Census Bureau, Geography Division</Originator>
+            <Publication_Date>2020</Publication_Date>
+            <Title>TIGERweb, 2020 Series Information for the TIGERWeb files</Title>
+            <Geospatial_Data_Presentation_Form>Web Mapping Service</Geospatial_Data_Presentation_Form>
+            <Online_Linkage>https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_wms.html</Online_Linkage>
+        </Citation>
+        <Description>
+            <Abstract>TIGERweb files are designed for Viewing TIGER\Line spatial data online or streaming
+                to your mapping application. The TIGER/Line shapefiles and related database files (.dbf) are an extract of
+                selected geographic and cartographic information from the U.S. Census Bureau's
+                Master Address File / Topologically Integrated Geographic Encoding and Referencing
+                (MAF/TIGER) Database (MTDB).</Abstract>
+            <Purpose> To provide a simple HTTP interface for requesting geo-registered map images
+                from our geospatial database. The response to the request is one or more
+                geo-registered map images that can be displayed in a browser or WMS client
+                application. By gaining access to our data through our WMS, users can produce maps
+                containing TIGERweb layers combined with layers from other servers. </Purpose>
+        </Description>
+        <Time_Period_of_Content>
+            <Calendar_Date>20000101</Calendar_Date>
+            <Currentness_Reference>ground condition</Currentness_Reference>
+        </Time_Period_of_Content>
+        <Status>
+            <Progress>Completed</Progress>
+            <Maintenance_and_Update_Frequency>Annually</Maintenance_and_Update_Frequency>
+        </Status>
+        <Spatial_Domain>
+            <Bounding_Coordinates>
+                <West_Bounding_Coordinate>-179.231086</West_Bounding_Coordinate>
+                <East_Bounding_Coordinate>179.8596</East_Bounding_Coordinate>
+                <North_Bounding_Coordinate>71.441059</North_Bounding_Coordinate>
+                <South_Bounding_Coordinate>-14.601813</South_Bounding_Coordinate>
+            </Bounding_Coordinates>
+        </Spatial_Domain>
+        <Keywords>
+            <Theme>
+                <Theme_Keyword_Thesaurus>None</Theme_Keyword_Thesaurus>
+                <Theme_Keyword>108th Congressional Districts</Theme_Keyword>
+                <Theme_Keyword>111th Congressional Districts</Theme_Keyword>
+                <Theme_Keyword>113th Congressional Districts</Theme_Keyword>
+                <Theme_Keyword>114th Congressional Districts</Theme_Keyword>
+                <Theme_Keyword>115th Congressional Districts</Theme_Keyword>
+                <Theme_Keyword>116th Congressional Districts</Theme_Keyword>
+                <Theme_Keyword>2010 Census Blocks</Theme_Keyword>
+                <Theme_Keyword>2010 Census Public Use Microdata Areas</Theme_Keyword>
+                <Theme_Keyword>2010 Census Urban Clusters</Theme_Keyword>
+                <Theme_Keyword>2010 Census Urbanized Areas</Theme_Keyword>
+                <Theme_Keyword>2010 Census ZIP Code Tabulation Areas</Theme_Keyword>
+                <Theme_Keyword>2010 State Legislative Districts - Lower</Theme_Keyword>
+                <Theme_Keyword>2010 State Legislative Districts - Upper</Theme_Keyword>
+                <Theme_Keyword>2013 State Legislative Districts - Lower</Theme_Keyword>
+                <Theme_Keyword>2013 State Legislative Districts - Upper</Theme_Keyword>
+                <Theme_Keyword>2014 State Legislative Districts - Lower</Theme_Keyword>
+                <Theme_Keyword>2014 State Legislative Districts - Upper</Theme_Keyword>
+                <Theme_Keyword>2016 State Legislative Districts - Lower</Theme_Keyword>
+                <Theme_Keyword>2016 State Legislative Districts - Upper</Theme_Keyword>
+                <Theme_Keyword>2018 State Legislative Districts - Lower</Theme_Keyword>
+                <Theme_Keyword>2018 State Legislative Districts - Upper</Theme_Keyword>
+                <Theme_Keyword>2019 State Legislative Districts - Lower</Theme_Keyword>
+                <Theme_Keyword>2019 State Legislative Districts - Upper</Theme_Keyword>
+                <Theme_Keyword>Alaska Native Regional Corporations</Theme_Keyword>
+                <Theme_Keyword>Alaska Native Village Statistical Areas</Theme_Keyword>
+                <Theme_Keyword>American Indian Joint-Use Areas</Theme_Keyword>
+                <Theme_Keyword>Areal Hydrography</Theme_Keyword>
+                <Theme_Keyword>Census Block Groups</Theme_Keyword>
+                <Theme_Keyword>Census Blocks</Theme_Keyword>
+                <Theme_Keyword>Census Designated Places</Theme_Keyword>
+                <Theme_Keyword>Census Divisions</Theme_Keyword>
+                <Theme_Keyword>Census Regions</Theme_Keyword>
+                <Theme_Keyword>Census Tracts</Theme_Keyword>
+                <Theme_Keyword>Colleges and Universities</Theme_Keyword>
+                <Theme_Keyword>Combined New England City and Town Areas</Theme_Keyword>
+                <Theme_Keyword>Combined Statistical Areas</Theme_Keyword>
+                <Theme_Keyword>Consolidated Cities</Theme_Keyword>
+                <Theme_Keyword>Correctional Facilities</Theme_Keyword>
+                <Theme_Keyword>Counties</Theme_Keyword>
+                <Theme_Keyword>County Subdivisions</Theme_Keyword>
+                <Theme_Keyword>Economic Places</Theme_Keyword>
+                <Theme_Keyword>Elementary School Districts</Theme_Keyword>
+                <Theme_Keyword>Estates</Theme_Keyword>
+                <Theme_Keyword>Federal American Indian Reservations</Theme_Keyword>
+                <Theme_Keyword>Glaciers</Theme_Keyword>
+                <Theme_Keyword>Hawaiian Home Lands</Theme_Keyword>
+                <Theme_Keyword>Incorporated Places</Theme_Keyword>
+                <Theme_Keyword>Linear Hydrography</Theme_Keyword>
+                <Theme_Keyword>Local Roads</Theme_Keyword>
+                <Theme_Keyword>Metropolitan Divisions</Theme_Keyword>
+                <Theme_Keyword>Metropolitan New England City and Town Areas</Theme_Keyword>
+                <Theme_Keyword>Metropolitan Statistical Areas</Theme_Keyword>
+                <Theme_Keyword>Metropolitan Statistical Areas/Consolidated Metropolitan Statistical Areas</Theme_Keyword>
+                <Theme_Keyword>Micropolitan New England City and Town Areas</Theme_Keyword>
+                <Theme_Keyword>Micropolitan Statistical Areas</Theme_Keyword>
+                <Theme_Keyword>Military Installations</Theme_Keyword>
+                <Theme_Keyword>National Park Service Areas</Theme_Keyword>
+                <Theme_Keyword>New England City and Town Area Divisions</Theme_Keyword>
+                <Theme_Keyword>Off-Reservation Trust Lands</Theme_Keyword>
+                <Theme_Keyword>Oklahoma Tribal Statistical Areas</Theme_Keyword>
+                <Theme_Keyword>Primary Metropolitan Statistical Areas</Theme_Keyword>
+                <Theme_Keyword>Primary Roads</Theme_Keyword>
+                <Theme_Keyword>Public Use Microdata Areas</Theme_Keyword>
+                <Theme_Keyword>Railroads</Theme_Keyword>
+                <Theme_Keyword>Secondary Roads</Theme_Keyword>
+                <Theme_Keyword>Secondary School Districts</Theme_Keyword>
+                <Theme_Keyword>State American Indian Reservations</Theme_Keyword>
+                <Theme_Keyword>State Designated Tribal Statistical Areas</Theme_Keyword>
+                <Theme_Keyword>State Legislative Districts - Lower</Theme_Keyword>
+                <Theme_Keyword>State Legislative Districts - Upper</Theme_Keyword>
+                <Theme_Keyword>States</Theme_Keyword>
+                <Theme_Keyword>Subbarrios</Theme_Keyword>
+                <Theme_Keyword>Traffic Analysis Districts</Theme_Keyword>
+                <Theme_Keyword>Traffic Analysis Zones</Theme_Keyword>
+                <Theme_Keyword>Tribal Block Groups</Theme_Keyword>
+                <Theme_Keyword>Tribal Census Tracts</Theme_Keyword>
+                <Theme_Keyword>Tribal Designated Statistical Areas</Theme_Keyword>
+                <Theme_Keyword>Tribal Subdivisions</Theme_Keyword>
+                <Theme_Keyword>Unified School Districts</Theme_Keyword>
+                <Theme_Keyword>Urban Clusters</Theme_Keyword>
+                <Theme_Keyword>Urban Growth Areas</Theme_Keyword>
+                <Theme_Keyword>Urbanized Areas</Theme_Keyword>
+                <Theme_Keyword>Voting Districts</Theme_Keyword>
+                <Theme_Keyword>ZIP Code Tabulation Areas</Theme_Keyword>
+                <Theme_Keyword>Zip Code Tabulation Areas</Theme_Keyword>
+            </Theme>
+            <Place>
+                <Place_Keyword_Thesaurus>National Standard Codes (ANSI INCITS 38-2009), Federal Information Processing Series (FIPS) &#8211; States/State Equivalents</Place_Keyword_Thesaurus>
+                <Place_Keyword>Alabama</Place_Keyword>
+                <Place_Keyword>Alaska</Place_Keyword>
+                <Place_Keyword>Arizona</Place_Keyword>
+                <Place_Keyword>Arkansas</Place_Keyword>
+                <Place_Keyword>California</Place_Keyword>
+                <Place_Keyword>Colorado</Place_Keyword>
+                <Place_Keyword>Connecticut</Place_Keyword>
+                <Place_Keyword>Delaware</Place_Keyword>
+                <Place_Keyword>District of Columbia</Place_Keyword>
+                <Place_Keyword>Florida</Place_Keyword>
+                <Place_Keyword>Georgia</Place_Keyword>
+                <Place_Keyword>Hawaii</Place_Keyword>
+                <Place_Keyword>Idaho</Place_Keyword>
+                <Place_Keyword>Illinois</Place_Keyword>
+                <Place_Keyword>Indiana</Place_Keyword>
+                <Place_Keyword>Iowa</Place_Keyword>
+                <Place_Keyword>Kansas</Place_Keyword>
+                <Place_Keyword>Kentucky</Place_Keyword>
+                <Place_Keyword>Louisiana</Place_Keyword>
+                <Place_Keyword>Maine</Place_Keyword>
+                <Place_Keyword>Maryland</Place_Keyword>
+                <Place_Keyword>Massachusetts</Place_Keyword>
+                <Place_Keyword>Michigan</Place_Keyword>
+                <Place_Keyword>Minnesota</Place_Keyword>
+                <Place_Keyword>Mississippi</Place_Keyword>
+                <Place_Keyword>Missouri</Place_Keyword>
+                <Place_Keyword>Montana</Place_Keyword>
+                <Place_Keyword>Nebraska</Place_Keyword>
+                <Place_Keyword>Nevada</Place_Keyword>
+                <Place_Keyword>New Hampshire</Place_Keyword>
+                <Place_Keyword>New Jersey</Place_Keyword>
+                <Place_Keyword>New Mexico</Place_Keyword>
+                <Place_Keyword>New York</Place_Keyword>
+                <Place_Keyword>North Carolina</Place_Keyword>
+                <Place_Keyword>North Dakota</Place_Keyword>
+                <Place_Keyword>Ohio</Place_Keyword>
+                <Place_Keyword>Oklahoma</Place_Keyword>
+                <Place_Keyword>Oregon</Place_Keyword>
+                <Place_Keyword>Pennsylvania</Place_Keyword>
+                <Place_Keyword>Rhode Island</Place_Keyword>
+                <Place_Keyword>South Carolina</Place_Keyword>
+                <Place_Keyword>South Dakota</Place_Keyword>
+                <Place_Keyword>Tennessee</Place_Keyword>
+                <Place_Keyword>Texas</Place_Keyword>
+                <Place_Keyword>Utah</Place_Keyword>
+                <Place_Keyword>Vermont</Place_Keyword>
+                <Place_Keyword>Virginia</Place_Keyword>
+                <Place_Keyword>Washington</Place_Keyword>
+                <Place_Keyword>West Virginia</Place_Keyword>
+                <Place_Keyword>Wisconsin</Place_Keyword>
+                <Place_Keyword>Wyoming</Place_Keyword>
+            </Place>
+            <Place>
+                <Place_Keyword_Thesaurus>ISO 3166: Codes for the representation of names of countries and their subdivisions </Place_Keyword_Thesaurus>
+                <Place_Keyword>U.S</Place_Keyword>
+                <Place_Keyword>United States</Place_Keyword>
+                <Place_Keyword>United States of America</Place_Keyword>
+            </Place>
+        </Keywords>
+        <Constraints>
+            <Access_Constraints>unrestricted</Access_Constraints>
+            <Use_Constraints>trademark</Use_Constraints>
+            <Use_Constraints>otherRestrictions</Use_Constraints>
+            <Other_Constraints>Use Constraints: These products are free to use in a product or
+                publication, however acknowledgement must be given to the U.S. Census Bureau as the source. WMS
+                boundary files should not be used for geographic analysis including area or perimeter calculation.
+                Files should not be used for geocoding addresses. Files should not be used for determining precise
+                geographic area relationships.</Other_Constraints>
+        </Constraints>
+        <Point_of_Contact>
+            <Contact_Organization>U.S. Department of Commerce, U.S. Census Bureau, Geography Division</Contact_Organization>
+            <Contact_Electronic_Mail_Address>geo.geography@census.gov</Contact_Electronic_Mail_Address>
+        </Point_of_Contact>
+    </Identification_Information>
+    <Distribution_Information>
+        <Point_of_Contact>
+        <Contact_Organization>Geography Division, Spatial Products Software Branch</Contact_Organization>
+        <Contact_Electronic_Mail_Address>geo.tigerweb@census.gov</Contact_Electronic_Mail_Address>
+        </Point_of_Contact>
+        <Distribution_Liability>This WMS contains geographic data only and do not
+            include display mapping software or statistical data. For information on how to use the
+            TIGER/Line shapefile data with specific software package users shall contact the company
+            that produced the software. To use this WMS in a web browser, reference the OGC specification.</Distribution_Liability>
+        <Standard_Order_Process>
+            <Digital_Form>
+                <Format_Name>HTML</Format_Name>
+                <File_Decompression_Technique></File_Decompression_Technique>
+                <Network_Address>
+                    <Network_Resource_Name>https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_wms.html</Network_Resource_Name>
+                    <mimeType>text/html</mimeType>
+                    <Application_Profile>http://opengis.net/spec/wms</Application_Profile>
+                </Network_Address>
+            </Digital_Form>
+            <Fees>Census Web Mapping Services may be accessed without charge.</Fees>
+        </Standard_Order_Process>
+        <Technical_Prerequisites></Technical_Prerequisites>
+    </Distribution_Information>
+    <Metadata_Reference_Information>
+        <Metadata_Date>2020</Metadata_Date>
+        <Metadata_Hierarchy_Level>service</Metadata_Hierarchy_Level>
+        <Point_of_Contact>
+            <Contact_Organization>U.S. Department of Commerce, U.S. Census Bureau, Geography Division</Contact_Organization>
+            <Contact_Electronic_Mail_Address>geo.geography@census.gov</Contact_Electronic_Mail_Address>
+        </Point_of_Contact>
+        <Metadata_Standard_Name>GeoPlatform Profile of ISO 19115-1</Metadata_Standard_Name>
+        <Metadata_Standard_Version>DRAFT Revision 1</Metadata_Standard_Version>
+        <Metadata_Character_Set>UTF-8</Metadata_Character_Set>
+        <Metadata_File_Identifier>TigerWebSeriesInfo.gpm.xml</Metadata_File_Identifier>
+        <Metadata_Language>eng</Metadata_Language>
+    </Metadata_Reference_Information>
+  </GPM> 
